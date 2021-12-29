@@ -1,0 +1,61 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?f3b5c482364d5b437e2b2745e9f11a77") format("truetype"),
+url("./flaticon.woff?f3b5c482364d5b437e2b2745e9f11a77") format("woff"),
+url("./flaticon.woff2?f3b5c482364d5b437e2b2745e9f11a77") format("woff2"),
+url("./flaticon.eot?f3b5c482364d5b437e2b2745e9f11a77#iefix") format("embedded-opentype"),
+url("./flaticon.svg?f3b5c482364d5b437e2b2745e9f11a77#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "after-effects": "\f101",
+    "premiere": "\f102",
+    "illustrator": "\f103",
+    "files": "\f104",
+    "files-1": "\f105",
+    "js-format": "\f106",
+    "sass": "\f107",
+    "bootstrap": "\f108",
+    "play-button": "\f109",
+);
+
+.flaticon-after-effects:before {
+    content: map-get($flaticon-map, "after-effects");
+}
+.flaticon-premiere:before {
+    content: map-get($flaticon-map, "premiere");
+}
+.flaticon-illustrator:before {
+    content: map-get($flaticon-map, "illustrator");
+}
+.flaticon-files:before {
+    content: map-get($flaticon-map, "files");
+}
+.flaticon-files-1:before {
+    content: map-get($flaticon-map, "files-1");
+}
+.flaticon-js-format:before {
+    content: map-get($flaticon-map, "js-format");
+}
+.flaticon-sass:before {
+    content: map-get($flaticon-map, "sass");
+}
+.flaticon-bootstrap:before {
+    content: map-get($flaticon-map, "bootstrap");
+}
+.flaticon-play-button:before {
+    content: map-get($flaticon-map, "play-button");
+}

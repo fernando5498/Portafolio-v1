@@ -1,0 +1,52 @@
+@font-face {
+    font-family: "flaticon";
+    src: url("./flaticon.ttf?b69f7bff9fb94d8cd39bd8dd5e809173") format("truetype"), url("./flaticon.woff?b69f7bff9fb94d8cd39bd8dd5e809173") format("woff"), url("./flaticon.woff2?b69f7bff9fb94d8cd39bd8dd5e809173") format("woff2"), url("./flaticon.eot?b69f7bff9fb94d8cd39bd8dd5e809173#iefix") format("embedded-opentype"), url("./flaticon.svg?b69f7bff9fb94d8cd39bd8dd5e809173#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before,
+i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-after-effects:before {
+    content: "\f101";
+}
+
+.flaticon-premiere:before {
+    content: "\f102";
+}
+
+.flaticon-illustrator:before {
+    content: "\f103";
+}
+
+.flaticon-files:before {
+    content: "\f104";
+}
+
+.flaticon-files-1:before {
+    content: "\f105";
+}
+
+.flaticon-js-format:before {
+    content: "\f106";
+}
+
+.flaticon-sass:before {
+    content: "\f107";
+}
+
+.flaticon-bootstrap:before {
+    content: "\f108";
+}
+
+.flaticon-play-button:before {
+    content: "\f109";
+}

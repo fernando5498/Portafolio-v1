@@ -1,0 +1,17 @@
+/* --------------------------- BASE -------------------------- */
+
+@import "base/variables";
+@import "base/reset";
+
+/* -------------------------- COMPONENTES ------------------------- */
+
+@import "componentes/mixin";
+@import "componentes/modal";
+@import "componentes/preload";
+
+/* ---------------------------- LAYOUT ---------------------------- */
+
+@import "layout/header";
+@import "layout/main";
+@import "layout/footer";
+@import "layout/dark-mode";

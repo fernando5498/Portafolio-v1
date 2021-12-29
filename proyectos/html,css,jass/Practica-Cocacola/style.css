@@ -1,0 +1,307 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .sec {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            padding: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #0062be;
+            transition: 0.5s;
+        }
+        
+        header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            position: relative;
+            max-width: 80px;
+        }
+        
+        header ul {
+            position: relative;
+            display: flex;
+        }
+        
+        header ul li {
+            list-style: none;
+        }
+        
+        header ul li a {
+            color: #fff;
+            font-weight: 400;
+            margin-left: 40px;
+            text-decoration: none;
+        }
+        
+        .content {
+            position: relative;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .textoBox {
+            position: relative;
+            max-width: 600px;
+        }
+        
+        .textoBox h2 {
+            color: #fff;
+            font-size: 4em;
+            line-height: 1.5em;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+        
+        .textoBox h2 span {
+            font-size: 2em;
+        }
+        
+        .textoBox p {
+            color: #fff;
+        }
+        
+        .textoBox a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 8px 20px;
+            background: #fff;
+            color: #111;
+            border-radius: 40px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: all 300ms;
+        }
+        
+        .textoBox a:hover {
+            letter-spacing: 2px;
+        }
+        
+        .imgBox {
+            width: 600px;
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 50px;
+            margin-top: 50px;
+        }
+        
+        .imgBox img {
+            max-width: 260px;
+        }
+        
+        .thumb {
+            position: absolute;
+            left: 50%;
+            bottom: 20px;
+            transform: translateX(-50%);
+            display: flex;
+        }
+        
+        .thumb li {
+            list-style: none;
+            display: inline-block;
+            margin: 0 20px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        
+        .thumb li:hover {
+            transform: translateY(-15px);
+        }
+        
+        .thumb li img {
+            max-width: 40px;
+        }
+        /* ///////////////////Porque Tantas Propiedades???////////////////// */
+        
+        .sci {
+            position: absolute;
+            top: 40%;
+            right: 30px;
+            display: flex;
+            transform: translateY(50%);
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        .sci li {
+            list-style: none;
+        }
+        /* filter es un filtro usado mas que todo en imagenes */
+        
+        .sci li a {
+            display: inline-block;
+            filter: invert(1);
+            margin: 10px;
+            padding: 5px;
+            transform: scale(1.2);
+            transition: all 300ms;
+        }
+        
+        .sci li a:hover {
+            padding-right: 20px;
+        }
+        /* //////////////////MEdia Queries================ */
+        
+        @media (min-width:1440px) {
+            .navigation {
+                font-size: 1.5rem;
+            }
+            .sci li a {
+                transform: scale(1.8);
+            }
+            .imgBox {
+                justify-content: center;
+            }
+            .imgBox img {
+                max-width: 300px;
+            }
+            .thumb li img {
+                max-width: 80px;
+            }
+        }
+        
+        @media (max-width:1200px) {
+            h2 {
+                font-size: 1rem;
+                ;
+            }
+            .textoBox h2 span {
+                font-size: 5rem;
+            }
+        }
+        
+        @media (max-width: 990px) {
+            section {
+                padding: 40px;
+                padding-bottom: 140px;
+            }
+            header {
+                padding: 20px 40px;
+            }
+            .logo {
+                position: relative;
+                max-width: 60px;
+            }
+            header ul {
+                position: fixed;
+                top: 0;
+                left: 0px;
+                width: 100%;
+                height: 100%;
+                background: #fff;
+                z-index: 1;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: 0.2s;
+                visibility: hidden;
+                opacity: 0;
+            }
+            img.pepsi {
+                height: 250px;
+            }
+            header ul.active {
+                visibility: visible;
+                opacity: 1;
+            }
+            header ul li a {
+                display: inline-block;
+                color: #111;
+                font-weight: 400;
+                margin-left: 0;
+                text-decoration: none;
+                font-size: 2em;
+                margin: 10px 0;
+            }
+            header ul li a:hover {
+                color: #ed033e;
+            }
+            .toggleMenu {
+                position: relative;
+                width: 40px;
+                height: 40px;
+                background: url(img/menu.png);
+                background-position: center;
+                background-size: 30px;
+                z-index: 2;
+                cursor: pointer;
+                background-repeat: no-repeat;
+            }
+            .toggleMenu.active {
+                background: url(img/close.png);
+                background-position: center;
+                background-size: 25px;
+                background-repeat: no-repeat;
+                filter: invert(1);
+            }
+            .content {
+                flex-direction: column;
+                max-width: 100%;
+                padding-right: 20px;
+            }
+            .content .textoBox h2 {
+                color: #fff;
+                font-size: 3em;
+            }
+            .content .textoBox a {
+                font-size: 14px;
+                padding: 8px 15px;
+            }
+            .content .imgBox {
+                width: 100%;
+                padding-left: 100px;
+                margin-top: 50px;
+                justify-content: center;
+            }
+            .content .imgBox img {
+                max-width: 150px;
+            }
+            .thumb li img {
+                max-width: 30px;
+            }
+            .sci {
+                right: 0;
+                width: 50px;
+            }
+            .sci li {
+                background: rgba(0, 0, 0, 0.5)
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .sec {
+                padding: 100px 30px;
+            }
+            .content .imgBox {
+                padding-right: 20%;
+            }
+            .textoBox a {
+                width: 100%;
+                text-align: center;
+            }
+        }
