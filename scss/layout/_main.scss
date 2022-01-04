@@ -19,7 +19,6 @@
     background: $bg-color;
     .about-image {
         height: 100%;
-        width: 35%;
         margin-left: 4rem;
         position: absolute;
         display: flex;
@@ -39,9 +38,8 @@
         height: 100%;
         position: absolute;
         border: none;
-        width: 65%;
         right: 0;
-        padding: 0px 4rem 0px 2rem;
+        padding: 0px 4rem 0px 0px;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -112,17 +110,6 @@
                     opacity: 1;
                 }
             }
-        }
-    }
-}
-
-@media (max-width:1200px) {
-    #about-us {
-        .about-image {
-            width: 40%;
-        }
-        .about-content {
-            width: 60%;
         }
     }
 }

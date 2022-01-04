@@ -4,6 +4,8 @@
     width: 100%;
     background: $bg-color2;
     flex-direction: column;
+    position: fixed;
+    z-index: 101;
     img {
         position: relative;
         -webkit-animation: patoAnimate 7s linear infinite;
