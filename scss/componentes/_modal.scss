@@ -128,6 +128,12 @@
         width: 90%;
         padding: 1rem;
     }
+    .cerrar-overlay,
+    .cerrar-overlay-video {
+        width: 20px !important;
+        z-index: 10;
+        height: 20px !important;
+    }
 }
 
 @media (max-width:550px) {
@@ -150,12 +156,6 @@
     .overlay-container,
     .video-container {
         padding: 1rem !important;
-    }
-    .cerrar-overlay,
-    .cerrar-overlay-video {
-        width: 20px !important;
-        z-index: 10;
-        height: 20px !important;
     }
 }
 
@@ -181,6 +181,7 @@
     width: 100%;
     height: 100vh;
     @include f-center;
+    z-index: 101 !important;
 }
 
 .active-overlay {
@@ -265,6 +266,7 @@
     background: rgba(0, 0, 0, 0.788);
     width: 100%;
     height: 100vh;
+    z-index: 101 !important;
     @include f-center;
     .video-container {
         position: relative;
@@ -325,12 +327,6 @@
 }
 
 @media (max-width:600px) {
-    #overlay {
-        z-index: 101;
-    }
-    .modal-video {
-        z-index: 101;
-    }
     .enlaces-img a {
         font-size: .5rem;
         padding: 5px 15px;

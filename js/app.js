@@ -205,6 +205,8 @@ modalGaleria.forEach((img) => {
 var modalvideo = document.getElementById('modal-video')
 var Video = document.querySelectorAll('.item-content video')
 
+
+
 Video.forEach((vid) => {
     const rutaVid = vid.getAttribute('src')
     const canalYoutube = vid.parentNode.parentNode.dataset.link
