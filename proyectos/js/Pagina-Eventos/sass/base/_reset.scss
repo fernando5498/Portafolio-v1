@@ -1,0 +1,123 @@
+* {
+    padding: 0;
+    margin: 0;
+    // &:hover {
+    //     color: $hover-text;
+    // }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $base;
+}
+
+p {
+    color: $color-secundario;
+}
+
+.tSlow {
+    transition: all 500ms ease-in-out;
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+    -ms-transition: all 500ms ease-in-out;
+    -o-transition: all 500ms ease-in-out;
+}
+
+.pad_100 {
+    padding: 100px 0px;
+}
+
+.pad_120 {
+    padding: 120px 0px;
+}
+
+.center {
+    text-align: center;
+    margin: 0 auto;
+}
+
+input,
+select,
+option,
+textarea {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid $base;
+    margin: 5px 0px;
+    opacity: .5;
+    @extend .tSlow;
+    &:hover {
+        opacity: 1;
+        color: $base;
+    }
+}
+
+textarea {
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 150px;
+    max-height: 250px;
+}
+
+button {
+    background: transparent;
+    text-transform: uppercase;
+    border: 1px solid $base;
+    padding: 10px 20px;
+    margin: 5px 0px;
+    color: $base;
+    font: 1rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    opacity: .7;
+    @extend .tSlow;
+    &:hover {
+        opacity: 1;
+        color: white;
+        background: $base;
+    }
+}
+
+.black {
+    background: $base;
+    opacity: 1;
+    color: white;
+    &:hover {
+        background: $hover;
+        border: 1px solid $hover;
+    }
+}
+
+.white_bg {
+    background: transparentize(white, .2);
+}
+
+.center {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.main-tittle {
+    font-size: 50px;
+    font-weight: bold;
+    color: $base;
+}
+
+
+/* ----------------- IMAGENES DEL SITIO ----------------- */
+
+.rounded-circle {
+    width: 250px;
+    height: 250px;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    @extend .tSlow;
+    object-fit: cover;
+    object-position: center;
+    &:hover {
+        clip-path: polygon(100% 0%, 100% 100%, 0% 100%, 0% 0%);
+    }
+}

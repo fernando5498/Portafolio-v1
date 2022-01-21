@@ -174,10 +174,15 @@ var modalGaleria = document.querySelectorAll('.item img')
 
 modalGaleria.forEach((img) => {
     const ruta = img.getAttribute('src')
+    const title = img.parentNode.parentNode.dataset.title
     const url = img.parentNode.parentNode.dataset.link
     const repo = img.parentNode.parentNode.dataset.repositorio
     const download = img.parentNode.parentNode.dataset.download
     const categoria = img.parentNode.parentNode.dataset.categoria
+    const fecha = img.parentNode.parentNode.dataset.fecha
+    const description = img.parentNode.parentNode.dataset.description
+
+
 
     img.addEventListener('click', () => {
 
@@ -186,6 +191,16 @@ modalGaleria.forEach((img) => {
         document.querySelector('.repo-git').href = repo
         document.querySelector('.link-sitio').href = url
         document.querySelector('.link-descarga').href = download
+        document.querySelector('.item-description').innerHTML = description
+
+        const tituloItem = document.querySelectorAll('.item-title')
+        tituloItem.forEach((titulo) => {
+            titulo.innerHTML = title
+        })
+        const fechaItem = document.querySelectorAll('.item-fecha')
+        fechaItem.forEach((time) => {
+            time.innerHTML = fecha
+        })
         if (categoria === 'illustrator') {
             document.querySelector('.link-sitio').style.display = "none"
             document.querySelector('.repo-git').style.display = "none"

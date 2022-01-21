@@ -1,0 +1,144 @@
+footer {
+    margin-top: -60px;
+    width: 100%;
+    background: $base;
+    clip-path: polygon(0% 15%, 50% 5%, 100% 15%, 100% 100%, 0% 100%);
+    .container {
+        padding: 100px 0px 20px 0px;
+    }
+    p {
+        margin: 0px;
+        padding: 0px;
+        .white {
+            color: transparentize(white, .6);
+        }
+    }
+    ul {
+        padding: 0px;
+        margin: 0px;
+        list-style: none;
+        li {
+            display: 0px;
+            margin: 0px;
+            color: transparentize(white, .8);
+            &:hover,
+            a:hover {
+                color: $hover-text;
+            }
+            a {
+                text-decoration: none;
+                color: transparentize(white, .8);
+            }
+        }
+    }
+    hr {
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+        background: transparentize(white, .1);
+    }
+}
+
+.tumblr {
+    position: relative;
+    float: left;
+    margin: 0px;
+    padding: 0px;
+    width: 20%;
+    height: 50%;
+    cursor: pointer;
+    flex-basis: 10px;
+    object-fit: cover;
+    opacity: .7;
+    @extend .tSlow;
+    &:hover {
+        opacity: 1;
+    }
+}
+
+@media (max-width:1200px) {
+    .tumblr {
+        height: 33.3%;
+    }
+}
+
+@media (max-width:768px) {
+    .tumblr {
+        height: 20%;
+    }
+}
+
+.copy {
+    padding: 10px 0px;
+    background: lighten($base, 1);
+    text-align: left;
+    p,
+    a {
+        margin: 0px;
+        padding: 0px;
+        color: transparentize(white, .7);
+    }
+    a {
+        opacity: .5;
+        color: transparentize(white, .5);
+        @extend .tSlow;
+        &:hover {
+            opacity: 1;
+            text-decoration: none;
+        }
+    }
+}
+
+.social-networks {
+    margin-top: 5px;
+    li {
+        display: inline-block;
+        position: relative;
+        margin: 0px 7px;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        cursor: pointer;
+        @extend .tSlow;
+        i {
+            font-size: 22px;
+            color: transparentize(white, .8);
+            transform: rotate(0deg) translate(-3px, 3px);
+            -webkit-transform: rotate(0deg) translate(-3px, 3px);
+            -moz-transform: rotate(0deg) translate(-3px, 3px);
+            -ms-transform: rotate(0deg) translate(-3px, 3px);
+            -o-transform: rotate(0deg) translate(-3px, 3px);
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            @extend .tSlow;
+        }
+        &:hover {
+            .bi {
+                display: block;
+                color: $base;
+                transform: rotate(-45deg) !important;
+                -webkit-transform: rotate(-45deg) !important;
+                -moz-transform: rotate(-45deg) !important;
+                -ms-transform: rotate(-45deg) !important;
+                -o-transform: rotate(-45deg) !important;
+            }
+            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            background: white;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+        }
+    }
+}

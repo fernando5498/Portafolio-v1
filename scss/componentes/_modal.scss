@@ -122,7 +122,7 @@
     }
 }
 
-@media (max-width:900px) {
+@media (max-width:1000px) {
     .modal-content.mo-con-active {
         height: 90%;
         width: 90%;
@@ -155,7 +155,7 @@
     }
     .overlay-container,
     .video-container {
-        padding: 1rem !important;
+        padding: .5rem !important;
     }
 }
 
@@ -171,6 +171,12 @@
 
 
 /* --------------------- MODAL WORKS -------------------- */
+
+.div-margen {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
 
 .overlay {
     display: none !important;
@@ -191,8 +197,6 @@
 
 .overlay-container {
     position: relative;
-    display: flex;
-    align-items: center;
     width: 90%;
     height: 80%;
     background: $bg-color;
@@ -200,19 +204,26 @@
     color: $color-secundario;
     -webkit-animation: abrir 1s ease-out;
     animation: abrir 1s ease-out;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.overlay-info {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    @include f-center;
     .contenedor-img {
-        width: 70%;
-        height: 100%;
-        @include f-center;
         img {
             width: 100%;
             height: 100%;
+            max-height: calc(100vh / 1.5);
             -o-object-fit: contain;
             object-fit: contain;
         }
     }
     .description-img {
-        width: 30%;
         @include f-center;
         flex-direction: column;
     }
@@ -227,30 +238,30 @@
     }
 }
 
-.cerrar-overlay {
-    background: url(../svg/cancel.svg) no-repeat 30px;
-    background-position: center;
-    -webkit-filter: invert(100%);
-    filter: invert(100%);
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 1rem;
-    cursor: pointer;
+.overlay-title {
+    text-align: center;
+    margin-bottom: 2px;
+    h3 {
+        margin: 0;
+    }
+    span {
+        font-size: 12px;
+        color: $nav-modal-color;
+        font-weight: bolder;
+    }
 }
 
 
 /* --------------------- MODAL-VIDEO -------------------- */
 
-.cerrar-overlay-video {
+.cerrar-overlay-video,
+.cerrar-overlay {
     background: url(../svg/cancel.svg) no-repeat 30px;
     background-position: center;
     -webkit-filter: invert(100%);
     filter: invert(100%);
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     position: absolute;
     top: 0;
     right: 0;
@@ -268,28 +279,26 @@
     height: 100vh;
     z-index: 101 !important;
     @include f-center;
-    .video-container {
-        position: relative;
+}
+
+.video-container {
+    position: relative;
+    width: 90%;
+    height: 80%;
+    background: $bg-color;
+    padding: 3rem;
+    color: $color-secundario;
+    -webkit-animation: abrir 1s ease-out;
+    animation: abrir 1s ease-out;
+    video {
+        width: 100%;
+        max-height: 100%;
+    }
+    .enlaces-img {
         display: flex;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
-        width: 90%;
-        height: 80%;
-        background: $bg-color;
-        justify-content: space-evenly;
-        padding: 3rem;
-        color: $color-secundario;
-        -webkit-animation: abrir 1s ease-out;
-        animation: abrir 1s ease-out;
-        video {
-            width: 70%;
-            max-height: 100%;
-        }
-        .enlaces-img {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
     }
 }
 
@@ -298,23 +307,25 @@
     z-index: 1;
 }
 
-@media (max-width:900px) {
+
+/* ----------------- MEDIAQUERIES MODAL VIDEO Y WORKS----------------- */
+
+@media (max-width:1000px) {
     .overlay-container {
-        flex-direction: column;
         .contenedor-img {
             width: 100%;
-            height: 80%;
             margin-bottom: 1rem;
         }
-        .description-img {
-            width: 100%;
-        }
     }
-    .video-container {
-        flex-direction: column;
+    .description-img {
+        width: 100%;
+    }
+    .contenedor-video {
+        width: 100%;
         video {
-            max-height: 80% !important;
-            width: 100% !important;
+            width: 100%;
+            // height: 80%;
+            margin-bottom: 1rem;
         }
     }
     .grid .item {

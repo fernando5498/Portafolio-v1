@@ -206,7 +206,7 @@ h4 {
     opacity: 1;
   }
 }
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .modal-content.mo-con-active {
     height: 90%;
     width: 90%;
@@ -239,7 +239,7 @@ h4 {
 
   .overlay-container,
 .video-container {
-    padding: 1rem !important;
+    padding: 0.5rem !important;
   }
 }
 @media (max-height: 550px) {
@@ -253,6 +253,12 @@ h4 {
   }
 }
 /* --------------------- MODAL WORKS -------------------- */
+.div-margen {
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+
 .overlay {
   display: none !important;
   position: fixed;
@@ -274,8 +280,6 @@ h4 {
 
 .overlay-container {
   position: relative;
-  display: flex;
-  align-items: center;
   width: 90%;
   height: 80%;
   background: #0c121d;
@@ -284,31 +288,36 @@ h4 {
   -webkit-animation: abrir 1s ease-out;
   animation: abrir 1s ease-out;
 }
-.overlay-container .contenedor-img {
-  width: 70%;
+.overlay-container::-webkit-scrollbar {
+  display: none;
+}
+
+.overlay-info {
   height: 100%;
+  width: 100%;
+  margin: 0;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.overlay-container .contenedor-img img {
+.overlay-info .contenedor-img img {
   width: 100%;
   height: 100%;
+  max-height: calc(100vh / 1.5);
   -o-object-fit: contain;
   object-fit: contain;
 }
-.overlay-container .description-img {
-  width: 30%;
+.overlay-info .description-img {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
-.overlay-container .enlaces-img {
+.overlay-info .enlaces-img {
   display: flex;
   flex-direction: column;
 }
-.overlay-container .enlaces-img a {
+.overlay-info .enlaces-img a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -316,28 +325,28 @@ h4 {
   animation: links-modal 2s ease-in-out;
 }
 
+.overlay-title {
+  text-align: center;
+  margin-bottom: 2px;
+}
+.overlay-title h3 {
+  margin: 0;
+}
+.overlay-title span {
+  font-size: 12px;
+  color: #a5a5a5;
+  font-weight: bolder;
+}
+
+/* --------------------- MODAL-VIDEO -------------------- */
+.cerrar-overlay-video,
 .cerrar-overlay {
   background: url(../svg/cancel.svg) no-repeat 30px;
   background-position: center;
   -webkit-filter: invert(100%);
   filter: invert(100%);
-  width: 40px;
-  height: 40px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  margin: 1rem;
-  cursor: pointer;
-}
-
-/* --------------------- MODAL-VIDEO -------------------- */
-.cerrar-overlay-video {
-  background: url(../svg/cancel.svg) no-repeat 30px;
-  background-position: center;
-  -webkit-filter: invert(100%);
-  filter: invert(100%);
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   position: absolute;
   top: 0;
   right: 0;
@@ -358,24 +367,22 @@ h4 {
   align-items: center;
   justify-content: center;
 }
-.modal-video .video-container {
+
+.video-container {
   position: relative;
-  display: flex;
-  align-items: center;
   width: 90%;
   height: 80%;
   background: #0c121d;
-  justify-content: space-evenly;
   padding: 3rem;
   color: white;
   -webkit-animation: abrir 1s ease-out;
   animation: abrir 1s ease-out;
 }
-.modal-video .video-container video {
-  width: 70%;
+.video-container video {
+  width: 100%;
   max-height: 100%;
 }
-.modal-video .video-container .enlaces-img {
+.video-container .enlaces-img {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -387,25 +394,23 @@ h4 {
   z-index: 1;
 }
 
-@media (max-width: 900px) {
-  .overlay-container {
-    flex-direction: column;
-  }
+/* ----------------- MEDIAQUERIES MODAL VIDEO Y WORKS----------------- */
+@media (max-width: 1000px) {
   .overlay-container .contenedor-img {
     width: 100%;
-    height: 80%;
     margin-bottom: 1rem;
   }
-  .overlay-container .description-img {
+
+  .description-img {
     width: 100%;
   }
 
-  .video-container {
-    flex-direction: column;
+  .contenedor-video {
+    width: 100%;
   }
-  .video-container video {
-    max-height: 80% !important;
-    width: 100% !important;
+  .contenedor-video video {
+    width: 100%;
+    margin-bottom: 1rem;
   }
 
   .grid .item {
