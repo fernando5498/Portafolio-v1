@@ -380,7 +380,7 @@ h4 {
 }
 .video-container video {
   width: 100%;
-  max-height: 100%;
+  max-height: calc(100vh / 1.5);
 }
 .video-container .enlaces-img {
   display: flex;
