@@ -239,7 +239,13 @@ h4 {
 
   .overlay-container,
 .video-container {
-    padding: 0.5rem !important;
+    padding: 2rem 0.5rem !important;
+  }
+
+  .cerrar-overlay,
+.cerrar-overlay-video {
+    width: 15px !important;
+    height: 15px !important;
   }
 }
 @media (max-height: 550px) {

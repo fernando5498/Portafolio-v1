@@ -76,7 +76,7 @@
         z-index: 1;
         min-height: 700px;
         height: 100vh;
-        background-image: url(SVG/bg-dulce.svg);
+        background-image: url(svg/bgDulce.svg);
         background-position: 0%;
         background-repeat: no-repeat;
         background-size: cover;
@@ -209,7 +209,7 @@
         position: absolute;
         width: 100%;
         height: 100%;
-        background-image: url(svg/bg-dulce.svg);
+        background-image: url(svg/bgDulce.svg);
         background-repeat: no-repeat;
         background-size: cover;
         transform: rotate(180deg);

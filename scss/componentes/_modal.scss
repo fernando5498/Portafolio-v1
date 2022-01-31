@@ -155,7 +155,12 @@
     }
     .overlay-container,
     .video-container {
-        padding: .5rem !important;
+        padding: 2rem .5rem !important;
+    }
+    .cerrar-overlay,
+    .cerrar-overlay-video {
+        width: 15px !important;
+        height: 15px !important;
     }
 }
 
