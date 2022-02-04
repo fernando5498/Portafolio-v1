@@ -41,6 +41,9 @@
 }
 
 .dark {
+    .cls-11 {
+        fill: #040006 !important;
+    }
     .btn-secundario {
         border: 2px solid $text-color-night;
         &:hover {
@@ -179,6 +182,28 @@
         }
         #footer {
             background: $bg-color-night;
+        }
+        .form {
+            background: $color-secundario;
+            .cerrar-overlay {
+                filter: none;
+                -webkit-filter: none;
+            }
+        }
+        .form__data {
+            input,
+            textarea {
+                border-bottom: 1px solid transparentize($color-secundario-night, .7);
+                color: transparentize($color-secundario-night, .5);
+            }
+            input:focus,
+            textarea:focus {
+                border-bottom: 1px solid $color-secundario-night;
+                color: $color-secundario-night;
+            }
+            input[type="submit"] {
+                color: transparentize($color-secundario-night, .5);
+            }
         }
     }
 }

@@ -8,48 +8,7 @@
     z-index: 101;
     img {
         position: relative;
-        -webkit-animation: patoAnimate 7s linear infinite;
-        animation: patoAnimate 7s linear infinite;
         width: 200px;
-        left: -15px;
-    }
-}
-
-@-webkit-keyframes patoAnimate {
-    0% {
-        left: -15px;
-    }
-    25% {
-        left: 15px;
-    }
-    50% {
-        left: -15px;
-    }
-    75% {
-        left: -30px;
-        ;
-    }
-    100% {
-        left: -15px;
-    }
-}
-
-@keyframes patoAnimate {
-    0% {
-        left: -15px;
-    }
-    25% {
-        left: 15px;
-    }
-    50% {
-        left: -15px;
-    }
-    75% {
-        left: -30px;
-        ;
-    }
-    100% {
-        left: -15px;
     }
 }
 

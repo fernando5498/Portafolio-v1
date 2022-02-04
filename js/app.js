@@ -5,12 +5,16 @@ window.onload = function() {
         // $('.modal-container').removeClass('d-none')
 };
 
-// const cache = "Ignacio"
-// localStorage.setItem('galeriaCompleta', cache)
+// animation
 
-// localStorage.getItem('galeriaCompleta')
-
-
+var animation = bodymovin.loadAnimation({
+    container: document.querySelector('.animation'), // Required
+    path: 'js/gos.json', // Required
+    renderer: 'svg', // Required
+    loop: true, // Optional
+    autoplay: true, // Optional
+    name: "Hello World", // Name for future reference. Optional.
+})
 
 /* --------------------- BOTON NOCHE -------------------- */
 
@@ -256,6 +260,7 @@ Video.forEach((vid) => {
 /* -------------------- BOTON CERRAR -------------------- */
 document.querySelector('.cerrar-overlay').addEventListener('click', () => {
     overlay.classList.remove('active-overlay')
+
 })
 document.querySelector('.cerrar-overlay-video').addEventListener('click', () => {
     modalvideo.classList.remove('active-video')
@@ -276,3 +281,33 @@ modalvideo.addEventListener('click', (fuera) => {
 
     }
 })
+
+/* --------------------- FORMULARIO --------------------- */
+const buttomGmail = document.querySelector('.gmail')
+const form = document.querySelector('.container-form')
+const closeForm = document.querySelector('.close--form')
+buttomGmail.addEventListener('click', function(e) {
+    e.preventDefault()
+    form.classList.toggle('active')
+})
+closeForm.addEventListener('click', () => {
+    form.classList.remove('active')
+})
+form.addEventListener('click', (fuera) => {
+    if (fuera.target.id == 'container-form') {
+        form.classList.remove('active')
+    }
+})
+
+// scrollreveal
+ScrollReveal().reveal('.card', {
+    distance: '150%',
+    origin: 'bottom',
+    duration: 2000
+});
+ScrollReveal().reveal('.contact-redes', {
+    distance: '150%',
+    origin: 'bottom',
+    duration: 2000
+});
+ScrollReveal().reveal('.item', { delay: 500 });
