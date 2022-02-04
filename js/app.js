@@ -303,11 +303,10 @@ form.addEventListener('click', (fuera) => {
 ScrollReveal().reveal('.card', {
     distance: '150%',
     origin: 'bottom',
-    duration: 2000
+    duration: 1800
 });
 ScrollReveal().reveal('.contact-redes', {
     distance: '150%',
     origin: 'bottom',
-    duration: 2000
+    duration: 1800
 });
-ScrollReveal().reveal('.item', { delay: 500 });

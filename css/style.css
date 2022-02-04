@@ -1330,6 +1330,7 @@ h4 {
   display: flex;
   width: 100%;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 .contact-content .contact-redes ul li a {
   padding: 2rem;
