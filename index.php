@@ -631,8 +631,8 @@
                         </div>
                         <div class="cerrar-overlay-video"></div>
 
-                        <div class="contenedor-video col-8">
-                            <iframe src="" width="100%" height="100%" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <div class=" contenedor-video col-md-8">
+                            <div class="ratio ratio-4x3"><iframe src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
                         </div>
 
                         <div class="description-img col-4">
