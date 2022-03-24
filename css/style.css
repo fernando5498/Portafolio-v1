@@ -531,6 +531,20 @@ h4 {
   z-index: 1;
 }
 
+.contenedor-video {
+  position: relative;
+  padding-bottom: 35.25%;
+  padding-top: 25px;
+  height: 0;
+}
+.contenedor-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 /* ----------------- MEDIAQUERIES MODAL VIDEO Y WORKS----------------- */
 @media (max-width: 1000px) {
   .overlay-container .contenedor-img {
@@ -543,10 +557,6 @@ h4 {
   }
 
   .contenedor-video {
-    width: 100%;
-  }
-  .contenedor-video video {
-    width: 100%;
     margin-bottom: 1rem;
   }
 

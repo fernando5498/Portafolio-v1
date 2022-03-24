@@ -233,11 +233,12 @@ Video.forEach((vid) => {
     const title = vid.parentNode.parentNode.dataset.title
     const fecha = vid.parentNode.parentNode.dataset.fecha
     const description = vid.parentNode.parentNode.dataset.description
+    let newUrl = `https://www.youtube.com/embed${rutaVid}`
 
     vid.addEventListener('click', () => {
         modalvideo.classList.add('active-video')
-        const modal = document.querySelector('.video-container video')
-        modal.src = rutaVid
+        const modal = document.querySelector('.video-container iframe')
+        modal.src = newUrl
         document.querySelector('.vid-descrip').innerHTML = description
 
         const tituloItem = document.querySelectorAll('.item-title')
@@ -264,7 +265,7 @@ document.querySelector('.cerrar-overlay').addEventListener('click', () => {
 })
 document.querySelector('.cerrar-overlay-video').addEventListener('click', () => {
     modalvideo.classList.remove('active-video')
-    const videoReproduc = document.querySelector('.video-container video').pause()
+    const videoReproduc = document.querySelector('.video-container iframe').src = `yotube.com`
 
 })
 
@@ -277,7 +278,8 @@ overlay.addEventListener('click', (fuera) => {
 modalvideo.addEventListener('click', (fuera) => {
     if (fuera.target.id == 'modal-video') {
         modalvideo.classList.remove('active-video')
-        const videoReproduc = document.querySelector('.video-container video').pause()
+        const videoReproduc = document.querySelector('.video-container iframe').src = `yotube.com`
+
 
     }
 })
