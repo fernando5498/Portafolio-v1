@@ -5,17 +5,6 @@ window.onload = function() {
         // $('.modal-container').removeClass('d-none')
 };
 
-// animation
-
-var animation = bodymovin.loadAnimation({
-    container: document.querySelector('.animation'), // Required
-    path: 'js/gos.json', // Required
-    renderer: 'svg', // Required
-    loop: true, // Optional
-    autoplay: true, // Optional
-    name: "Hello World", // Name for future reference. Optional.
-})
-
 /* --------------------- BOTON NOCHE -------------------- */
 
 const btnSwitch = document.querySelector('#switch')
@@ -105,7 +94,7 @@ window.addEventListener("scroll", function() {
 
 
     sections.forEach(section => {
-        const sectionTop = section.offsetTop;
+        const sectionTop = section.offsetTop - 100;
         const sectionHeight = section.clientHeight;
         if (pageYOffset >= sectionTop) {
             current = section.getAttribute('id')
@@ -167,6 +156,45 @@ cerrar.forEach(cer => {
     })
 })
 
+/* --------------------- MODAL VIDEO -------------------- */
+
+var modalvideo = document.getElementById('modal-video')
+var Video = document.querySelectorAll('.item-content video')
+
+
+
+Video.forEach((vid) => {
+    const rutaVid = vid.getAttribute('src')
+    const canalYoutube = vid.parentNode.parentNode.dataset.link
+    const downVid = vid.parentNode.parentNode.dataset.download
+    const title = vid.parentNode.parentNode.dataset.title
+    const fecha = vid.parentNode.parentNode.dataset.fecha
+    const description = vid.parentNode.parentNode.dataset.description
+    let newUrl = `https://www.youtube.com/embed${rutaVid}`
+
+    vid.addEventListener('click', () => {
+        modalvideo.classList.add('active-video')
+        const modal = document.querySelector('.video-container iframe')
+        modal.src = newUrl
+        document.querySelector('.vid-descrip').innerHTML = description
+
+        const tituloItem = document.querySelectorAll('.item-title')
+        tituloItem.forEach((titulo) => {
+            titulo.innerHTML = title
+        })
+        const fechaItem = document.querySelectorAll('.item-fecha')
+        fechaItem.forEach((time) => {
+            time.innerHTML = fecha
+        })
+
+        document.querySelector('.link-video').href = canalYoutube
+        document.querySelector('.download-video').href = downVid
+
+    })
+})
+
+
+
 
 /* -------------------- MODAL GALERIA ------------------- */
 
@@ -218,45 +246,6 @@ modalGaleria.forEach((img) => {
 
 
 })
-
-/* --------------------- MODAL VIDEO -------------------- */
-
-var modalvideo = document.getElementById('modal-video')
-var Video = document.querySelectorAll('.item-content video')
-
-
-
-Video.forEach((vid) => {
-    const rutaVid = vid.getAttribute('src')
-    const canalYoutube = vid.parentNode.parentNode.dataset.link
-    const downVid = vid.parentNode.parentNode.dataset.download
-    const title = vid.parentNode.parentNode.dataset.title
-    const fecha = vid.parentNode.parentNode.dataset.fecha
-    const description = vid.parentNode.parentNode.dataset.description
-    let newUrl = `https://www.youtube.com/embed${rutaVid}`
-
-    vid.addEventListener('click', () => {
-        modalvideo.classList.add('active-video')
-        const modal = document.querySelector('.video-container iframe')
-        modal.src = newUrl
-        document.querySelector('.vid-descrip').innerHTML = description
-
-        const tituloItem = document.querySelectorAll('.item-title')
-        tituloItem.forEach((titulo) => {
-            titulo.innerHTML = title
-        })
-        const fechaItem = document.querySelectorAll('.item-fecha')
-        fechaItem.forEach((time) => {
-            time.innerHTML = fecha
-        })
-
-        document.querySelector('.link-video').href = canalYoutube
-        document.querySelector('.download-video').href = downVid
-
-    })
-})
-
-
 
 /* -------------------- BOTON CERRAR -------------------- */
 document.querySelector('.cerrar-overlay').addEventListener('click', () => {

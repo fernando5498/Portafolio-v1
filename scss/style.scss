@@ -1,18 +1,28 @@
 /* --------------------------- BASE -------------------------- */
 
-@import "base/variables";
-@import "base/reset";
+@import "1-base/variables";
+@import "1-base/reset";
+
+/* ----------------------- MIXINS ----------------------- */
+
+@import "2-mixins/mixins";
+@import "2-mixins/breakPoints";
+
+/* ----------------------- LAYOUT ----------------------- */
+
+@import "3-layout/buttons";
+@import "3-layout/containers";
+@import "3-layout/dark-mode";
 
 /* -------------------------- COMPONENTES ------------------------- */
 
-@import "componentes/logo";
-@import "componentes/mixin";
-@import "componentes/modal";
-@import "componentes/preload";
+@import "4-componentes/header";
+@import "4-componentes/footer";
+@import "4-componentes/logo";
+@import "4-componentes/modal";
+@import "4-componentes/preload";
 
-/* ---------------------------- LAYOUT ---------------------------- */
+/* ------------------------ PAGES ----------------------- */
 
-@import "layout/header";
-@import "layout/main";
-@import "layout/footer";
-@import "layout/dark-mode";
+@import "5-pages/home";
+@import "5-pages/home-responsive";

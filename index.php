@@ -271,80 +271,80 @@
                     <div class="timeline">
                         <ul>
                             <li>
-                                <div class="s-card card">
+                                <a class="s-card card" href="proyectos/certificados/Certificado_Electronica_Basica.pdf" target="_blank">
                                     <img class="col-3" src="svg/circuito-electronico.svg " alt="">
                                     <div class=" col-sm-10 col-md-9 card-content ">
                                         <h4>Electronica Básica</h4>
                                         <p>Tipo: Curso <br> <span>Diciembre 2018</span></p>
-                                        <a class="btn-certificado" href="proyectos/certificados/Certificado_Electronica_Basica.pdf" target="_blank">Ver Certificado</a>
+                                        <span class="btn-certificado">Ver Certificado</span>
                                     </div>
-                                </div>
+                                </a>
                             </li>
                             <li>
-                                <div class="s-card card ">
+                                <a class="s-card card " href="proyectos/certificados/Certificado_Reparacion_Pc.pdf" target="_blank">
                                     <img class="col-3" src="svg/torre-de-pc.svg " alt="">
                                     <div class=" col-sm-10 col-md-9 card-content ">
                                         <h4>Reparación de Computadoras</h4>
                                         <p>Tipo: Curso <br> <span>Marzo 2019</span></p>
-                                        <a class="btn-certificado" href="proyectos/certificados/Certificado_Reparacion_Pc.pdf" target="_blank">Ver Certificado</a>
+                                        <span class="btn-certificado">Ver Certificado</span>
 
                                     </div>
-                                </div>
+                                </a>
                             </li>
                             <li>
-                                <div class="s-card card">
+                                <a class="s-card card" href="proyectos/certificados/Bachiller.pdf" target="_blank">
                                     <img class="col-3" src="svg/graduado.svg " alt="">
                                     <div class=" col-sm-10 col-md-9 card-content ">
                                         <h4>Estudios</h4>
                                         <p>Tipo: Bachillerato<br><span>2014-2019</span></p>
-                                        <a class="btn-certificado" href="proyectos/certificados/Bachiller.pdf" target="_blank">Ver Certificado</a>
+                                        <span class="btn-certificado">Ver Certificado</span>
 
                                     </div>
-                                </div>
+                                </a>
                             </li>
                             <li>
-                                <div class="s-card card ">
+                                <a class="s-card card " href="proyectos/certificados/Certificado Udemy Master en Css.pdf" target="_blank">
                                     <img class="col-3" src="svg/Css-Bootstrap.svg" alt="">
                                     <div class=" col-sm-10 col-md-9 card-content ">
                                         <h4>Css Responsive y BootsTrap</h4>
                                         <p>Tipo: Curso Online<br>Agosto 2021</span>
                                         </p>
-                                        <a class="btn-certificado" href="proyectos/certificados/Certificado Udemy Master en Css.pdf" target="_blank">Ver Certificado</a>
+                                        <span class="btn-certificado">Ver Certificado</span>
                                     </div>
-                                </div>
+                                </a>
                             </li>
                             <li>
-                                <div class="s-card card ">
+                                <a class="s-card card " href="proyectos/certificados/Certificado Udemy HTML.pdf" target="_blank">
                                     <img class="col-3" src="svg/html.svg" alt="">
                                     <div class=" col-sm-10 col-md-9 card-content ">
                                         <h4>HTML de Cero a Experto</h4>
                                         <p>Tipo: Curso Online<br>Diciembre 2021</span>
                                         </p>
-                                        <a class="btn-certificado" href="proyectos/certificados/Certificado Udemy HTML.pdf" target="_blank">Ver Certificado</a>
+                                        <span class="btn-certificado">Ver Certificado</span>
                                     </div>
-                                </div>
+                                </a>
                             </li>
                             <li>
-                                <div class="s-card card ">
+                                <a class="s-card card " href="proyectos/certificados/Universidad de Css desde cero a experto.pdf" target="_blank">
                                     <img class="col-3" src="svg/Css.svg " alt="">
                                     <div class=" col-sm-10 col-md-9 card-content ">
                                         <h4>Css de Cero a Experto</h4>
                                         <p>Tipo: Curso Online<br>Diciembre 2021</span>
                                         </p>
-                                        <a class="btn-certificado" href="proyectos/certificados/Universidad de Css desde cero a experto.pdf" target="_blank">Ver Certificado</a>
+                                        <span class="btn-certificado">Ver Certificado</span>
                                     </div>
-                                </div>
+                                </a>
                             </li>
                             <li>
-                                <div class="s-card card ">
+                                <a class="s-card card " href="proyectos/certificados/Certificado_sass.pdf" target="_blank">
                                     <img class="col-3" src="svg/sass.svg " alt="">
                                     <div class=" col-sm-10 col-md-9 card-content ">
                                         <h4>Sass y JQuery</h4>
                                         <p>Tipo: Curso Online<br>Enero 2022</span>
                                         </p>
-                                        <a class="btn-certificado" href="proyectos/certificados/Certificado_sass.pdf" target="_blank">Ver Certificado</a>
+                                        <span class="btn-certificado">Ver Certificado</span>
                                     </div>
-                                </div>
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -631,7 +631,7 @@
                         </div>
                         <div class="cerrar-overlay-video"></div>
 
-                        <div class=" contenedor-video col-md-8">
+                        <div class=" contenedor-video col-lg-8">
                             <div class="ratio ratio-4x3"><iframe src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
                         </div>
 

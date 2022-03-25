@@ -1,0 +1,209 @@
+/* ----------------------- MODO NOCTURNO ---------------------- */
+
+.switch {
+    background: rgba(255, 255, 255, 0.685);
+    border-radius: 1000px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    outline: none;
+    &::after {
+        content: "";
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        background: $bg-color2;
+        top: 0;
+        left: 0;
+        right: unset;
+        transition: 300ms;
+        border-radius: 100%;
+        box-shadow: 0px 0px 2px 2xp rgba(18, 29, 36, 0.3);
+    }
+    &.active-noche {
+        background: rgba(0, 0, 0, 0.623);
+        color: black;
+        &::after {
+            left: 50%;
+            background: #ffffff;
+        }
+    }
+    span {
+        i {
+            background: url(../svg/menu.svg);
+            width: 30px;
+            height: 30px;
+            display: block;
+        }
+    }
+}
+
+.dark {
+    .cls-11 {
+        fill: #040006 !important;
+    }
+    .btn-secundario {
+        border: 2px solid $text-color-night;
+        &:hover {
+            border: 2px solid $color-primario;
+            img {
+                filter: invert(100%);
+                -webkit-filter: invert(100%);
+            }
+        }
+        img {
+            width: 15px;
+            -webkit-filter: invert(0%);
+            filter: invert(0%);
+            transition: all .5s;
+        }
+    }
+    #preload {
+        background: $bg-color-night;
+    }
+    .lds-facebook div {
+        background: $nav-modal-color;
+    }
+    background: $bg-color-night;
+    p,
+    article,
+    a,
+    h1,
+    h2,
+    h3,
+    h4,
+    li {
+        color: $text-color-night;
+    }
+    #header {
+        .navbar-down {
+            background: rgb(238, 238, 238);
+        }
+        .menu-btn {
+            filter: invert(0%) !important;
+            -webkit-filter: invert(0%) !important;
+        }
+        .video-bg,
+        .video-bg2 {
+            opacity: .9;
+        }
+        @media (max-width:950px) {
+            .nav {
+                background: rgba(238, 238, 238, 0.753);
+                a {
+                    color: $color-secundario-night;
+                }
+            }
+        }
+        &::before {
+            background: rgb(255, 255, 255);
+        }
+    }
+    #main {
+        background: $bg-color-night;
+        #about-us,
+        .about-content,
+        .about-image {
+            background: $bg-color2-night;
+        }
+        .btn-certificado:hover {
+            color: $color-primario;
+        }
+        .about-button {
+            .icon {
+                img {
+                    filter: invert(0);
+                    -webkit-filter: invert(0);
+                }
+            }
+        }
+        .link-sitio:hover {
+            color: $color-primario;
+        }
+        .s-card:hover {
+            background: $bg-color2-night;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.096);
+            color: black;
+        }
+        .card {
+            background: $bg-color-night;
+        }
+        .m-study-container::after {
+            background: #afafafe8;
+        }
+        .progress {
+            background-color: $bg-color2-night;
+        }
+        #works {
+            background: $bg-color-night;
+            .filter-item {
+                border: 2px solid $bg-color2-night;
+            }
+        }
+        #overlay {
+            background: rgb(0, 0, 0, 56%);
+            .overlay-container {
+                background: $bg-color-night;
+                .cerrar-overlay {
+                    -webkit-filter: none;
+                    filter: none;
+                }
+                .enlaces-img a:hover {
+                    color: white
+                }
+            }
+        }
+        #modal-video {
+            background: rgb(0, 0, 0, 56%);
+            .video-container {
+                background: $bg-color-night;
+                .cerrar-overlay-video {
+                    -webkit-filter: none;
+                    filter: none;
+                }
+            }
+        }
+        #contact {
+            background: $bg-color2-night;
+            .contact-redes ul li {
+                a {
+                    background: $bg-color2-night;
+                    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.096);
+                }
+                a:hover p {
+                    color: $color-primario;
+                }
+                a:active {
+                    box-shadow: none;
+                }
+            }
+        }
+        #footer {
+            background: $bg-color-night;
+        }
+        .form {
+            background: $color-secundario;
+            .cerrar-overlay {
+                filter: none;
+                -webkit-filter: none;
+            }
+        }
+        .form__data {
+            input,
+            textarea {
+                border-bottom: 1px solid transparentize($color-secundario-night, .7);
+                color: transparentize($color-secundario-night, .5);
+            }
+            input:focus,
+            textarea:focus {
+                border-bottom: 1px solid $color-secundario-night;
+                color: $color-secundario-night;
+            }
+            input[type="submit"] {
+                color: transparentize($color-secundario-night, .5);
+            }
+        }
+    }
+}
