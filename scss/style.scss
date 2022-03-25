@@ -10,17 +10,17 @@
 
 /* ----------------------- LAYOUT ----------------------- */
 
+@import "3-layout/preload";
 @import "3-layout/buttons";
 @import "3-layout/containers";
-@import "3-layout/dark-mode";
+@import "3-layout/footer";
+@import "3-layout/header";
+@import "3-layout/logo";
+@import "3-layout/modal";
 
-/* -------------------------- COMPONENTES ------------------------- */
+/* ---------------------- DARK-MODE --------------------- */
 
-@import "4-componentes/header";
-@import "4-componentes/footer";
-@import "4-componentes/logo";
-@import "4-componentes/modal";
-@import "4-componentes/preload";
+@import "4-dark-mode/dark-mode";
 
 /* ------------------------ PAGES ----------------------- */
 
