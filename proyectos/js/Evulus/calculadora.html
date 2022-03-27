@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evulus</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="shortcut icon" href="assets/icons/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="body-calc">
+    <header class="header">
+        <nav class="navbar navbar-evulus-black navbar-home navbar-expand-lg  fixed-top navbar-light ">
+            <div class="container  d-flex ">
+                <a class="navbar-brand logo" href="index.html">
+                    <picture>
+                        <source media="(min-width: 993px)" srcset="assets/icons/logos/logo-evulusstaking.svg">
+                        <source media="(min-width: 80px)" srcset="assets/icons/logos/logo-staking-white.svg">
+                        <img src="assets/icons/logos/logo-evulusstaking.svg" alt="logo">
+                    </picture>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class=" collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="d-none d-lg-flex menu-icon-compact mx-xl-5">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-2 justify-content-center">
+
+                        <li class="nav-item">
+                            <a class="btn-nav" href="staking.html">Staking</a>
+                        </li>
+                        <li class="nav-item">
+                            <button type="button" class="btn-nav" aria-current="page" data-bs-toggle="modal" data-bs-target="#exampleModal">Calculadora</button>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn-nav active" href="calculadora.html">Comprar Evu</a>
+                        </li>
+
+                    </ul>
+
+
+
+                    <a href="staking.html" class="btn-nav-2">REQUISITOS</a>
+                    <a href="#" class="btn-nav-3">Conectar Wallet</a>
+
+                    <div class="btn-group btn-lang">
+                        <button type="button" class="lang" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+                              ESP
+                            </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><button class="dropdown-item" type="button">Es</button></li>
+                            <li><button class="dropdown-item" type="button">En</button></li>
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-staking">
+
+        <!-- --------------------- MODAL --------------------- -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-calc">
+                <div class="modal-content modal-content-calc">
+
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+
+                    <div class="modal-header-calc">
+                        <h2>Calcular Beneficio</h2>
+                        <p>APY Actual 250%</p>
+                    </div>
+
+
+
+                    <div class="modal-main-calc">
+
+
+                        <div class="cantidad">
+                            <div class="cantidad-evu">
+                                <h5>Cantidad EVU</h5>
+                                <div class="data-value">
+                                    <input type="text" class="" value="Monto EVU">
+                                    <span class="value">$0.00</span>
+                                </div>
+
+
+                                </input>
+                            </div>
+
+
+                            <div class="component-day ">
+                                <div class="porcentaje ">
+                                    <div class="">Días</div>
+                                    <div class="d-flex align-items-baseline gap-1">
+                                        <div class="prev"></div>
+                                        <span class="porcentaje">0%</span>
+                                    </div>
+                                </div>
+                                <div class="linea-mes">
+                                    <div class="linea"></div>
+
+                                    <div class="mes mes-1">
+                                        <div class="container-item-mes">
+                                            <div class="day-mes__title">3meses</div>
+                                            <div class="circle"></div>
+                                        </div>
+
+                                    </div>
+                                    <div class="mes mes-2">
+                                        <div class="container-item-mes">
+                                            <div class="day-mes__title">3meses</div>
+                                            <div class="circle"></div>
+                                        </div>
+
+                                    </div>
+                                    <div class="mes mes-3">
+                                        <div class="container-item-mes">
+                                            <div class="day-mes__title">3meses</div>
+                                            <div class="circle"></div>
+                                        </div>
+
+                                    </div>
+                                    <div class="mes">
+                                        <div class="container-item-mes">
+                                            <div class="day-mes__title">3meses</div>
+                                            <div class="circle"></div>
+                                        </div>
+
+                                    </div>
+
+
+
+
+                                </div>
+                                <div class="porcentaje ">
+                                    <div></div>
+                                    <div class="d-flex align-items-baseline gap-1">
+                                        <div class="next"></div>
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+
+
+                        <div class="montos">
+
+                            <div class="data-value">
+
+                                <input type="text" class="" value="Monto Diario"><span class="value">$0.00</span>
+                            </div>
+                            <div class="data-value">
+
+                                <input type="text" class="" value="Monto Mensual"><span class="value">$0.00</span>
+                            </div>
+                            <div class="data-value">
+
+                                <input type="text" class="" value="Monto Total"><span class="value">$0.00</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="modal-footer-calc">
+
+                        <div class="component-mensual">
+
+                            <div class="meses">
+                                <div class="mes-title">Ganancia Estimada</div>
+
+                                <div class="mes__items-container d-flex">
+
+                                    <div class="item-mes">
+                                        <div class="item-mensual__number">1</div>
+                                        <div class="item-mensual__value active">5%</div>
+                                    </div>
+                                    <div class="item-mes">
+                                        <div class="item-mensual__number">2</div>
+                                        <div class="item-mensual__value active">8%</div>
+                                    </div>
+                                    <div class="item-mes">
+                                        <div class="item-mensual__number">3</div>
+                                        <div class="item-mensual__value active">12%</div>
+                                    </div>
+                                    <div class="item-mes">
+                                        <div class="item-mensual__number">4</div>
+                                        <div class="item-mensual__value active">16%</div>
+                                    </div>
+                                    <div class="item-mes">
+                                        <div class="item-mensual__number">5</div>
+                                        <div class="item-mensual__value">18%</div>
+                                    </div>
+                                    <div class="item-mes">
+                                        <div class="item-mensual__number">6</div>
+                                        <div class="item-mensual__value">20%</div>
+                                    </div>
+                                    <div class="item-mes">
+                                        <div class="item-mensual__number">7</div>
+                                        <div class="item-mensual__value">23%</div>
+                                    </div>
+                                    <div class="item-mes">
+                                        <div class="item-mensual__number">8</div>
+                                        <div class="item-mensual__value">27%</div>
+                                    </div>
+                                    <div class="item-mes">
+                                        <div class="item-mensual__number">9</div>
+                                        <div class="item-mensual__value">30%</div>
+                                    </div>
+                                    <div class="item-mes">
+                                        <div class="item-mensual__number">10</div>
+                                        <div class="item-mensual__value">33%</div>
+                                    </div>
+                                    <div class="item-mes">
+                                        <div class="item-mensual__number">11</div>
+                                        <div class="item-mensual__value">35%</div>
+                                    </div>
+                                    <div class="item-mes">
+                                        <div class="item-mensual__number">12</div>
+                                        <div class="item-mensual__value">40%</div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="mensual-total ">
+                                <div class="mensual-total__title">% Total</div>
+
+                                <button type="button">250%</button>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+        <!-- ---------------- FIN MODAL ---------------- -->
+        <section class="staking-progresivo mt-5 py-5">
+            <div class="container">
+                <div class="title">
+                    <h1>Staking progresivo</h1>
+                    <span class="code">0x18b5f22266343ccd180c6285a66cc9a23dc262e9</span>
+                </div>
+
+                <div class="precios">
+                    <div class="apy container-valance-value ">
+                        <div class="valance-value">
+                            <div class="precios__title">APY</div>
+                            <span>0%</span>
+                        </div>
+
+                    </div>
+                    <div class="tvl  container-valance-value ">
+                        <div class="valance-value">
+                            <div class="precios__title">TVL</div>
+                            <span>$0</span>
+                        </div>
+                    </div>
+                    <div class="precio-evu  container-valance-value ">
+                        <div class="valance-value">
+
+                            <div class="precios__title">Precio EVU</div>
+                            <span>0.66</span>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="panel">
+                    <div class="row">
+                        <div class="panel__cuenta d-flex">
+                            <select class="form-select form-select-lg " aria-label=".form-select-lg example">
+                                <option selected>Selecionar cuenta</option>
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                            </select>
+                            <div class="data-value">
+                                <input type="text" class="" value="cantidad-evu">
+                                <span class="value">$0.00</span>
+                                </input>
+                            </div>
+
+
+                        </div>
+
+
+
+
+                        <div class="panel__day">
+
+                            <div class="component-day ">
+                                <div class="porcentaje ">
+                                    <div class="">Días</div>
+                                    <div class="d-flex align-items-baseline gap-1">
+                                        <div class="prev"></div>
+                                        <span class="porcentaje">0%</span>
+                                    </div>
+                                </div>
+                                <div class="linea-mes">
+                                    <div class="linea"></div>
+
+                                    <div class="mes mes-1">
+                                        <div class="container-item-mes">
+                                            <div class="day-mes__title">3meses</div>
+                                            <div class="circle"></div>
+                                        </div>
+
+                                    </div>
+                                    <div class="mes mes-2">
+                                        <div class="container-item-mes">
+                                            <div class="day-mes__title">3meses</div>
+                                            <div class="circle"></div>
+                                        </div>
+
+                                    </div>
+                                    <div class="mes mes-3">
+                                        <div class="container-item-mes">
+                                            <div class="day-mes__title">3meses</div>
+                                            <div class="circle"></div>
+                                        </div>
+
+                                    </div>
+                                    <div class="mes">
+                                        <div class="container-item-mes">
+                                            <div class="day-mes__title">3meses</div>
+                                            <div class="circle"></div>
+                                        </div>
+
+                                    </div>
+
+
+
+
+                                </div>
+                                <div class="porcentaje ">
+                                    <div></div>
+                                    <div class="d-flex align-items-baseline gap-1">
+                                        <div class="next"></div>
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+
+
+
+                        <div class="panel__mes">
+                            <div class="component-mensual">
+
+                                <div class="meses">
+                                    <div class="mes-title">Ganancia Estimada</div>
+
+                                    <div class="mes__items-container d-flex">
+
+                                        <div class="item-mes">
+                                            <div class="item-mensual__number">1</div>
+                                            <div class="item-mensual__value active">5%</div>
+                                        </div>
+                                        <div class="item-mes">
+                                            <div class="item-mensual__number">2</div>
+                                            <div class="item-mensual__value active">8%</div>
+                                        </div>
+                                        <div class="item-mes">
+                                            <div class="item-mensual__number">3</div>
+                                            <div class="item-mensual__value active">12%</div>
+                                        </div>
+                                        <div class="item-mes">
+                                            <div class="item-mensual__number">4</div>
+                                            <div class="item-mensual__value active">16%</div>
+                                        </div>
+                                        <div class="item-mes">
+                                            <div class="item-mensual__number">5</div>
+                                            <div class="item-mensual__value">18%</div>
+                                        </div>
+                                        <div class="item-mes">
+                                            <div class="item-mensual__number">6</div>
+                                            <div class="item-mensual__value">20%</div>
+                                        </div>
+                                        <div class="item-mes">
+                                            <div class="item-mensual__number">7</div>
+                                            <div class="item-mensual__value">23%</div>
+                                        </div>
+                                        <div class="item-mes">
+                                            <div class="item-mensual__number">8</div>
+                                            <div class="item-mensual__value">27%</div>
+                                        </div>
+                                        <div class="item-mes">
+                                            <div class="item-mensual__number">9</div>
+                                            <div class="item-mensual__value">30%</div>
+                                        </div>
+                                        <div class="item-mes">
+                                            <div class="item-mensual__number">10</div>
+                                            <div class="item-mensual__value">33%</div>
+                                        </div>
+                                        <div class="item-mes">
+                                            <div class="item-mensual__number">11</div>
+                                            <div class="item-mensual__value">35%</div>
+                                        </div>
+                                        <div class="item-mes">
+                                            <div class="item-mensual__number">12</div>
+                                            <div class="item-mensual__value">40%</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="mensual-total ">
+                                    <div class="mensual-total__title">% Total</div>
+
+                                    <button type="button">250%</button>
+
+
+                                </div>
+                            </div>
+
+
+                        </div>
+
+
+
+
+
+
+
+
+                        <div class="panel__stake d-flex">
+                            <input class="btn-evulus-medium" type="button" value="stake">
+                            <input class="btn-evulus-medium" type="button" value="unstake">
+                            <input class="btn-evulus-medium" type="button" value="restake">
+                            <input class="btn-evulus-medium" type="button" value="claimreward">
+                        </div>
+
+
+
+
+                        <div class="panel__valance d-flex">
+                            <div class="valance-item">
+                                <div class="valance-item__title">Mi Stoke</div>
+                                <div class="valance-item__total">0</div>
+                            </div>
+                            <div class="valance-item">
+                                <div class="valance-item__title">Ganancia Estimada</div>
+                                <div class="valance-item__total">0,00</div>
+                                <span>EVU</span>
+                            </div>
+                            <div class="valance-item">
+                                <div class="valance-item__title">Mi Balance</div>
+                                <div class="valance-item__total">499000.00</div>
+                                <span>EVU</span>
+                            </div>
+                        </div>
+
+
+
+                        <div class="panel__table">
+                            <table>
+                                <thead>
+                                    <th class="col-md-4 col-2">Cuenta</th>
+                                    <th class="col-md-2 col-2">Cantidad</th>
+                                    <th class="col-md-2 col-2">inicio</th>
+                                    <th class="col-md-2 d-md-block d-none">finaliza</th>
+                                    <th class="col-md-2 col-2">Bloquedos</th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>0</td>
+                                        <td>5000.00</td>
+                                        <td>17/02/2020 <span>20:00 p.m</span></td>
+                                        <td class="d-md-block d-none">17/03/2022 <span>20:00 p.m</span></td>
+                                        <td>30 Dias</td>
+                                    </tr>
+
+                                </tbody>
+
+
+
+                            </table>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <div class="footer-staking">
+                    <button type="button" class="btn-submit-wallet">Conectar Wallet</button>
+
+
+                    <p>Conecte su billetera EVU a Evulus Staking</p>
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <script data-search-pseudo-elements defer src="https://pro.fontawesome.com/releases/v5.10.1/js/all.js "></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="assets/js/app-calc.js"></script>
+</body>
+
+</html>
