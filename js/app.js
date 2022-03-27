@@ -242,6 +242,7 @@ modalGaleria.forEach((img) => {
             document.querySelector('.repo-git').style.display = "flex"
 
         }
+
     })
 
 

@@ -509,10 +509,10 @@
                         </div>
                     </div>
 
-                    <div class="item" data-title="Evulus-Tokens" data-fecha="19/Febrero/2022" data-description="Apoye en la creación de algunas secciones de la página oficial de Evulus, trabaje de manera FreeLancer y todo fue creado en base a bootstrap,html,css y javaScript "
+                    <div class="item" data-title="Evulus-Tokens" data-fecha="19/Febrero/2022" data-description="Apoye en la creación de algunas secciones de la página oficial de Evulus, trabaje de manera FreeLancer y todo fue creado en base a bootstrap,html,css y javaScript. Pueden visitar su sitio en https://evulus.com/"
                         data-link="proyectos/js/evulus-Inicio/index.html" data-download="proyectos/js/evulus-Inicio/evulus-full.jpg" data-repositorio="https://github.com/fernando5498/evulus-Inicio" data-categoria="javascript">
                         <div class="item-content">
-                            <img src="proyectos/js/evulus-Inicio/evulus.webp" alt="Evulus-Tokens">
+                            <img src="proyectos/js/evulus-Inicio/evulus-home.webp" alt="Evulus-Tokens">
                         </div>
                     </div>
 
