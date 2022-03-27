@@ -157,7 +157,7 @@
                         <li class="nav-link"><a class="about-us" href="#about-us">Acerca de mí</a></li>
                         <li class="nav-link"><a class="study" href="#study">Estudios</a></li>
                         <li class="nav-link"><a class="skills" href="#skills">Habilidades</a></li>
-                        <li class="nav-link"><a class="works" href="#works">Portafolio</li>
+                        <li class="nav-link"><a class="works" href="#works">Portafolio</a></li>
                         <li class="nav-link"><a class="contact" href="#contact">Contáctos</a></li>
                     </ul>
                     <div class="menu-btn"></div>
