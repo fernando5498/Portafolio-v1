@@ -136,13 +136,12 @@ elementosHTML.forEach(containerContador => {
 contentGraphics = document.querySelector('.animation-graphics')
 
 let animationStatic = bodymovin.loadAnimation({
-    container: contentGraphics,
-    renderer: 'svg',
-    loop: false,
-    autoplay: false,
-    path: 'assets/animation-lottie/estadistica.json'
-});
-
+    container: contentGraphics, // Required
+    path: 'assets/animation-lottie/estadistica.json', // Required
+    renderer: 'svg', // Required
+    loop: false, // Optional
+    autoplay: false, // Optional
+})
 
 const animationInit = (entradas, observador2) => {
     entradas.forEach((entrada) => {
