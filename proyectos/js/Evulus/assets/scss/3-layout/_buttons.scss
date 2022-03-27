@@ -1,0 +1,251 @@
+.btn-evulus {
+    @include btn-personalizado($color-btn, 0px 37px, 1.5rem);
+    box-shadow: 0px 0px 2rem $color-btn;
+    &:hover {
+        box-shadow: 0px 0px 3rem $color-btn;
+        color: $color-texo;
+    }
+    &:active {
+        box-shadow: 0px 0px 3.5rem $color-btn !important;
+        color: $color-texo !important;
+    }
+    &:focus {
+        box-shadow: 0px 0px 3.5rem $color-btn !important;
+        color: $color-texo !important;
+    }
+}
+
+.btn-evulus-medium {
+    @include btn-personalizado($color-btn, 15px 20px, 1rem);
+    border: 3px solid $color-btn;
+    &:hover {
+        background: #e0a800;
+        color: $color-texo !important;
+        text-decoration: none !important;
+    }
+    &:active {
+        background: #d39e00;
+    }
+}
+
+.btn-evulus-small {
+    @include btn-personalizado($color-btn, .5rem, 1rem);
+    margin: 0;
+    border: 2px solid $color-btn;
+    &:hover {
+        background: #e0a800;
+        color: $color-texo !important;
+        text-decoration: none !important;
+        border: 2px solid #e0a800;
+    }
+    &:active {
+        background: #d39e00;
+    }
+}
+
+
+/* ------------------ BTN EVULUS WHITE ------------------ */
+
+.btn-evulus-white {
+    @include btn-personalizado($color-secundario, 5px 28px, 33px);
+    color: $color-principal;
+    border-radius: 30px;
+    box-shadow: 0px 0px 2rem $color-btn;
+    text-transform: uppercase;
+    white-space: nowrap;
+    &:hover {
+        box-shadow: 0px 0px 3rem $color-btn;
+        color: $color-principal;
+    }
+    &:active {
+        color: $color-principal-oscuro !important;
+        box-shadow: 0px 0px 3.5rem $color-btn !important;
+    }
+    &:focus {
+        color: $color-principal-oscuro !important;
+        box-shadow: 0px 0px 3.5rem $color-btn !important;
+    }
+}
+
+.btn-green {
+    @include btn-personalizado($color-principal, 12px 30px, 33px);
+    box-shadow: 0px 0px 2rem white;
+    border-radius: 40px;
+    color: $color-secundario;
+    &:hover {
+        box-shadow: 0px 0px 3rem $color-secundario;
+        color: $color-secundario;
+    }
+    &:active {
+        box-shadow: 0px 0px 3.5rem $color-secundario !important;
+        color: $color-secundario !important;
+    }
+    &:focus {
+        box-shadow: 0px 0px 3.5rem $color-secundario !important;
+        color: $color-secundario !important;
+    }
+}
+
+.btn-green--normal {
+    @include btn-personalizado($color-secundario, 9px 40px, 36px);
+    border: 3px solid $color-principal;
+    color: $color-principal;
+    &:hover {
+        background: $color-principal;
+        color: $color-secundario;
+    }
+    &.active {
+        background: $color-principal;
+        color: $color-secundario;
+    }
+}
+
+
+/* --------------------- BUTTON TOP --------------------- */
+
+.go-top {
+    background: $color-principal;
+    position: fixed;
+    bottom: 16px;
+    right: 32px;
+    width: 50px;
+    height: 50px;
+    border-radius: $borde-radius-medium;
+    -webkit-border-radius: $borde-radius-medium;
+    -moz-border-radius: $borde-radius-medium;
+    -ms-border-radius: $borde-radius-medium;
+    -o-border-radius: $borde-radius-medium;
+    transition: $transition-all;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    color: $color-secundario;
+    box-shadow: $box-shadow-terciario;
+    text-decoration: none;
+    pointer-events: none;
+    -webkit-transition: $transition-all;
+    -moz-transition: $transition-all;
+    -ms-transition: $transition-all;
+    -o-transition: $transition-all;
+    opacity: 0;
+    &:hover {
+        color: $color-secundario;
+    }
+}
+
+.go-top.active {
+    opacity: 1;
+    bottom: 32px;
+    pointer-events: auto;
+}
+
+
+/* -------------------- BTN-DOWNLOAD -------------------- */
+
+.btn-down-white {
+    font-size: 12px;
+    font-weight: 700;
+    height: fit-content;
+    margin: 10px;
+    padding: 5px .5rem;
+    color: $color-texo;
+    border: 2px solid #eee;
+    background: #eee;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    &:hover {
+        background: #a7a9ac;
+        color: $color-texo;
+    }
+    img {
+        vertical-align: text-top;
+    }
+}
+
+
+/* ------------------------------------------ BUTTONS-SECCION-EVULUS-TOKENS ----------------------------------------- */
+
+.btn-white-tall {
+    @include btn-white(300px, 2rem, 10px);
+    height: 136px;
+}
+
+.btn-white-medium {
+    @include btn-white(220px, .5rem 1rem, 5px);
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.btn-evulus-token {
+    @extend .btn-evulus;
+    font-size: 22px;
+    padding: 14px 30px;
+}
+
+
+/* -------------------- BTN-ACADEMIA -------------------- */
+
+.btn-evulus-academia {
+    @include btn-personalizado($color-btn, 6px 52px, 37.98px);
+    border-radius: 30px;
+    font-weight: 800;
+    box-shadow: $box-shadow-primario;
+    &:hover {
+        background: #e0a800;
+        color: $color-texo !important;
+        text-decoration: none !important;
+    }
+    &:active {
+        background: #d39e00;
+    }
+}
+
+
+/* -------------------- BTN-ACCOUNTS -------------------- */
+
+.account-google,
+.account-facebook {
+    @include btn-personalizado(auto, 16px 0px, auto);
+    color: $color-secundario;
+    max-width: 220px;
+    min-width: 50px;
+    border-radius: $borde-radius-low;
+    &:hover {
+        color: $color-secundario;
+    }
+}
+
+.account-facebook {
+    background: #3e5c9a;
+    &:hover {
+        background-color: #3c578d;
+    }
+}
+
+.account-google {
+    background: #df4b38;
+    &:hover {
+        background-color: #ca4534;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .btn-evulus,
+    .btn-evulus-medium,
+    .btn-evulus-icon,
+    .btn-evulus-white,
+    .btn-green,
+    .btn-green--normal,
+    .btn-evulus-academia {
+        width: 90%;
+        padding-left: 5px;
+        padding-right: 5px;
+        margin: 0 auto;
+    }
+}

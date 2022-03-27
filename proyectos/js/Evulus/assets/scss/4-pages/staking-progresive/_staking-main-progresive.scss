@@ -1,0 +1,159 @@
+.title,
+.precios {
+    margin-bottom: 50px;
+}
+
+.title {
+    color: $color-secundario;
+    text-align: center;
+    h1 {
+        font-size: 3rem;
+    }
+    span {
+        font-size: 2rem;
+    }
+}
+
+.precios {
+    display: flex;
+    justify-content: center;
+}
+
+.panel {
+    background: url(../img/bg-panel.png) no-repeat top;
+    box-shadow: 0px 0px 40px 0px #02201b;
+    background-size: cover;
+    position: relative;
+    padding: 3.5rem 2.5rem;
+    margin: 0px auto 30px auto;
+    max-width: 933px;
+    border-radius: 80px;
+    -webkit-border-radius: 80px;
+    -moz-border-radius: 80px;
+    -ms-border-radius: 80px;
+    -o-border-radius: 80px;
+    overflow: hidden;
+    min-height: 940px;
+    .panel__cuenta,
+    .panel__mes,
+    .panel__day,
+    .panel__stake,
+    .panel__valance {
+        margin: 0px auto 20px auto;
+    }
+    &__cuenta {
+        justify-content: space-between;
+        order: 1;
+        .form-select {
+            option {
+                width: 100%;
+            }
+        }
+    }
+    &__day {
+        width: 100%;
+        border: 1px solid white;
+        border-radius: 10px;
+        padding: .5rem 2rem;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        -ms-border-radius: 20px;
+        -o-border-radius: 20px;
+        order: 2;
+    }
+    &__mes {
+        color: $color-secundario;
+        width: 90%;
+        padding: 0;
+        order: 3;
+    }
+    &__stake {
+        border: 1px solid $color-secundario;
+        padding: .5rem 1rem;
+        justify-content: space-between;
+        width: 90%;
+        margin: 0 auto;
+        border-radius: 30px;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        -ms-border-radius: 30px;
+        -o-border-radius: 30px;
+        flex-wrap: wrap;
+        order: 4;
+        input {
+            font-size: 1.5rem;
+            margin: 10px;
+            padding: 0px 25px 6px 25px;
+            font-weight: 400;
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+        }
+    }
+    &__valance {
+        justify-content: space-between;
+        padding: 0;
+        gap: 10px;
+        order: 5;
+        .valance-item {
+            width: 258px;
+            background: $color-secundario;
+            text-align: center;
+            padding: .5rem 0px;
+            border-radius: 15px;
+            -webkit-border-radius: 15px;
+            -moz-border-radius: 15px;
+            -ms-border-radius: 15px;
+            -o-border-radius: 15px;
+            &__title {
+                font-weight: 700;
+            }
+            &__total {
+                display: inline-block;
+            }
+        }
+    }
+    &__table {
+        border-radius: 30px;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        -ms-border-radius: 30px;
+        -o-border-radius: 30px;
+        width: 100%;
+        height: 200px;
+        background: white;
+        overflow: hidden;
+        padding: 0;
+        order: 6;
+        table {
+            width: 100%;
+            thead {
+                background: rgb(0, 0, 0);
+                background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(7, 129, 109, 1) 100%);
+                font-size: 1rem;
+                color: $color-secundario;
+            }
+            tbody {
+                background: $color-secundario;
+                font-weight: 500;
+                font-size: .8rem;
+            }
+            td,
+            th {
+                padding: .5rem 15px;
+            }
+        }
+    }
+}
+
+.footer-staking {
+    width: 100%;
+    text-align: center;
+    p {
+        color: $color-secundario;
+        margin-top: 20px;
+        font-weight: 300;
+    }
+}

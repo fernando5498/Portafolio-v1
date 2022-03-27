@@ -1,0 +1,26 @@
+/* ----------------------- CONTACT ---------------------- */
+
+.contact {
+    background: url(../img/bg-end.png) top $color-principal;
+    padding: 80px 0px;
+    color: $color-secundario;
+    text-align: center;
+    position: relative;
+    &__content {
+        position: relative;
+        height: 100%;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        h3 {
+            font-size: calc(25px + 1vw);
+            margin: 0;
+            font-weight: 400;
+        }
+        h2 {
+            font-size: calc(35px + 1vw);
+            font-weight: 600;
+        }
+    }
+}

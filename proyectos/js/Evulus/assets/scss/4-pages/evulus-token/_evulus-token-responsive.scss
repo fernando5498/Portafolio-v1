@@ -1,0 +1,93 @@
+/* --------------------- RESPONSIVE --------------------- */
+
+@media screen and (max-width:1400px) {
+    .evulus-token .container .row .evulus-token__content__text {
+        h1 {
+            font-size: calc(50px + 1.3vw);
+        }
+        p {
+            font-size: calc(8px + 1.4vw);
+        }
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .logginSearch {
+        flex-direction: column;
+        .button-search {
+            width: 100%;
+            input {
+                width: 100% !important;
+                opacity: 1;
+            }
+            button {
+                background: $color-principal;
+                color: $color-secundario;
+            }
+        }
+    }
+    .btn-1,
+    .btn-2 {
+        min-width: 110px;
+    }
+    .btn-evulus-green {
+        text-align: start;
+        svg {
+            margin-right: 10px;
+            margin-top: 3px;
+        }
+    }
+    .platform-img,
+    .crypto-assets-img {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:991px) {
+    .evulus-token .container .row {
+        .evulus-token__img {
+            right: 0;
+            display: block;
+            margin: 0 auto;
+            width: 80%;
+            max-width: 500px;
+        }
+    }
+}
+
+@media screen and (max-width:767px) {
+    .evulus-token .container .row .evulus-token__content__text p {
+        font-size: 24px;
+    }
+    .nav_principal {
+        flex-direction: column;
+        li {
+            width: 100%;
+        }
+    }
+    .graphics-distribution__grafico {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .evulus-token .row .evulus__content__text h1 {
+        font-size: calc(30px + 4.8vw);
+    }
+    .crypto-assets .crypto-assets-text p,
+    .platform .platform-text-item p {
+        font-size: 19px;
+    }
+    .evu-contract .contract__text p {
+        font-size: 19px;
+        margin-bottom: 1rem;
+    }
+    .btn-evulus-token {
+        font-size: 20px;
+    }
+    .platform-img,
+    .crypto-assets-img,
+    .platform .video-container {
+        width: 100%;
+    }
+}

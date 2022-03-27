@@ -1,0 +1,158 @@
+/* ----------------------- STAKING ---------------------- */
+
+.staking {
+    position: relative;
+    min-height: 100vh;
+    background: url(../img/velas.png) no-repeat;
+    background-position: center calc(10px + 4.5vw);
+    color: $color-secundario;
+    .staking-content {
+        &__title {
+            h2,
+            h1 {
+                font-size: 80px;
+            }
+            h2 {
+                font-weight: 300;
+            }
+        }
+        .btn-evulus--staking {
+            font-size: 73px;
+            margin: 70px auto;
+            display: table;
+            border-radius: 20px;
+            position: relative;
+            left: -10%;
+            padding: 0px 37px;
+        }
+        &__parrafo {
+            font-size: calc(14px + .5vw);
+            h4 {
+                color: $color-texo;
+                padding: 8px;
+                font-size: calc(18px + .5vw);
+                background: $color-btn;
+                width: fit-content;
+                border-radius: $borde-radius-medium;
+            }
+        }
+    }
+    &__img {
+        position: relative;
+        margin: 0 auto;
+        max-width: 300px;
+        img {
+            width: 100%;
+        }
+    }
+    .btn-green {
+        margin: 30px auto 0px auto;
+    }
+}
+
+.pasos,
+.participacion,
+.reglas {
+    padding-top: 58px;
+    padding-bottom: 58px;
+}
+
+.subtitle {
+    font-size: calc(28px + 1.3wv);
+    margin-bottom: 30px;
+}
+
+.requisitos,
+.pasos,
+.reglas {
+    border-bottom: 1px solid $color-secundario;
+}
+
+
+/* --------------------- REQUISITOS --------------------- */
+
+.requisitos {
+    border-top: 1px solid $color-secundario;
+    .participacion {
+        width: 85%;
+        margin: 0 auto;
+        .participacion-content {
+            p {
+                font-size: calc(14px + .4vw);
+            }
+            &__items {
+                width: fit-content;
+                a {
+                    margin: 5px;
+                    border: 1px solid $color-secundario;
+                    border-radius: 5px;
+                    padding: 5px 10px;
+                    background: transparent;
+                    transition: $transition-all;
+                    img {
+                        width: 110px;
+                    }
+                    &:hover {
+                        transform: scale(1.03);
+                    }
+                }
+            }
+            .btn-evulus-white {
+                margin: 40px auto;
+            }
+        }
+    }
+}
+
+
+/* ------------------------ PASOS ----------------------- */
+
+.pasos-buttons {
+    margin-top: 20px;
+    .btn-evulus-medium {
+        padding: 5px 25px;
+    }
+}
+
+
+/* ----------------------- .REGLAS ---------------------- */
+
+.reglas {
+    .row {
+        width: 85%;
+        margin: 0 auto;
+    }
+    &__list {
+        list-style: decimal-leading-zero;
+        margin-left: 40px;
+        position: relative;
+        font-size: calc(17px + .5vw);
+        font-weight: 600;
+        li {
+            margin-bottom: 10px;
+        }
+        &::after {
+            position: absolute;
+            content: "";
+            width: 30px;
+            left: calc(-30px + -40px);
+            top: 50%;
+            transform: translateY(-50%);
+            height: 30px;
+            background: url(../icons/i-icon.png);
+        }
+    }
+}
+
+
+/* --------------- .TRANSICIONES--STAKING --------------- */
+
+.transiciones--staking {
+    background-color: transparent;
+    .contador-container {
+        h5,
+        span {
+            color: $color-secundario;
+        }
+    }
+}

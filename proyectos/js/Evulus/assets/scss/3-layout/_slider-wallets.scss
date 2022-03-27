@@ -1,0 +1,55 @@
+.carousel-wallets {
+    .item {
+        position: relative;
+        margin: 0 auto;
+        width: 120px;
+        color: $color-principal;
+        text-align: center;
+        a {
+            img {
+                margin: 0 auto;
+                width: 100%;
+                border-radius: 20px;
+                overflow: hidden;
+                margin-bottom: 10px;
+            }
+            pointer-events: none;
+        }
+        span {
+            font-weight: 600;
+        }
+    }
+    .owl-nav>button {
+        margin-top: -26px;
+        position: absolute;
+        top: 30%;
+    }
+    .owl-stage-outer {
+        padding-top: 20px;
+    }
+    .owl-nav [class*='owl-']:hover {
+        color: $color-secundario;
+        background: transparent !important;
+    }
+    .owl-nav svg {
+        font-size: 52px;
+        color: #878687;
+    }
+    .owl-nav .owl-prev {
+        left: -30px;
+    }
+    .owl-nav .owl-next {
+        right: -30px;
+    }
+}
+
+.owl-carousel {
+    z-index: 0;
+}
+
+@media screen and (max-width:767px) {
+    .carousel-wallets {
+        width: 80%;
+        margin: 0 auto;
+    }
+}

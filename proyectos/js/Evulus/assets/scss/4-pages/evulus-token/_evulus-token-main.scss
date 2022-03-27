@@ -1,0 +1,369 @@
+/* ----------------------- EVULUS TOKEN----------------------- */
+
+.evulus-token {
+    min-height: 100vh;
+    .container {
+        .row {
+            .evulus-token__content {
+                display: flex;
+                flex-direction: column;
+                &__text {
+                    h1 {
+                        font-size: 72.6px;
+                        span {
+                            color: $color-principal;
+                        }
+                    }
+                    p {
+                        font-size: 1.8em;
+                        line-height: 2rem;
+                    }
+                }
+                .evulus-items {
+                    gap: 20px;
+                }
+            }
+            .evulus-token__img {
+                position: relative;
+                right: -30px;
+                display: flex;
+                align-items: center;
+            }
+        }
+        .social-icons {
+            position: relative;
+            bottom: 0;
+        }
+    }
+}
+
+.bg-verde-claro {
+    background: $bg-color;
+}
+
+.bg-verde-ultra-claro {
+    background: $bg-color-ultra-claro;
+}
+
+.crypto-assets-content,
+.platform-img,
+.padding-video-container,
+.platform-info,
+.evu-tokens-content,
+.evu-contract-content,
+.evu-graphics-content,
+.exchanges__content,
+.service-team,
+.road-map__content {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+
+/* -------------------- CRYPTO-ASSETS ------------------- */
+
+.crypto-assets {
+    .crypto-assets-text {
+        p {
+            font-size: 24px;
+            text-align: justify;
+        }
+    }
+    .crypto-assets-img {
+        max-width: 930px;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+
+/* ---------------------- PLATFORM ---------------------- */
+
+.platform {
+    .platform-text-item {
+        div {
+            font-size: 2rem;
+            font-weight: 400;
+            line-height: 30px;
+            img {
+                width: 45px;
+                vertical-align: baseline;
+            }
+        }
+        p {
+            font-size: 24px;
+        }
+    }
+    .video-container {
+        max-width: 1115px;
+        max-height: 621px;
+    }
+    .platform-img {
+        img {
+            max-width: 1075px;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+}
+
+
+/* --------------------- EVU TOKENS --------------------- */
+
+.evu-tokens {
+    &__content {
+        gap: 20px;
+        &__card {
+            ul {
+                margin: 0 auto;
+                padding: 40px 20px 40px 40px;
+                background: $color-secundario;
+                border-radius: 20px;
+                width: 250px;
+                -webkit-border-radius: 20px;
+                -moz-border-radius: 20px;
+                -ms-border-radius: 20px;
+                -o-border-radius: 20px;
+                box-shadow: 0px -15px 0px 0px #08907915, 0px -30px 0px 0px #dff3f18f, 0px .5rem 1rem #b4b4b4;
+                li {
+                    position: relative;
+                    & span {
+                        color: $color-principal;
+                        font-size: 1.2rem;
+                        font-weight: 900;
+                        &::before {
+                            font: var(--fa-font-solid);
+                            content: "\f007";
+                            margin: 0 5px 0 -22px;
+                        }
+                    }
+                    p {
+                        margin: 0;
+                        font-size: 1.2rem;
+                    }
+                    a {
+                        position: absolute;
+                        top: 15px;
+                        right: 0;
+                        width: 125px;
+                        padding: 0.2rem .5rem;
+                        border-radius: 5px;
+                        -webkit-border-radius: 5px;
+                        -moz-border-radius: 5px;
+                        -ms-border-radius: 5px;
+                        -o-border-radius: 5px;
+                        transition: $transition-all;
+                        -webkit-transition: $transition-all;
+                        -moz-transition: $transition-all;
+                        -ms-transition: $transition-all;
+                        -o-transition: $transition-all;
+                        &:hover {
+                            box-shadow: $box-shadow-hover;
+                        }
+                    }
+                    span {
+                        position: relative;
+                        &::before {
+                            content: "";
+                            background: url(../icons/icon-hexágono.svg) no-repeat;
+                            background-size: contain;
+                            width: 15px;
+                            height: 15px;
+                            position: absolute;
+                            bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+        &__img {
+            margin: 20px 0px;
+            max-width: 405px;
+        }
+        &__text {
+            li {
+                margin-bottom: 2rem;
+                position: relative;
+                &::before {
+                    content: "";
+                    background: url(../icons/icon-hexágono.svg) no-repeat;
+                    background-size: contain;
+                    width: 15px;
+                    height: 15px;
+                    position: absolute;
+                    margin: 10px 0px 0px -25px;
+                }
+            }
+        }
+        &__text {
+            margin-left: 25px;
+        }
+    }
+    .container {
+        background: url(../img/mapabg-green.svg) no-repeat center;
+    }
+}
+
+
+/* -------------------- EVU-CONTRACT -------------------- */
+
+.evu-contract {
+    .contract__text {
+        display: flex;
+        row-gap: 20px;
+        flex-direction: column;
+        h3 {
+            font-size: 3rem;
+        }
+        p {
+            margin-bottom: 3rem;
+            font-size: 24px;
+            text-align: justify;
+        }
+    }
+    .contract__buttons {
+        a {
+            margin: 10px 10px 0px 0px;
+        }
+    }
+    .copy-contract {
+        display: flex;
+        width: 100%;
+        max-width: 400px;
+        .clipboard {
+            width: 100%;
+            background: transparent;
+            font-size: 16px;
+            user-select: none;
+            overflow: hidden;
+        }
+        .copy {
+            background: $color-btn;
+            font-size: 12px;
+            padding: 0 5px;
+            border-radius: 2px;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            -ms-border-radius: 2px;
+            -o-border-radius: 2px;
+            position: relative;
+            &:hover {
+                background: #e0a800;
+                &::after {
+                    position: absolute;
+                    content: "copy";
+                    text-align: center;
+                    width: 50px;
+                    height: 20px;
+                    border-radius: $borde-radius-low;
+                    -webkit-border-radius: $borde-radius-low;
+                    -moz-border-radius: $borde-radius-low;
+                    -ms-border-radius: $borde-radius-low;
+                    -o-border-radius: $borde-radius-low;
+                    top: -25px;
+                    transform: translateX(-66%);
+                    background: $color-btn;
+                    -webkit-transform: translateX(-66%);
+                    -moz-transform: translateX(-66%);
+                    -ms-transform: translateX(-66%);
+                    -o-transform: translateX(-66%);
+                    user-select: none;
+                    transition: $transition-all;
+                    -webkit-transition: $transition-all;
+                    -moz-transition: $transition-all;
+                    -ms-transition: $transition-all;
+                    -o-transition: $transition-all;
+                }
+                &::before {
+                    position: absolute;
+                    content: "";
+                    width: 10px;
+                    height: 10px;
+                    top: -10px;
+                    background: $color-btn;
+                    clip-path: polygon(50% 100%, 0 0, 100% 0);
+                    user-select: none;
+                }
+            }
+        }
+    }
+}
+
+
+/* -------------------- EVU GRAPCHICS -------------------- */
+
+.evu-graphics {
+    .evu-graphics-content {
+        background: url(../img/mapabg-green.svg) no-repeat top;
+        background-position-y: 6%;
+    }
+    .graphics-distribution {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .graphics-distribution__grafico {
+        margin: 0 auto;
+    }
+    p,
+    h3 {
+        color: $color-principal;
+    }
+    p {
+        font-size: .6rem;
+    }
+}
+
+
+/* ---------------------- EXCHANGES --------------------- */
+
+.exchanges {
+    &__content {
+        padding: 80px 0px;
+        &__populate {
+            a {
+                margin: 20px;
+            }
+        }
+    }
+}
+
+
+/* ----------------------- SERVICE ---------------------- */
+
+.service {
+    .service-team__text {
+        h3 {
+            font-size: 59.2px;
+            color: $color-principal;
+        }
+        p {
+            font-size: 16px;
+            font-weight: 600;
+            margin: 20px auto;
+        }
+    }
+}
+
+
+/* ---------------------- ROAD MAP ---------------------- */
+
+.pt-100 {
+    padding-top: 100px;
+}
+
+.road-map {
+    &__content {
+        background: url(../img/mapabg-green.svg) no-repeat top;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+/* ----------------------- CONTACT ---------------------- */
+
+.main-staking .contact {
+    background: transparent;
+}

@@ -1,0 +1,58 @@
+/* --------------------- BTN-EVULUS--------------------- */
+
+@mixin btn-personalizado($bg, $padding, $font-size) {
+    padding: $padding;
+    color: $color-texo;
+    background: $bg;
+    transition: $transition-all;
+    -webkit-transition: $transition-all;
+    -moz-transition: $transition-all;
+    -ms-transition: $transition-all;
+    -o-transition: $transition-all;
+    font-weight: 600;
+    font-size: $font-size;
+    text-align: center;
+    border-radius: $borde-radius-medium;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    display: inline-block;
+    height: auto;
+    user-select: none;
+    &:active {
+        box-shadow: none !important;
+    }
+    img,
+    svg,
+    i {
+        margin-right: 5px;
+        width: 43px;
+    }
+}
+
+
+/* ------------------ BTN-EVULUS-WHITE ------------------ */
+
+@mixin btn-white($weight-w, $padding-p, $radius-br) {
+    width: $weight-w;
+    min-height: 67px;
+    background: $color-secundario;
+    padding: $padding-p;
+    display: flex;
+    align-items: center;
+    box-shadow: $box-shadow-primario;
+    transition: $transition-all;
+    -webkit-transition: $transition-all;
+    -moz-transition: $transition-all;
+    -ms-transition: $transition-all;
+    -o-transition: $transition-all;
+    border-radius: $radius-br;
+    -webkit-border-radius: $radius-br;
+    -moz-border-radius: $radius-br;
+    -ms-border-radius: $radius-br;
+    -o-border-radius: $radius-br;
+    &:hover {
+        background: #f2f2f2;
+    }
+}

@@ -1,0 +1,26 @@
+:root {
+    --plyr-color-main: #08907a;
+}
+
+.container-video-player {
+    max-width: 776px;
+    max-height: 519px;
+    margin: 80px auto;
+    border-radius: $borde-radius-height;
+    position: relative;
+    padding: 0;
+    border: 10px solid $color-principal;
+    background: $color-principal;
+    .plyr--video {
+        border-radius: $borde-radius-height;
+        .plyr__controls {
+            background: transparent;
+        }
+        .plyr__poster {
+            background-size: cover;
+        }
+        &.plyr--menu-open {
+            overflow: hidden;
+        }
+    }
+}

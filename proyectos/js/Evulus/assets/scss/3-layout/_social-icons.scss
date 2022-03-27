@@ -1,0 +1,38 @@
+.social-icons {
+    flex-wrap: wrap;
+    li a img {
+        width: 30px;
+        height: 30px;
+        margin: .5rem;
+        transition: $transition-all;
+        -webkit-transition: $transition-all;
+        -moz-transition: $transition-all;
+        -ms-transition: $transition-all;
+        -o-transition: $transition-all;
+        &:hover {
+            transform: scale(1.1);
+            -webkit-transform: scale(1.1);
+            -moz-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            -o-transform: scale(1.1);
+        }
+    }
+}
+
+.social-icons--white {
+    li a img {
+        filter: brightness(0) invert(100%);
+        -webkit-filter: brightness(0) invert(100%);
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .social-icons--white {
+        li a img {
+            width: 50px;
+            height: 50px;
+        }
+    }
+}

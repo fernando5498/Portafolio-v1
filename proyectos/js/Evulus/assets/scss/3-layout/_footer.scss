@@ -1,0 +1,37 @@
+.footer {
+    color: $color-secundario;
+    padding-top: 45px;
+    padding-bottom: 45px;
+    font-weight: 400;
+    font-size: 14px;
+    background: black;
+    &__content {
+        h5 {
+            margin-top: 20px;
+            font-weight: bolder;
+        }
+        .btn-evulus-small {
+            padding: 0px 15px;
+            font-size: 14px;
+            margin: 5px 0px;
+            font-weight: 800;
+        }
+        .btn-evulus-ultra-small {
+            font-size: 10px;
+            border-radius: $borde-radius-height;
+            font-weight: 600;
+            padding: 0px 10px;
+        }
+        .social-icons--white {
+            li a img {
+                width: 20px;
+                height: 20px;
+                margin: 0px 10px 0px 0px;
+            }
+        }
+        a:hover {
+            color: $color-secundario;
+            text-decoration: underline;
+        }
+    }
+}

@@ -1,0 +1,120 @@
+@media screen and (max-width:1400px) {}
+
+@media screen and (max-width:1200px) {
+    .academia-desafio .academia-desafios-container .academia-desafios-item:nth-child(5) {
+        grid-row: 15;
+        grid-column: 1;
+    }
+    .academia-desafio {
+        background-size: 100% 40%;
+        background-repeat: repeat;
+    }
+}
+
+@media screen and (max-width:991px) {
+    .evulus-academia__content {
+        h1,
+        h2 {
+            font-size: calc(35px + 1vw);
+        }
+        .btn-evulus-medium {
+            margin: 50px auto;
+        }
+    }
+    .academia-metodologia h2 {
+        text-align: center;
+        margin-left: 0;
+    }
+    .academia-desafio .academia-desafios-container .academia-desafios-item:nth-child(4) {
+        grid-row: 13;
+        grid-column: 2;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .academia-aprende__content h2 {
+        text-align: center;
+        margin-left: 0;
+    }
+    .academia-noticias .owl-carousel {
+        width: auto;
+    }
+}
+
+@media screen and (max-width:575px) {
+    .academia-desafio .academia-desafios-container {
+        grid-template-rows: repeat(4, auto);
+        .academia-desafios-item:nth-child(2),
+        .academia-desafios-item:nth-child(3),
+        .academia-desafios-item:nth-child(5),
+        .academia-desafios-item:nth-child(4) {
+            grid-column: 1;
+        }
+        .academia-desafios-item:nth-child(2) {
+            grid-row: 3;
+        }
+    }
+    .evulus-academia__img .container-animation-bot {
+        &__1 {
+            max-width: 60px;
+        }
+        &__2 {
+            max-width: 60px;
+        }
+        &__3 {
+            max-width: 60px;
+        }
+    }
+    .academia-aprende-img {
+        &__item-1 {
+            max-width: 100px;
+        }
+        &__item-2 {
+            max-width: 100px;
+        }
+        &__item-3 {
+            max-width: 100px;
+        }
+        &__item-4 {
+            max-width: 100px;
+        }
+    }
+    .academia-metodologia .metodologia-video .title-reproductor .circle-play {
+        width: 60px;
+        height: 60px;
+        &::after {
+            border-bottom: 10px solid transparent;
+            border-top: 10px solid transparent;
+            border-left: 15px solid $color-secundario;
+        }
+    }
+}
+
+@media screen and (max-width:400px) {
+    .evulus-academia__content {
+        h1,
+        h2 {
+            word-break: break-all;
+            -webkit-hyphens: auto;
+            -ms-hyphens: auto;
+            hyphens: auto;
+        }
+        .btn-evulus-medium {
+            width: 100%;
+            font-size: 30px;
+        }
+    }
+    .academia-metodologia {
+        h2 {
+            font-size: 40px;
+        }
+        .metodologia-video .title-reproductor {
+            font-size: 20px;
+        }
+    }
+    .academia-aprende__content h2,
+    .academia-desafio .academia-desafios-container .academia-desafio-title,
+    .academia-suscripcion h2 {
+        font-size: 40px;
+    }
+}

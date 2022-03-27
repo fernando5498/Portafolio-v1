@@ -1,0 +1,349 @@
+.academia-body {
+    .go-top.active {
+        background: $color-secundario;
+        color: $color-principal;
+    }
+}
+
+.evulus-academia {
+    min-height: 100vh;
+    position: relative;
+    &__content {
+        h1,
+        h2 {
+            font-size: 48.84px;
+        }
+        h2 {
+            font-weight: 800;
+        }
+        p {
+            font-size: 28px;
+            font-weight: 500;
+            margin: 40px 0px;
+        }
+        .btn-evulus-medium {
+            margin-top: 70px;
+            font-weight: 800;
+        }
+    }
+}
+
+.container-animation-bot {
+    position: relative;
+    max-height: 560px;
+    width: 100%;
+    margin-bottom: 20px;
+    &__bot {
+        max-height: 560px;
+        display: block;
+        margin: 0 auto;
+        position: relative;
+    }
+    &__1 {
+        max-width: 95px;
+        top: 45%;
+        position: absolute;
+        left: 0;
+        animation: evulus-anime 10000ms ease-in-out infinite normal forwards;
+    }
+    &__2 {
+        max-width: 95px;
+        top: 80%;
+        position: absolute;
+        animation: ethereum-anime 10000ms ease-in-out infinite normal forwards 1s;
+    }
+    &__3 {
+        max-width: 95px;
+        right: 0;
+        bottom: 20%;
+        position: absolute;
+        animation: bitcoin-anime 10000ms ease-in-out infinite normal forwards 2s;
+    }
+}
+
+@keyframes evulus-anime {
+    0% {
+        left: 0%;
+        transform: translateY(0px);
+    }
+    50% {
+        left: 78%;
+        transform: translateY(100%);
+    }
+    100% {
+        z-index: -1;
+        left: 0%;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes ethereum-anime {
+    0% {
+        left: 0%;
+        z-index: -1;
+    }
+    50% {
+        left: 80%;
+        top: 10%;
+    }
+    100% {
+        left: 0%;
+    }
+}
+
+@keyframes bitcoin-anime {
+    0% {
+        bottom: 20%;
+        z-index: -1;
+    }
+    50% {
+        right: 80%;
+        bottom: 80%;
+    }
+    100% {
+        bottom: 20%;
+    }
+}
+
+
+/* --------------------- METODOLOGIA -------------------- */
+
+.academia-metodologia {
+    background: url(../img/mapabg-green.svg) no-repeat;
+    background-size: 143%;
+    background-position: 47% 50%;
+    margin: 30px auto;
+    h2 {
+        font-size: 51.52px;
+        color: $color-principal;
+        font-weight: 700;
+        margin: 45px 0px;
+        margin-left: 55px;
+    }
+}
+
+.metodologia-item-container {
+    gap: 40px;
+    justify-content: center;
+    .metodologia-item {
+        background: #f1f1f1;
+        border-radius: 15px;
+        padding: 18px 12px;
+        transition: $transition-all;
+        color: $color-principal;
+        height: 90px;
+        flex-basis: 277px;
+        display: flex;
+        align-items: center;
+        line-height: 1.2;
+        font-size: 21.48px;
+        box-shadow: $box-shadow-primario;
+        &:hover,
+        &.active {
+            background: $color-principal;
+            color: $color-secundario;
+            img {
+                filter: brightness(0) invert(100%);
+            }
+        }
+        &:hover {
+            transform: scale(1.1);
+        }
+        img {
+            width: 20%;
+            height: 100%;
+            transition: $transition-all;
+            margin-right: 5px;
+        }
+        span {
+            text-align: center;
+        }
+        &:nth-child(1n) {
+            font-size: 21px;
+        }
+        &:nth-child(2n) {
+            font-size: 21px;
+        }
+        &:nth-child(3n) {
+            font-size: 16px;
+        }
+        &:nth-child(4n) {
+            font-size: 16px;
+        }
+    }
+}
+
+
+/* ---------------------- APRENDER ---------------------- */
+
+.academia-aprende {
+    padding-top: 62px;
+    &__content {
+        margin-top: 30px;
+        h2 {
+            color: $color-principal;
+            font-size: 51.51px;
+            font-weight: 700;
+            margin-left: 30px;
+            margin-bottom: 34px;
+        }
+        p {
+            font-size: 20px;
+        }
+    }
+}
+
+.academia-aprende-img {
+    display: block;
+    max-width: 375px;
+    margin: 0 auto;
+    max-height: 618px;
+    position: relative;
+    width: 70%;
+    &__persona {
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+    &__item-1 {
+        max-width: 167px;
+        position: absolute;
+        top: 10%;
+        left: -15%;
+    }
+    &__item-2 {
+        max-width: 177px;
+        position: absolute;
+        top: 20%;
+        right: -22%;
+    }
+    &__item-3 {
+        max-width: 178px;
+        position: absolute;
+        bottom: -5%;
+        left: -18%;
+    }
+    &__item-4 {
+        max-width: 178px;
+        position: absolute;
+        bottom: 5%;
+        right: -22%;
+    }
+}
+
+
+/* ----------------------- DESAFIO ---------------------- */
+
+.academia-desafio {
+    background: url(../img/academia/linea-bg.svg) no-repeat;
+    padding-bottom: 60px;
+    h2 {
+        font-size: 41.53px;
+        color: $color-principal;
+        font-weight: 700;
+    }
+}
+
+.academia-desafios-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    grid-template-rows: repeat(14, 63px);
+    .academia-desafio-title {
+        grid-row: 2;
+        grid-column: 1/span 2;
+    }
+    .academia-desafios-item:nth-child(2) {
+        grid-row: 7;
+        grid-column: 1;
+    }
+    .academia-desafios-item:nth-child(3) {
+        grid-row: 5;
+        grid-column: 2;
+    }
+    .academia-desafios-item:nth-child(4) {
+        grid-row: 7;
+        grid-column: 3;
+    }
+    .academia-desafios-item:nth-child(5) {
+        grid-row: 3;
+        grid-column: 4;
+    }
+}
+
+
+/* ---------------------- NOTICIAS ---------------------- */
+
+.academia-noticias {
+    padding: 45px 0px 50px 0px;
+}
+
+
+/* ----------------------- CONTACT ---------------------- */
+
+.contact--home {
+    background: url(../img/bg-end.png) top $color-principal;
+    padding: 80px 0px;
+    color: $color-secundario;
+    text-align: center;
+    position: relative;
+    .contact__content {
+        position: relative;
+        height: 100%;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        h3 {
+            font-size: calc(25px + 1vw);
+            margin: 0;
+            font-weight: 400;
+        }
+        h2 {
+            font-size: calc(35px + 1vw);
+            font-weight: 600;
+        }
+    }
+}
+
+
+/* --------------------- SUSCRIBETE --------------------- */
+
+.academia-suscripcion {
+    padding: 80px 0px 65px 0px;
+    text-align: center;
+    h2 {
+        color: $color-principal;
+        font-weight: 700;
+        font-size: 51.51px;
+    }
+    p {
+        font-size: 15.46px;
+    }
+}
+
+.academia-suscripcion-correo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    gap: 20px;
+    .env-correo {
+        height: 88px;
+        width: 50%;
+        background: #e5e5e5;
+        border: 3px solid $color-secundario;
+        border-radius: $borde-radius-height;
+        box-shadow: 0px 0px 4px $color-grey-claro;
+        font-size: 25px;
+        padding: 0px 20px;
+        min-width: 300px;
+    }
+    .btn-env {
+        background: $color-principal;
+        border-radius: $borde-radius-medium;
+        padding: 0px 45px;
+        height: 69px;
+        color: $color-secundario;
+        font-size: 27.22px;
+    }
+}

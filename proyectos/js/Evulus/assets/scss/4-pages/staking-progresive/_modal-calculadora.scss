@@ -1,0 +1,180 @@
+/* ------------------------ MODAL ----------------------- */
+
+.modal-dialog-calc {
+    max-width: none;
+    .modal-content-calc {
+        box-shadow: $box-shadow-secundario;
+        margin: 0 auto;
+        background: url(../img/bg_modal.png) no-repeat center;
+        background-size: inherit;
+        border-radius: 35px;
+        -webkit-border-radius: 35px;
+        -moz-border-radius: 35px;
+        -ms-border-radius: 35px;
+        -o-border-radius: 35px;
+        width: 650px;
+        position: relative;
+        padding: 20px 0px;
+        .modal-header-calc,
+        .cantidad,
+        .montos,
+        .modal-footer-calc {
+            border-bottom: 1px solid $color-secundario;
+            padding: 20px 50px;
+        }
+        .btn-close {
+            position: absolute;
+            right: 20px;
+            filter: invert(1);
+            -webkit-filter: invert(1);
+            opacity: 1;
+        }
+        .modal-header-calc {
+            text-align: center;
+            color: $color-secundario;
+            h2 {
+                font-size: 3rem;
+            }
+        }
+        .modal-main-calc {
+            .cantidad {
+                display: flex;
+                flex-direction: column;
+                gap: 40px;
+                text-align: center;
+                .cantidad-evu {
+                    h5 {
+                        color: $color-secundario;
+                    }
+                    .data-value {
+                        font-size: 1rem;
+                        margin: 0 auto;
+                        width: 180px;
+                        height: 44px;
+                    }
+                }
+                .component-day .day-mes {
+                    justify-content: center;
+                }
+            }
+            .montos {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 20px;
+                .data-value {
+                    width: 80%;
+                }
+            }
+        }
+        .modal-footer-calc {
+            text-align: center;
+            border-bottom: none;
+            .component-mensual {
+                flex-wrap: wrap;
+                justify-content: center;
+                .meses {
+                    width: 100%;
+                }
+                .mensual-total {
+                    button {
+                        width: 100%;
+                    }
+                }
+                .mes-title,
+                .mensual-total__title {
+                    margin-top: 10px;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:767px) {
+    .modal {
+        .modal-content-calc {
+            width: 85%;
+        }
+    }
+}
+
+@media screen and (max-width:575px) {
+    .modal-dialog-calc {
+        .modal-content-calc {
+            .modal-header-calc,
+            .cantidad,
+            .montos,
+            .modal-footer-calc {
+                padding: 10px;
+                border: none;
+            }
+            .modal-header-calc {
+                padding-top: 20px;
+                h2 {
+                    font-size: 35px;
+                }
+            }
+            .modal-main-calc {
+                .cantidad {
+                    gap: 20px;
+                }
+            }
+            .modal-footer-calc .component-mensual .meses .mes-title {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:400px) {
+    .panel__day {
+        padding: .5rem;
+        .component-day .day-mes__items span {
+            height: 18px;
+            width: 40px;
+            padding: 0;
+            text-align: center;
+            font-size: .7rem;
+        }
+    }
+    .component-day .day-mes__items span {
+        height: 20px;
+        width: 40px;
+        padding: 0;
+        text-align: center;
+        font-size: .7rem;
+    }
+    .slider-range {
+        gap: 5px;
+    }
+    .modal-dialog-calc {
+        .modal-content-calc {
+            width: 100%;
+            .modal-header-calc,
+            .cantidad,
+            .montos,
+            .modal-footer-calc {
+                padding: 5px 10px;
+                border: none;
+            }
+            .modal-header-calc {
+                padding-top: 20px;
+            }
+            .modal-main-calc {
+                .montos {
+                    .data-value {
+                        width: 90%;
+                    }
+                }
+                .cantidad {
+                    gap: 20px;
+                }
+            }
+            .modal-footer-calc .component-mensual .meses .mes-title {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

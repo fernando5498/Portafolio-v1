@@ -1,0 +1,47 @@
+/* -------------------- TRANSICIONES -------------------- */
+
+.transiciones {
+    background-color: #c1e3de;
+    padding-top: 58px;
+    padding-bottom: 58px;
+    background: $bg-color;
+}
+
+.contador-container {
+    color: $color-texo;
+    h5,
+    span {
+        font-size: calc(40px + 2.5vw);
+    }
+    p {
+        font-size: calc(18px + .5vw);
+    }
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+        -webkit-transform: translateY(100px);
+        -moz-transform: translateY(100px);
+        -ms-transform: translateY(100px);
+        -o-transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+        -webkit-transform: translateY(0px);
+        -moz-transform: translateY(0px);
+        -ms-transform: translateY(0px);
+        -o-transform: translateY(0px);
+    }
+}
+
+.show-number {
+    opacity: 0;
+}
+
+.animation-number {
+    animation: aparecer 1.3s;
+    -webkit-animation: aparecer 1.3s;
+}

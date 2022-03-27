@@ -1,0 +1,47 @@
+.subtitle-green {
+    width: 100%;
+    text-align: center;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(90deg, white -4%, #009c87 15%, #009179 50%, #00b3a0 85%, white 104%);
+    color: $color-secundario;
+    padding: 10px 5%;
+    h2 {
+        font-size: 44px;
+        font-weight: 600;
+        margin: 0;
+    }
+    h3 {
+        font-weight: 500;
+        font-size: 40px;
+    }
+}
+
+.video-container {
+    overflow: hidden;
+    border-radius: $borde-radius-ultra-height;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.583);
+    display: block;
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+@media screen and (max-width:1400px) {
+    .subtitle-green {
+        h2 {
+            font-size: calc(17px + 2vw);
+        }
+        h3 {
+            font-size: calc(14px + 2vw);
+        }
+    }
+}
+
+@media screen and (max-width:576px) {
+    .subtitle-green {
+        background: $color-principal;
+    }
+    .video-container {
+        --bs-aspect-ratio: 74%;
+        max-width: 100%;
+    }
+}

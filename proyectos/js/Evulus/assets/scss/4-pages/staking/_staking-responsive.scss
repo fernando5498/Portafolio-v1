@@ -1,0 +1,114 @@
+@media screen and (min-width:1500px) {
+    .staking {
+        min-height: auto;
+    }
+}
+
+@media screen and (max-width:1400px) {
+    .staking {
+        .staking-content {
+            &__title {
+                h1,
+                h2 {
+                    font-size: calc(30px + 3vw);
+                }
+            }
+            .btn-evulus--staking {
+                font-size: calc(20px + 3vw);
+                margin: 50px auto;
+                width: fit-content;
+            }
+            &__parrafo {
+                h4 {
+                    font-size: calc(15px + .5vw);
+                }
+            }
+        }
+        .btn-green {
+            margin: 30px auto 0px auto;
+            font-size: calc(12px + 1.5vw);
+        }
+    }
+    .requisitos {
+        .participacion {
+            .participacion-content {
+                p {
+                    font-size: calc(14px + .4vw);
+                }
+                .btn-evulus-white {
+                    margin: 40px auto;
+                    font-size: calc(12px + 1.5vw);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:991px) {
+    .staking {
+        .staking-content {
+            &__title {
+                h1,
+                h2 {
+                    font-size: calc(0px + 8vw);
+                }
+            }
+            .btn-evulus {
+                left: 0;
+            }
+            &__parrafo {
+                h4 {
+                    font-size: calc(15px + .5vw);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:575px) {
+    .requisitos {
+        .participacion {
+            .participacion-content {
+                @include f-center;
+                flex-direction: column;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .staking .staking-content__title {
+        h1,
+        h2 {
+            font-size: calc(30px + 3vw);
+        }
+    }
+    .subtitle {
+        margin-bottom: 20px;
+    }
+    .btn-evulus-white,
+    .btn-green,
+    .btn-evulus-icon,
+    .btn-evulus-medium {
+        font-size: 14px
+    }
+    .btn-green {
+        padding: 5px 20px;
+    }
+    .btn-evulus-white,
+    .btn-evulus-icon {
+        width: 100%;
+        white-space: normal;
+    }
+    .btn-evulus-white {
+        margin: 20px auto !important;
+    }
+    .reglas__list {
+        margin: 0;
+    }
+    .staking .staking__img img {
+        width: 80%;
+        display: block;
+        margin: 0 auto;
+    }
+}

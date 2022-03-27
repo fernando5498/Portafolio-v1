@@ -1,0 +1,34 @@
+.academia-desafios-item {
+    width: 269px;
+    margin: 0 auto;
+    &__img {
+        max-height: 207px;
+        transform: translateX(-40%);
+        transition: $transition-all;
+        display: block;
+        margin: 0 auto;
+        &:hover {
+            transform: translateX(-40%) scale(1.1);
+        }
+    }
+    &__content {
+        h3 {
+            color: $color-principal;
+            font-weight: 700;
+            font-size: 25.48px;
+            text-indent: 3px;
+        }
+        p {
+            font-size: 16px;
+        }
+    }
+}
+
+@media screen and (max-width:575px) {
+    .academia-desafios-item__img {
+        transform: translateX(0%);
+        &:hover {
+            transform: translateX(0%) scale(1.1);
+        }
+    }
+}

@@ -1,0 +1,116 @@
+@media screen and (max-width:1400px) {
+    .preguntas-title {
+        h2 {
+            font-size: calc(20px + 2.4vw);
+        }
+    }
+    .evulus {
+        p {
+            font-size: calc(18.5px + .1vw);
+        }
+    }
+    .preguntas {
+        .pregunta-1__text,
+        .acciones p {
+            font-size: calc(18.5px + .1vw);
+        }
+    }
+    .btn-green--normal {
+        font-size: calc(0px + 2.2vw);
+    }
+}
+
+@media screen and (max-width:991px) {
+    .btn-green--normal {
+        font-size: calc(18px + 2vw);
+    }
+    .pregunta-2__img,
+    .pregunta-3__img {
+        img {
+            left: -10%;
+        }
+    }
+    .preguntas {
+        .pregunta-2 {
+            .pregunta-2__content p {
+                margin: 40px 0px;
+            }
+            .pregunta-2__buttons {
+                margin-bottom: 40px;
+            }
+        }
+    }
+    .nosotros .cards-nosotros .nosotros-item {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .evulus {
+        h1 {
+            font-size: calc(30.34px + 1.5vw);
+            width: 100%;
+        }
+    }
+    .btn-green--normal {
+        font-size: calc(19px + 2vw);
+    }
+    .preguntas {
+        .pregunta-2 .pregunta-2__content h2,
+        .pregunta-3 .pregunta-3__content h2 {
+            text-align: center;
+            font-size: calc(40px + 3.5vw);
+        }
+        .pregunta-2 .pregunta-2__content p,
+        .preguntas .pregunta-3 ul {
+            font-size: 32px;
+        }
+    }
+    .pregunta-2__img,
+    .pregunta-3__img {
+        img {
+            left: 0%;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .btn-green--normal {
+        white-space: nowrap;
+    }
+    .btn-ver {
+        font-size: 20px;
+    }
+    .preguntas {
+        .pregunta-2 .pregunta-2__content h2,
+        .pregunta-3 .pregunta-3__content h2 {
+            font-size: 40px;
+        }
+        .pregunta-3 ul,
+        .preguntas .pregunta-2 .pregunta-2__content {
+            font-size: 20px;
+        }
+    }
+    .nosotros .cards-nosotros .nosotros-item {
+        min-width: auto;
+        width: 95%;
+        padding: 30px;
+        .social-icons li {
+            margin: 10px;
+        }
+        .servicios-items--card a img {
+            max-height: 45px;
+        }
+        .nosotros-item:nth-child(odd) {
+            h3 {
+                font-size: 40.8px;
+            }
+        }
+    }
+    .preguntas .video-plataforma .video-container {
+        border-radius: 10px;
+    }
+    .preguntas .pregunta-2 .pregunta-2__img img {
+        width: 100%;
+    }
+}
