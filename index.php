@@ -157,7 +157,7 @@
                         <li class="nav-link"><a class="about-us" href="#about-us">Acerca de mí</a></li>
                         <li class="nav-link"><a class="study" href="#study">Estudios</a></li>
                         <li class="nav-link"><a class="skills" href="#skills">Habilidades</a></li>
-                        <li class="nav-link"><a class="works" href="#works">Trabajos</a></li>
+                        <li class="nav-link"><a class="works" href="#works">Portafolio</li>
                         <li class="nav-link"><a class="contact" href="#contact">Contáctos</a></li>
                     </ul>
                     <div class="menu-btn"></div>
@@ -179,7 +179,7 @@
                     <h2>Desarrollador Web Front-End</h2>
                     <div class="home-btn">
                         <a href="#" class="btn-secundario  welcom-btn">Bienvenidos</a>
-                        <a href="proyectos/RaulPineda-Actualizado.pdf" target="_blank" class=" btn-secundario">Curriculum <img src="https://img.icons8.com/ios-filled/50/000000/user-male-circle.png" /></a>
+                        <a href="proyectos/RaulPineda-Curriculum.pdf" target="_blank" class=" btn-secundario">Curriculum <img src="https://img.icons8.com/ios-filled/50/000000/user-male-circle.png" /></a>
                     </div>
                 </div>
                 <!-- <div class="animation col">
@@ -508,6 +508,14 @@
                             <img src="proyectos/js/Pagina-Almuerzos/Pagina-Almuerzos.webp" alt="Pagina-Almuerzos">
                         </div>
                     </div>
+
+                    <div class="item" data-title="Evulus-Tokens" data-fecha="19/Febrero/2022" data-description="Apoye en la creación de algunas secciones de la página oficial de Evulus, trabaje de manera FreeLancer y todo fue creado en base a bootstrap,html,css y javaScript "
+                        data-link="proyectos/js/evulus-Inicio/index.html" data-download="proyectos/js/evulus-Inicio/evulus-full.jpg" data-repositorio="https://github.com/fernando5498/evulus-Inicio" data-categoria="javascript">
+                        <div class="item-content">
+                            <img src="proyectos/js/evulus-Inicio/evulus.webp" alt="Evulus-Tokens">
+                        </div>
+                    </div>
+
                     <div class="item" data-title="Pagina Ficticia de Pepsi" data-fecha="18/abril/2021" data-description="Entre mis primeras practicas personales es solo la cabezera de una pagina creada con Html, Css y JavaScript" data-link="proyectos/html,css,jass/Practica-Cocacola/index.html"
                         data-download="proyectos/html,css,jass/Practica-Cocacola/Practica-Cocacola.png" data-repositorio="https://github.com/fernando5498/Practica-Cocacola" data-categoria="html/css/jass">
                         <div class="item-content">
