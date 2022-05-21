@@ -173,7 +173,7 @@
                     <h2>Desarrollador Web Front-End</h2>
                     <div class="home-btn">
                         <a href="#" class="btn-secundario  welcom-btn">Bienvenidos</a>
-                        <a href="proyectos/RaulPineda-Curriculum.pdf" target="_blank" class=" btn-secundario">Curriculum <img src="https://img.icons8.com/ios-filled/50/000000/user-male-circle.png" /></a>
+                        <a href="proyectos/RaulPineda-Curriculum.pdf" target="_blank" class=" btn-secundario">Curriculum <img src="img/icon-curriculum.svg" /></a>
                     </div>
                 </div>
             </div>
