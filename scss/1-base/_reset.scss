@@ -21,22 +21,20 @@ body {
     font-family: 'Raleway', sans-serif;
     background: $bg-color2;
     scroll-behavior: smooth;
-    ;
 }
 
 a {
     text-decoration: none;
     font-size: $font-size-navbar;
-    text-transform: uppercase;
-    color: $color-secundario;
     transition: all 300ms;
+    color: $color-secundario;
     &:hover {
-        color: $color-primario;
+        color: black;
     }
 }
 
 ul {
-    padding: 0!important;
+    padding: 0;
 }
 
 h1 {

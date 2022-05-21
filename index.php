@@ -166,12 +166,6 @@
             </div>
         </div>
 
-        <div class="videos-background">
-
-            <!-- <video src="videos/fats.mp4" muted loop autoplay class="video-bg"></video>
-            <video src="videos/bg-2.mp4" muted loop class="video-bg2 d-none"></video> -->
-        </div>
-
         <section id="home" class="container">
             <div class="row align-content-center">
                 <div class="home-title col">
@@ -182,15 +176,9 @@
                         <a href="proyectos/RaulPineda-Curriculum.pdf" target="_blank" class=" btn-secundario">Curriculum <img src="https://img.icons8.com/ios-filled/50/000000/user-male-circle.png" /></a>
                     </div>
                 </div>
-                <!-- <div class="animation col">
-                </div> -->
-
-
             </div>
         </section>
     </header>
-
-
 
 
 
@@ -247,11 +235,6 @@
                         <div class="tooltip-personal">Trabajo Remoto</div>
                         <img src="img/apoyo.png" style="filter: none;" />
                     </div>
-
-
-
-
-
                 </div>
             </div>
         </section>
@@ -265,45 +248,43 @@
                 <div class="study-title ">
                     <h3>Educación <span class="linea "></span></h3>
                 </div>
-
                 <div class="container-timeline">
-
                     <div class="timeline">
                         <ul>
                             <li>
-                                <a class="s-card card" href="proyectos/certificados/Certificado_Electronica_Basica.pdf" target="_blank">
+                                <a class="s-card" href="proyectos/certificados/Certificado_Electronica_Basica.pdf" target="_blank">
                                     <img class="col-3" src="svg/circuito-electronico.svg " alt="">
                                     <div class=" col-sm-10 col-md-9 card-content ">
                                         <h4>Electronica Básica</h4>
-                                        <p>Tipo: Curso <br> <span>Diciembre 2018</span></p>
+                                        <p>Tipo: Curso <br>Diciembre 2018</p>
                                         <span class="btn-certificado">Ver Certificado</span>
                                     </div>
                                 </a>
                             </li>
                             <li>
-                                <a class="s-card card " href="proyectos/certificados/Certificado_Reparacion_Pc.pdf" target="_blank">
+                                <a class="s-card" href="proyectos/certificados/Certificado_Reparacion_Pc.pdf" target="_blank">
                                     <img class="col-3" src="svg/torre-de-pc.svg " alt="">
                                     <div class=" col-sm-10 col-md-9 card-content ">
                                         <h4>Reparación de Computadoras</h4>
-                                        <p>Tipo: Curso <br> <span>Marzo 2019</span></p>
+                                        <p>Tipo: Curso <br> Marzo 2019</p>
                                         <span class="btn-certificado">Ver Certificado</span>
 
                                     </div>
                                 </a>
                             </li>
                             <li>
-                                <a class="s-card card" href="proyectos/certificados/Bachiller.pdf" target="_blank">
+                                <a class="s-card " href="proyectos/certificados/Bachiller.pdf" target="_blank">
                                     <img class="col-3" src="svg/graduado.svg " alt="">
                                     <div class=" col-sm-10 col-md-9 card-content ">
                                         <h4>Estudios</h4>
-                                        <p>Tipo: Bachillerato<br><span>2014-2019</span></p>
+                                        <p>Tipo: Bachillerato<br>2014-2019</p>
                                         <span class="btn-certificado">Ver Certificado</span>
 
                                     </div>
                                 </a>
                             </li>
                             <li>
-                                <a class="s-card card " href="proyectos/certificados/Certificado Udemy Master en Css.pdf" target="_blank">
+                                <a class="s-card  " href="proyectos/certificados/Certificado Udemy Master en Css.pdf" target="_blank">
                                     <img class="col-3" src="svg/Css-Bootstrap.svg" alt="">
                                     <div class=" col-sm-10 col-md-9 card-content ">
                                         <h4>Css Responsive y BootsTrap</h4>
@@ -314,7 +295,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a class="s-card card " href="proyectos/certificados/Certificado Udemy HTML.pdf" target="_blank">
+                                <a class="s-card  " href="proyectos/certificados/Certificado Udemy HTML.pdf" target="_blank">
                                     <img class="col-3" src="svg/html.svg" alt="">
                                     <div class=" col-sm-10 col-md-9 card-content ">
                                         <h4>HTML de Cero a Experto</h4>
@@ -325,7 +306,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a class="s-card card " href="proyectos/certificados/Universidad de Css desde cero a experto.pdf" target="_blank">
+                                <a class="s-card  " href="proyectos/certificados/Universidad de Css desde cero a experto.pdf" target="_blank">
                                     <img class="col-3" src="svg/Css.svg " alt="">
                                     <div class=" col-sm-10 col-md-9 card-content ">
                                         <h4>Css de Cero a Experto</h4>
@@ -336,7 +317,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a class="s-card card " href="proyectos/certificados/Certificado_sass.pdf" target="_blank">
+                                <a class="s-card  " href="proyectos/certificados/Certificado_sass.pdf" target="_blank">
                                     <img class="col-3" src="svg/sass.svg " alt="">
                                     <div class=" col-sm-10 col-md-9 card-content ">
                                         <h4>Sass y JQuery</h4>
@@ -355,96 +336,91 @@
         <!-- ----------------- SKILLS ------------------ -->
         <section id="skills">
             <!-- estudio personal  -->
-
             <div class="container">
                 <div class="study-individual">
                     <h3>Habilidades <span class="linea "></span></h3>
-                    <div class="individual-cards text-center row">
-                        <div class="col-lg-6">
-                            <div class="i-study card m-3">
-                                <img src="svg/adobe.svg" alt="">
-                                <div class="card-content">
-                                    <h4>LIBRERIA DE ADOBE</h4>
-                                    <ul class="card-points ">
-                                        <li>
-                                            <p>Manejo Básico Illustrator</p>
-                                        </li>
-                                        <li>
-                                            <p>Manejo Básico Premiere</p>
-                                        </li>
+                    <div class="individual-cards text-center row ">
 
-                                        <li>
-                                            <p>Manejo Básico After Effects</p>
-                                        </li>
+                        <div class="i-study col-lg-6">
+                            <img src="svg/adobe.svg" alt="">
+                            <div class="card-content">
+                                <h4>LIBRERIA DE ADOBE</h4>
+                                <ul class="card-points ">
+                                    <li>
+                                        <p>Manejo Básico Illustrator</p>
+                                    </li>
+                                    <li>
+                                        <p>Manejo Básico Premiere</p>
+                                    </li>
+
+                                    <li>
+                                        <p>Manejo Básico After Effects</p>
+                                    </li>
 
 
-                                    </ul>
-                                </div>
+                                </ul>
                             </div>
                         </div>
 
-                        <div class="col-lg-6 ">
-                            <div class="i-study card m-3">
-                                <img src="svg/navegador-web.svg" alt="">
-                                <div class="card-content ">
-                                    <h4>DESARROLLO WEB</h4>
-                                    <ul class="card-points ">
-                                        <li>
-                                            <p>HTML</p>
 
-                                        </li>
-                                        <li>
-                                            <p>CSS</p>
 
-                                        </li>
-                                        <li>
-                                            <p>BootsTrap</p>
+                        <div class="i-study col-lg-6  ">
+                            <img src="svg/navegador-web.svg" alt="">
+                            <div class="card-content ">
+                                <h4>DESARROLLO WEB</h4>
+                                <ul class="card-points ">
+                                    <li>
+                                        <p>HTML</p>
+                                    </li>
+                                    <li>
+                                        <p>CSS</p>
+                                    </li>
+                                    <li>
+                                        <p>BootsTrap</p>
 
-                                        </li>
-                                        <li>
-                                            <p>JavaScript</p>
-
-                                        </li>
-                                        <li>
-                                            <p>Control de Versiones con GitHub</p>
-
-                                        </li>
-                                    </ul>
-                                </div>
+                                    </li>
+                                    <li>
+                                        <p>JavaScript</p>
+                                    </li>
+                                    <li>
+                                        <p>Control de Versiones con GitHub</p>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
 
-                        <div class="col-lg-6 ">
-                            <div class="i-study card m-3">
-                                <img src="svg/icono pc.svg " alt="">
-                                <div class="card-content ">
-                                    <h4>OTROS</h4>
-                                    <ul class="card-points ">
-                                        <li>
-                                            <p>Formateo de Computadoras</p>
 
-                                        </li>
-                                        <li>
-                                            <p>Instalación de Sistemas</p>
 
-                                        </li>
-                                        <li>
-                                            <p>Creación de Particiones de Disco Duro</p>
+                        <div class="i-study col-lg-6 ">
+                            <img src="svg/icono pc.svg " alt="">
+                            <div class="card-content ">
+                                <h4>OTROS</h4>
+                                <ul class="card-points ">
+                                    <li>
+                                        <p>Formateo de Computadoras</p>
 
-                                        </li>
-                                        <li>
-                                            <p>Manejo De OBS para Directos</p>
+                                    </li>
+                                    <li>
+                                        <p>Instalación de Sistemas</p>
 
-                                        </li>
-                                        <li>
-                                            <p>Manejo de Excel y Word Básico</p>
+                                    </li>
+                                    <li>
+                                        <p>Creación de Particiones de Disco Duro</p>
 
-                                        </li>
+                                    </li>
+                                    <li>
+                                        <p>Manejo De OBS para Directos</p>
 
-                                    </ul>
-                                </div>
+                                    </li>
+                                    <li>
+                                        <p>Manejo de Excel y Word Básico</p>
+
+                                    </li>
+
+                                </ul>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -487,7 +463,7 @@
                     <div class="item" data-title="Soul Page" data-fecha="27/diciembre/2021" data-description="Creada mayormente con bootstrap 5 y optimizada para diferentes dispositivos" data-link="proyectos/bootstrap/pagina con Bootstrap/index.html" data-download="proyectos/bootstrap/pagina con Bootstrap/Pagina-Con-Bootstrap_full.jpg"
                         data-repositorio="https://github.com/fernando5498/Pagina-Con-Bootstrap" data-categoria="bootstrap">
                         <div class="item-content">
-                            <img src="proyectos/bootstrap/pagina con Bootstrap/Pagina-Con-Bootstrap_index.html.jpg" alt="BootsTrap">
+                            <img src="proyectos/bootstrap/pagina con Bootstrap/Pagina-Con-Bootstrap_index.html.webp" alt="BootsTrap">
                         </div>
                     </div>
                     <div class="item" data-title="Filtro de Buscador" data-fecha="14/septiembre/2021" data-description="Lo pude realizar gracias a un video de youtube pero me ayudo mucho para crear mis futuras paginas" data-link="proyectos/js/Pagina-con-Busqueda/index.html"
@@ -532,8 +508,7 @@
                     <div class="item" data-title="RedesTopk Marketing" data-fecha="1/octubre/2021" data-description="Tuve la oportunidad de crearles un video a RedesTopk, les invito a visitar su canal es una empresa dedicada al Marketing " data-link="https://www.youtube.com/watch?v=W8mErtIAuwE"
                         data-download="proyectos/premire/redestopk.mp4" data-categoria="premiere">
                         <div class="item-content">
-                            <video src="/W8mErtIAuwE" poster="proyectos/premire/redestopk.webp"></video>
-
+                            <video src="W8mErtIAuwE" poster="proyectos/premire/redestopk.webp"></video>
                         </div>
                     </div>
 
@@ -547,16 +522,14 @@
                     <div class="item" data-title="Two Feet I Feel Like I'm Drowning" data-fecha="3/Enero/2022" data-description="Siempre me ha gustado la musica y me encantaria seguir creando videos asi por mi cuenta, lo cree con after effects" data-link="https://youtu.be/HcxUKjzbFhQ"
                         data-download="proyectos/after_effects/two_feet.mp4" data-categoria="after effects">
                         <div class="item-content">
-                            <video src="/HcxUKjzbFhQ" poster="proyectos/after_effects/two_feet-poster.png"></video>
-
-
+                            <video src="HcxUKjzbFhQ" poster="proyectos/after_effects/two_feet-poster.webp"></video>
                         </div>
                     </div>
 
-                    <div class="item" data-title="Ed Sheeran Bad Habbies" data-fecha="30/Julio/2021" data-description="Creado con after effects y de las primeras practicas que hice con la cancion de uno de mis artistas favoritos" data-link="https://youtu.be/UvnCHD3BrdI"
-                        data-download="proyectos/after_effects/spectro.mp4" data-categoria="after effects">
+                    <div class="item" data-title="Ed Sheeran Bad Habits" data-fecha="30/Julio/2021" data-description="Creado con after effects y de las primeras practicas que hice con la cancion de uno de mis artistas favoritos" data-link="https://youtu.be/UvnCHD3BrdI" data-download="proyectos/after_effects/spectro.mp4"
+                        data-categoria="after effects">
                         <div class="item-content">
-                            <video src="/UvnCHD3BrdI" poster="proyectos/after_effects/audio-spectrum-poster.jpg"></video>
+                            <video src="UvnCHD3BrdI" poster="proyectos/after_effects/audio-spectrum-poster.webp"></video>
                         </div>
                     </div>
                     <div class="item" data-title="Publicidad Tortas" data-fecha="19/Noviembre/2021" data-description="Creada con illustrator y diseñada por mi mismo, espero mejorar cada vez más" data-download="proyectos/pothoshop/publicidad Tortas.png" data-categoria="illustrator">
@@ -574,14 +547,14 @@
                     <div class="item" data-title="Video para RedesTopk" data-fecha="19/octubre/2021" data-description="Video Creado con Illustrator, After effects y Premiere y montado por Redestopk en su canal Oficial de Youtube, si gustan visiten su canal con el boton de abajo"
                         data-link="https://www.youtube.com/watch?v=yh-xzSoGBNA" data-download="proyectos/premire/RedesTopk1.mp4" target="_blank" data-categoria="premiere">
                         <div class="item-content">
-                            <video src="/yh-xzSoGBNA" poster="proyectos/premire/redestopk1.webp"></video>
+                            <video src="yh-xzSoGBNA" poster="proyectos/premire/redestopk1.webp"></video>
                         </div>
                     </div>
 
                     <div class="item" data-title="Publicidad Ficticia KFC" data-fecha="9/Diciembre/2021" data-description="Creada con Illustrator y After Effects una publicidad ficticia con efectos simples " data-link="https://youtu.be/mYneTGqrKC0" data-download="proyectos/after_effects/publicKfc.mp4"
                         data-categoria="after effects">
                         <div class="item-content">
-                            <video src="/mYneTGqrKC0" poster="proyectos/after_effects/publicKfc_poster.webp">
+                            <video src="mYneTGqrKC0" poster="proyectos/after_effects/publicKfc_poster.webp">
                             </video>
                         </div>
                     </div>
@@ -869,7 +842,6 @@
 
 
     </main>
-
 
 
 

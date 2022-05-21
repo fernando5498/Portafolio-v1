@@ -31,16 +31,15 @@ body {
 a {
   text-decoration: none;
   font-size: 0.8rem;
-  text-transform: uppercase;
-  color: white;
   transition: all 300ms;
+  color: white;
 }
 a:hover {
-  color: #00A8E8;
+  color: black;
 }
 
 ul {
-  padding: 0 !important;
+  padding: 0;
 }
 
 h1 {
@@ -708,6 +707,88 @@ h4 {
   }
 }
 
+.s-card {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  color: white;
+}
+.s-card img {
+  margin-right: 10px;
+}
+.s-card:hover {
+  border-radius: 3px;
+  border: 0;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.623);
+  margin-bottom: 30px;
+  margin-bottom: 0px;
+  color: white;
+}
+.s-card:hover span {
+  color: #00A8E8;
+}
+
+@media only screen and (min-width: 768px) {
+  .timeline::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    right: 49.8%;
+    background-color: #00A8E8;
+  }
+
+  .timeline ul li {
+    width: 50%;
+    margin-bottom: 50px;
+    position: relative;
+  }
+  .timeline ul li:nth-child(odd) {
+    float: left;
+    clear: right;
+    transform: translateX(-29px);
+  }
+  .timeline ul li:nth-child(even) {
+    float: right;
+    clear: left;
+    transform: translateX(30px);
+  }
+  .timeline ul li::after {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background: #00A8E8;
+    border-radius: 50%;
+    top: 0;
+    transition: all 300ms;
+  }
+  .timeline ul li:nth-child(odd)::after {
+    transform: translate(50%, -50%);
+    right: -30px;
+  }
+  .timeline ul li:nth-child(even)::after {
+    transform: translate(-50%, 50%);
+    left: -30px;
+  }
+  .timeline ul li:hover::after {
+    box-shadow: 0px 0px 10px #00A8E8;
+  }
+}
+.clearfix {
+  clear: none;
+}
+
+@media (max-width: 480px) {
+  .s-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .s-card img {
+    margin: 20px 0px;
+  }
+}
 .modal-container {
   display: flex;
 }
@@ -947,7 +1028,7 @@ h4 {
 .overlay-info .contenedor-img img {
   width: 100%;
   height: 100%;
-  max-height: calc(100vh / 1.5);
+  max-height: 66.6666666667vh;
   -o-object-fit: contain;
   object-fit: contain;
 }
@@ -1024,7 +1105,7 @@ h4 {
 }
 .video-container video {
   width: 100%;
-  max-height: calc(100vh / 1.5);
+  max-height: 66.6666666667vh;
 }
 .video-container .enlaces-img {
   display: flex;
@@ -1517,38 +1598,6 @@ h4 {
   user-select: none;
 }
 
-.card {
-  background: #141d2f;
-  color: white;
-  transition: all 300ms;
-  border: none;
-}
-
-.s-card {
-  display: flex;
-  flex-direction: row;
-  padding: 10px;
-}
-.s-card img {
-  margin-right: 10px;
-}
-
-.s-card:hover {
-  border-radius: 3px;
-  border: 0;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.623);
-  margin-bottom: 30px;
-  margin-bottom: 0px;
-  transform: scale(1.01);
-}
-
-.individual-cards {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
 /* ----------------------- SKILLS ----------------------- */
 #skills {
   padding: 5rem 0px;
@@ -1578,81 +1627,6 @@ h4 {
   border-bottom: 1px solid #00A8E8;
 }
 
-.progress {
-  width: 75%;
-  background-color: #0c121d;
-  right: 0;
-  position: absolute;
-  height: 50%;
-  border-radius: 20px;
-}
-.progress .progress-bar {
-  background: #00A8E8;
-  border-radius: 20px;
-  transition: all 300ms;
-}
-
-@media only screen and (min-width: 768px) {
-  .timeline::before {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 2px;
-    right: 49.8%;
-    background-color: #00A8E8;
-  }
-
-  .timeline ul li {
-    width: 50%;
-    margin-bottom: 50px;
-    position: relative;
-  }
-  .timeline ul li:nth-child(odd) {
-    float: left;
-    clear: right;
-    transform: translateX(-29px);
-  }
-  .timeline ul li:nth-child(even) {
-    float: right;
-    clear: left;
-    transform: translateX(30px);
-  }
-  .timeline ul li::after {
-    content: "";
-    position: absolute;
-    height: 20px;
-    width: 20px;
-    background: #00A8E8;
-    border-radius: 50%;
-    top: 0;
-    transition: all 300ms;
-  }
-  .timeline ul li:nth-child(odd)::after {
-    transform: translate(50%, -50%);
-    right: -30px;
-  }
-  .timeline ul li:nth-child(even)::after {
-    transform: translate(-50%, 50%);
-    left: -30px;
-  }
-  .timeline ul li:hover::after {
-    box-shadow: 0px 0px 10px #00A8E8;
-  }
-}
-.clearfix {
-  clear: none;
-}
-
-@media (max-width: 480px) {
-  .s-card {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .s-card img {
-    margin: 20px 0px;
-  }
-}
 /* -------------------------- PORTAFOLIO -------------------------- */
 #works {
   background: #141d2f;

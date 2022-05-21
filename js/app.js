@@ -2,22 +2,15 @@
 window.onload = function() {
     $('#preload').fadeOut();
     $('body').removeClass('overflow-hidden')
-        // $('.modal-container').removeClass('d-none')
 };
 
 /* --------------------- BOTON NOCHE -------------------- */
 
 const btnSwitch = document.querySelector('#switch')
-    // const bgVideo = document.querySelector('.video-bg')
-    // const bgVideo2 = document.querySelector(".video-bg2")
 
 btnSwitch.addEventListener('click', () => {
     document.body.classList.toggle('dark')
     btnSwitch.classList.toggle('active-noche')
-        // bgVideo.classList.toggle("d-none")
-        // bgVideo2.classList.toggle('d-none')
-        // bgVideo2.play()
-        // Local storage del modo dark
     if (document.body.classList.contains('dark')) {
         localStorage.setItem('dark-mode', 'true')
     } else {
@@ -30,16 +23,10 @@ btnSwitch.addEventListener('click', () => {
 if (localStorage.getItem('dark-mode') === 'true') {
     document.body.classList.add('dark')
     btnSwitch.classList.add('active-noche')
-        // bgVideo.classList.add("d-none")
-        // bgVideo2.classList.remove('d-none')
-        // bgVideo2.play()
 } else {
     document.body.classList.remove('dark')
 
     btnSwitch.classList.remove('active-noche')
-        // bgVideo.classList.remove("d-none")
-        // bgVideo2.classList.add('d-none')
-        // bgVideo2.play()
 };
 
 
@@ -170,7 +157,7 @@ Video.forEach((vid) => {
     const title = vid.parentNode.parentNode.dataset.title
     const fecha = vid.parentNode.parentNode.dataset.fecha
     const description = vid.parentNode.parentNode.dataset.description
-    let newUrl = `https://www.youtube.com/embed${rutaVid}`
+    let newUrl = `https://www.youtube.com/embed/${rutaVid}`
 
     vid.addEventListener('click', () => {
         modalvideo.classList.add('active-video')
