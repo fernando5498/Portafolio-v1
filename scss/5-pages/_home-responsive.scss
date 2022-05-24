@@ -1,0 +1,74 @@
+@media (max-width:900px) {
+    .card-points {
+        padding: 0;
+    }
+    #about-us {
+        .about-image {
+            display: none;
+        }
+        .about-content {
+            width: 100%;
+            position: relative;
+            padding: 0px 3rem;
+        }
+        .about-text {
+            overflow-y: scroll;
+            margin-bottom: 30px;
+            h2 {
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            img {
+                display: block !important;
+                width: 300px;
+                float: left;
+                margin-right: 15px;
+            }
+        }
+    }
+}
+
+@media (max-height:550px) {
+    #about-us {
+        height: 700px;
+    }
+}
+
+@media (max-width:530px) {
+    .linea {
+        width: 80px;
+    }
+    #about-us {
+        .about-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            img {
+                margin: 0;
+                margin-bottom: 10px;
+                width: 150px;
+            }
+        }
+    }
+}
+
+@media (max-width:1000px) {
+    .grid {
+        .item {
+            width: calc(50% - 20px);
+        }
+    }
+}
+
+@media (max-width:600px) {
+    .grid {
+        .item {
+            width: calc(100% - 20px);
+        }
+    }
+    .progress {
+        width: 50%;
+    }
+}

@@ -1,0 +1,13 @@
+.btn-primario {
+    @include btn-principal;
+}
+
+.btn-secundario {
+    @include btn-secundario;
+    img {
+        width: 15px;
+        -webkit-filter: invert(100%);
+        filter: invert(100%);
+        transition: all .5s;
+    }
+}

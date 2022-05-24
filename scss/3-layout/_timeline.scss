@@ -1,0 +1,22 @@
+.container-timeline {
+    padding: 5rem 0px 0px 0px;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timeline {
+    height: auto;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    ul {
+        li {
+            border-radius: 10px;
+            margin-bottom: 20px;
+            user-select: none;
+        }
+    }
+}

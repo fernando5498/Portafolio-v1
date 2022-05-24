@@ -1,9 +1,18 @@
-.linea {
-    width: 120px;
-    height: 1px;
-    display: inline-block;
-    background: $color-primario;
-    margin: 4px 10px;
+/* ------------------------ HOME ------------------------ */
+
+.home {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    &__title {
+        text-align: start;
+        color: $color-secundario;
+        h2 {
+            font-weight: 200;
+        }
+    }
 }
 
 
@@ -28,8 +37,8 @@
             width: 100%;
             height: 80%;
             position: absolute;
-            -o-object-fit: cover;
-            object-fit: cover;
+            -o-object-fit: contain;
+            object-fit: contain;
         }
     }
     .about-content {
@@ -114,62 +123,6 @@
     }
 }
 
-@media (max-width:900px) {
-    .card-points {
-        padding: 0;
-    }
-    #about-us {
-        .about-image {
-            display: none;
-        }
-        .about-content {
-            width: 100%;
-            position: relative;
-            padding: 0px 3rem;
-        }
-        .about-text {
-            overflow-y: scroll;
-            margin-bottom: 30px;
-            h2 {
-                text-align: center;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-            img {
-                display: block !important;
-                width: 300px;
-                float: left;
-                margin-right: 15px;
-            }
-        }
-    }
-}
-
-@media (max-height:550px) {
-    #about-us {
-        height: 700px;
-    }
-}
-
-@media (max-width:530px) {
-    .linea {
-        width: 80px;
-    }
-    #about-us {
-        .about-text {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            img {
-                margin: 0;
-                margin-bottom: 10px;
-                width: 150px;
-            }
-        }
-    }
-}
-
 
 /* ----------------------------- STUDY ---------------------------- */
 
@@ -178,60 +131,12 @@
     overflow: hidden;
 }
 
-.container-timeline {
-    padding: 5rem 0px 0px 0px;
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.timeline {
-    height: auto;
-    max-width: 1200px;
-    margin: 0 auto;
-    position: relative;
-    ul {
-        li {
-            border-radius: 10px;
-            margin-bottom: 20px;
-            user-select: none;
-        }
-    }
-}
-
 
 /* ----------------------- SKILLS ----------------------- */
 
 #skills {
     padding: $padding-conteiner;
     overflow: hidden;
-}
-
-.i-study {
-    height: 500px;
-    padding: 20px;
-    img {
-        margin: 0px 0px 20px 0px;
-        height: 30%;
-    }
-}
-
-.card-content {
-    .card-points {
-        margin-top: 2rem;
-        height: 100%;
-        font-size: $text-normal;
-        text-align: start;
-        li {
-            display: flex;
-            position: relative;
-            margin: 1rem 0px;
-            width: 100%;
-            border-bottom: 1px solid $color-primario;
-        }
-    }
 }
 
 
@@ -317,24 +222,5 @@
                 }
             }
         }
-    }
-}
-
-@media (max-width:1000px) {
-    .grid {
-        .item {
-            width: calc(50% - 20px);
-        }
-    }
-}
-
-@media (max-width:600px) {
-    .grid {
-        .item {
-            width: calc(100% - 20px);
-        }
-    }
-    .progress {
-        width: 50%;
     }
 }

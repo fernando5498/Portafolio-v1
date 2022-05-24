@@ -67,31 +67,42 @@ window.addEventListener('load', () => {
 
 /* ----------------------------- MENU ----------------------------- */
 
-// =========== SCROLL SECTIONS ACTIVE LINK ===========
-window.addEventListener("scroll", function() {
-    var nav = document.querySelector(".bg-nav")
-    nav.classList.toggle("navbar-down", window.scrollY > 0)
+/* ------------------ BACKGROUND SCROLL ----------------- */
+
+
+window.addEventListener('scroll', () => {
+    let headerNavBar = document.getElementById("header")
+    if (window.scrollY > 0) {
+        headerNavBar.classList.add("navbar-down")
+    } else {
+        headerNavBar.classList.remove("navbar-down")
+    }
 })
+
+
+// =========== SCROLL SECTIONS ACTIVE LINK ===========
+
+
 
 const sections = document.querySelectorAll("section")
 const navLink = document.querySelectorAll(".nav-link a")
 
+
+
+
 window.addEventListener("scroll", function() {
-    let current = '';
-
-
+    let idSection = '';
     sections.forEach(section => {
         const sectionTop = section.offsetTop - 100;
         const sectionHeight = section.clientHeight;
         if (pageYOffset >= sectionTop) {
-            current = section.getAttribute('id')
+            idSection = section.getAttribute('id')
         }
     })
-
-    console.log(current);
+    console.log(idSection);
     navLink.forEach(li => {
         li.classList.remove('active-link')
-        if (li.classList.contains(current)) {
+        if (li.dataset.page == idSection) {
             li.classList.add('active-link')
         }
     })

@@ -1,3 +1,19 @@
+.card-content {
+    .card-points {
+        margin-top: 2rem;
+        height: 100%;
+        font-size: $text-normal;
+        text-align: start;
+        li {
+            display: flex;
+            position: relative;
+            margin: 1rem 0px;
+            width: 100%;
+            border-bottom: 1px solid $color-primario;
+        }
+    }
+}
+
 .s-card {
     display: flex;
     flex-direction: row;
@@ -13,6 +29,15 @@
         span {
             color: $color-primario;
         }
+    }
+}
+
+.i-study {
+    height: 500px;
+    padding: 20px;
+    img {
+        margin: 0px 0px 20px 0px;
+        height: 30%;
     }
 }
 
