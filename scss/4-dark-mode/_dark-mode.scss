@@ -60,7 +60,7 @@ body.dark {
             transition: all .5s;
         }
     }
-    #preload {
+    .preload {
         background: $bg-color-night;
     }
     .lds-facebook div {
@@ -80,7 +80,7 @@ body.dark {
     .navbar-down {
         background: rgb(238, 238, 238);
     }
-    #header {
+    .header {
         .menu-btn {
             filter: invert(0%) !important;
             -webkit-filter: invert(0%) !important;
@@ -102,7 +102,7 @@ body.dark {
             filter: invert(0);
         }
         background: $bg-color-night;
-        #about-us,
+        .about-us,
         .about-content,
         .about-image {
             background: $bg-color2-night;
@@ -135,13 +135,13 @@ body.dark {
         .progress {
             background-color: $bg-color2-night;
         }
-        #works {
+        .works {
             background: $bg-color-night;
             .filter-item {
                 border: 2px solid $bg-color2-night;
             }
         }
-        #overlay {
+        .overlay {
             background: rgb(0, 0, 0, 56%);
             .overlay-container {
                 background: $bg-color-night;
@@ -154,7 +154,7 @@ body.dark {
                 }
             }
         }
-        #modal-video {
+        .modal-video {
             background: rgb(0, 0, 0, 56%);
             .video-container {
                 background: $bg-color-night;
@@ -164,7 +164,7 @@ body.dark {
                 }
             }
         }
-        #contact {
+        .contact {
             background: $bg-color2-night;
             .contact-redes ul li {
                 a {
@@ -176,7 +176,7 @@ body.dark {
                 }
             }
         }
-        #footer {
+        .footer {
             background: $bg-color-night;
         }
         .form {

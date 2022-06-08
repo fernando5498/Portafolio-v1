@@ -1,4 +1,4 @@
-#contact {
+.contact {
     padding: $padding-conteiner;
     background: $bg-color;
     min-height: 100vh;
@@ -169,9 +169,9 @@
     }
 }
 
-#footer {
+.footer {
     color: $color-secundario;
-    background: $bg-color2;
+    background: $bg-color;
     text-align: center;
     padding-top: 10px;
     @include f-center;

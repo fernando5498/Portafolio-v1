@@ -182,7 +182,13 @@ p {
   transition: all 0.5s;
 }
 
-#contact {
+@media screen and (max-width: 370px) {
+  .btn-primario,
+.btn-secundario {
+    padding: 10px 25px;
+  }
+}
+.contact {
   padding: 5rem 0px;
   background: #0c121d;
   min-height: 100vh;
@@ -375,9 +381,9 @@ p {
   letter-spacing: 1px;
 }
 
-#footer {
+.footer {
   color: white;
-  background: #141d2f;
+  background: #0c121d;
   text-align: center;
   padding-top: 10px;
   display: flex;
@@ -1273,7 +1279,7 @@ body.dark .btn-secundario img {
   filter: invert(0%);
   transition: all 0.5s;
 }
-body.dark #preload {
+body.dark .preload {
   background: white;
 }
 body.dark .lds-facebook div {
@@ -1292,19 +1298,19 @@ body.dark li {
 body.dark .navbar-down {
   background: #eeeeee;
 }
-body.dark #header .menu-btn {
+body.dark .header .menu-btn {
   filter: invert(0%) !important;
   -webkit-filter: invert(0%) !important;
 }
 @media (max-width: 950px) {
-  body.dark #header .nav {
+  body.dark .header .nav {
     background: rgba(238, 238, 238, 0.753);
   }
-  body.dark #header .nav a {
+  body.dark .header .nav a {
     color: black;
   }
 }
-body.dark #header::before {
+body.dark .header::before {
   background: white;
 }
 body.dark .main {
@@ -1313,7 +1319,7 @@ body.dark .main {
 body.dark .main .home__img img {
   filter: invert(0);
 }
-body.dark .main #about-us,
+body.dark .main .about-us,
 body.dark .main .about-content,
 body.dark .main .about-image {
   background: #eeeeee;
@@ -1342,46 +1348,46 @@ body.dark .main .m-study-container::after {
 body.dark .main .progress {
   background-color: #eeeeee;
 }
-body.dark .main #works {
+body.dark .main .works {
   background: white;
 }
-body.dark .main #works .filter-item {
+body.dark .main .works .filter-item {
   border: 2px solid #eeeeee;
 }
-body.dark .main #overlay {
+body.dark .main .overlay {
   background: rgba(0, 0, 0, 0.56);
 }
-body.dark .main #overlay .overlay-container {
+body.dark .main .overlay .overlay-container {
   background: white;
 }
-body.dark .main #overlay .overlay-container .cerrar-overlay {
+body.dark .main .overlay .overlay-container .cerrar-overlay {
   -webkit-filter: none;
   filter: none;
 }
-body.dark .main #overlay .overlay-container .enlaces-img a:hover {
+body.dark .main .overlay .overlay-container .enlaces-img a:hover {
   color: white;
 }
-body.dark .main #modal-video {
+body.dark .main .modal-video {
   background: rgba(0, 0, 0, 0.56);
 }
-body.dark .main #modal-video .video-container {
+body.dark .main .modal-video .video-container {
   background: white;
 }
-body.dark .main #modal-video .video-container .cerrar-overlay-video {
+body.dark .main .modal-video .video-container .cerrar-overlay-video {
   -webkit-filter: none;
   filter: none;
 }
-body.dark .main #contact {
+body.dark .main .contact {
   background: #eeeeee;
 }
-body.dark .main #contact .contact-redes ul li a {
+body.dark .main .contact .contact-redes ul li a {
   background: #eeeeee;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.096);
 }
-body.dark .main #contact .contact-redes ul li a:active {
+body.dark .main .contact .contact-redes ul li a:active {
   box-shadow: none;
 }
-body.dark .main #footer {
+body.dark .main .footer {
   background: white;
 }
 body.dark .main .form {
@@ -1409,11 +1415,12 @@ body.dark .main .form__data input[type=submit] {
 /* ------------------------ HOME ------------------------ */
 .home {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   width: 100%;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap-reverse;
 }
 .home__title {
   text-align: start;
@@ -1423,14 +1430,14 @@ body.dark .main .form__data input[type=submit] {
   font-weight: 200;
 }
 .home__img {
-  width: 350px;
+  max-width: 350px;
 }
 .home__img img {
   filter: invert(1);
 }
 
 /* --------------------------- ABOUT-US --------------------------- */
-#about-us {
+.about-us {
   overflow: hidden;
   position: relative;
   width: 100%;
@@ -1439,7 +1446,7 @@ body.dark .main .form__data input[type=submit] {
   transition: all 500ms;
   background: #0c121d;
 }
-#about-us .about-image {
+.about-us .about-image {
   height: 100%;
   margin-left: 4rem;
   position: absolute;
@@ -1447,14 +1454,14 @@ body.dark .main .form__data input[type=submit] {
   align-items: center;
   justify-content: center;
 }
-#about-us .about-image img {
+.about-us .about-image img {
   width: 100%;
   height: 80%;
   position: absolute;
   -o-object-fit: contain;
   object-fit: contain;
 }
-#about-us .about-content {
+.about-us .about-content {
   color: white;
   height: 100%;
   position: absolute;
@@ -1465,32 +1472,32 @@ body.dark .main .form__data input[type=submit] {
   flex-direction: column;
   justify-content: space-around;
 }
-#about-us .about-content .about-text {
+.about-us .about-content .about-text {
   font-size: 1rem;
   margin-top: 2rem;
 }
-#about-us .about-content .about-text img {
+.about-us .about-content .about-text img {
   display: none;
 }
-#about-us .about-content .about-button {
+.about-us .about-content .about-button {
   display: flex;
   padding-bottom: 1rem;
   justify-content: space-between;
   align-items: center;
 }
-#about-us .about-content .about-button .icon {
+.about-us .about-content .about-button .icon {
   height: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
 }
-#about-us .about-content .about-button .icon img {
+.about-us .about-content .about-button .icon img {
   filter: invert(100%);
   align-self: center;
   height: 100%;
 }
-#about-us .about-content .about-button .icon .tooltip-personal {
+.about-us .about-content .about-button .icon .tooltip-personal {
   background: white;
   color: black;
   padding: 5px 20px;
@@ -1516,7 +1523,7 @@ body.dark .main .form__data input[type=submit] {
   -ms-transition: all 0.3s;
   -o-transition: all 0.3s;
 }
-#about-us .about-content .about-button .icon .tooltip-personal::after {
+.about-us .about-content .about-button .icon .tooltip-personal::after {
   content: "";
   position: absolute;
   width: 8px;
@@ -1530,24 +1537,24 @@ body.dark .main .form__data input[type=submit] {
   -ms-transform: translateX(-50%) rotate(45deg);
   -o-transform: translateX(-50%) rotate(45deg);
 }
-#about-us .about-content .about-button .icon:hover .tooltip-personal {
+.about-us .about-content .about-button .icon:hover .tooltip-personal {
   opacity: 1;
 }
 
 /* ----------------------------- STUDY ---------------------------- */
-#study {
+.study {
   padding: 5rem 0px;
   overflow: hidden;
 }
 
 /* ----------------------- SKILLS ----------------------- */
-#skills {
+.skills {
   padding: 5rem 0px;
   overflow: hidden;
 }
 
 /* -------------------------- PORTAFOLIO -------------------------- */
-#works {
+.works {
   background: #141d2f;
   padding: 5rem 0px;
   overflow: hidden;
@@ -1631,29 +1638,37 @@ body.dark .main .form__data input[type=submit] {
 }
 
 @media (max-width: 900px) {
+  .home {
+    padding-top: 90px;
+    padding-bottom: 90px;
+  }
+  .home__img {
+    min-width: 210px;
+  }
+
   .card-points {
     padding: 0;
   }
 
-  #about-us .about-image {
+  .about-us .about-image {
     display: none;
   }
-  #about-us .about-content {
+  .about-us .about-content {
     width: 100%;
     position: relative;
-    padding: 0px 3rem;
+    padding: 0px 1rem;
   }
-  #about-us .about-text {
+  .about-us .about-text {
     overflow-y: scroll;
     margin-bottom: 30px;
   }
-  #about-us .about-text h2 {
+  .about-us .about-text h2 {
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  #about-us .about-text img {
+  .about-us .about-text img {
     display: block !important;
     width: 300px;
     float: left;
@@ -1661,21 +1676,25 @@ body.dark .main .form__data input[type=submit] {
   }
 }
 @media (max-height: 550px) {
-  #about-us {
+  .about-us {
     height: 700px;
   }
 }
 @media (max-width: 530px) {
+  .home__title {
+    width: 100%;
+  }
+
   .linea {
     width: 80px;
   }
 
-  #about-us .about-text {
+  .about-us .about-text {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  #about-us .about-text img {
+  .about-us .about-text img {
     margin: 0;
     margin-bottom: 10px;
     width: 150px;

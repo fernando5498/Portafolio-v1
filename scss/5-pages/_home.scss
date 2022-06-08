@@ -2,11 +2,12 @@
 
 .home {
     position: relative;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     width: 100%;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap-reverse;
     &__title {
         text-align: start;
         color: $color-secundario;
@@ -15,7 +16,8 @@
         }
     }
     &__img {
-        width: 350px;
+        max-width: 350px;
+        // width: 30%;
         img {
             filter: invert(1);
         }
@@ -25,7 +27,7 @@
 
 /* --------------------------- ABOUT-US --------------------------- */
 
-#about-us {
+.about-us {
     overflow: hidden;
     position: relative;
     width: 100%;
@@ -132,7 +134,7 @@
 
 /* ----------------------------- STUDY ---------------------------- */
 
-#study {
+.study {
     padding: $padding-conteiner;
     overflow: hidden;
 }
@@ -140,7 +142,7 @@
 
 /* ----------------------- SKILLS ----------------------- */
 
-#skills {
+.skills {
     padding: $padding-conteiner;
     overflow: hidden;
 }
@@ -148,7 +150,7 @@
 
 /* -------------------------- PORTAFOLIO -------------------------- */
 
-#works {
+.works {
     background: $bg-color2;
     padding: $padding-conteiner;
     overflow: hidden;

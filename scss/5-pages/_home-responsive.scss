@@ -1,15 +1,22 @@
 @media (max-width:900px) {
+    .home {
+        padding-top: 90px;
+        padding-bottom: 90px;
+        &__img {
+            min-width: 210px;
+        }
+    }
     .card-points {
         padding: 0;
     }
-    #about-us {
+    .about-us {
         .about-image {
             display: none;
         }
         .about-content {
             width: 100%;
             position: relative;
-            padding: 0px 3rem;
+            padding: 0px 1rem;
         }
         .about-text {
             overflow-y: scroll;
@@ -31,16 +38,19 @@
 }
 
 @media (max-height:550px) {
-    #about-us {
+    .about-us {
         height: 700px;
     }
 }
 
 @media (max-width:530px) {
+    .home__title {
+        width: 100%;
+    }
     .linea {
         width: 80px;
     }
-    #about-us {
+    .about-us {
         .about-text {
             display: flex;
             flex-direction: column;
