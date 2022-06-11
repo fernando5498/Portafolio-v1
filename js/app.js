@@ -1,5 +1,5 @@
 /* ---------------------------- PRELOAD --------------------------- */
-window.onload = function() {
+window.onload = function () {
     $('#preload').fadeOut();
     $('body').removeClass('overflow-hidden')
 };
@@ -32,21 +32,39 @@ if (localStorage.getItem('dark-mode') === 'true') {
 
 
 /* ---------------------------- GALERIA --------------------------- */
-var grid = new Muuri('.grid', {
+let galery = document.querySelector('.grid')
+
+var grid = new Muuri(galery, {
     layout: {
-        // fillGaps: true,
-        // horizontal : true , 
-        // alignRight: true,
-        // alignBottom : true , 
-        rounding: true,
-    }
+        fillGaps: false,
+        horizontal: false,
+        alignRight: false,
+        alignBottom: false,
+        rounding: false
+    },
+    layoutOnResize: 150,
+    layoutOnInit: true,
+    layoutDuration: 300,
+    layoutEasing: 'ease',
+    dragEnabled: false,
+
+
+
+
 });
+
+
+window.addEventListener('scroll', () => {
+    grid.refreshItems().layout();
+
+})
+
 
 
 /* ----------------------- FILTRO ----------------------- */
 
 window.addEventListener('load', () => {
-    grid.refreshItems().layout();
+
     document.getElementById('grid').classList.add('img-cargadas')
     const enlaces = document.querySelectorAll(".filter .filter-item")
     enlaces.forEach((item) => {
@@ -68,16 +86,21 @@ window.addEventListener('load', () => {
 /* ----------------------------- MENU ----------------------------- */
 
 /* ------------------ BACKGROUND SCROLL ----------------- */
+let headerNavBar = document.getElementById("header")
 
+if (window.scrollY > 0) {
+    headerNavBar.classList.add("navbar-down")
 
-window.addEventListener('scroll', () => {
-    let headerNavBar = document.getElementById("header")
-    if (window.scrollY > 0) {
-        headerNavBar.classList.add("navbar-down")
-    } else {
-        headerNavBar.classList.remove("navbar-down")
-    }
-})
+} else {
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 0) {
+            headerNavBar.classList.add("navbar-down")
+        } else {
+            headerNavBar.classList.remove("navbar-down")
+        }
+    })
+}
+
 
 
 // =========== SCROLL SECTIONS ACTIVE LINK ===========
@@ -90,7 +113,7 @@ const navLink = document.querySelectorAll(".nav-link a")
 
 
 
-window.addEventListener("scroll", function() {
+window.addEventListener("scroll", function () {
     let idSection = '';
     sections.forEach(section => {
         const sectionTop = section.offsetTop - 100;
@@ -276,7 +299,7 @@ modalvideo.addEventListener('click', (fuera) => {
 const buttomGmail = document.querySelector('.gmail')
 const form = document.querySelector('.container-form')
 const closeForm = document.querySelector('.close--form')
-buttomGmail.addEventListener('click', function(e) {
+buttomGmail.addEventListener('click', function (e) {
     e.preventDefault()
     form.classList.toggle('active')
 })
@@ -300,3 +323,24 @@ ScrollReveal().reveal('.contact-redes', {
     origin: 'bottom',
     duration: 1800
 });
+
+
+
+/* ----------------- ANIMACION ICON INFO ---------------- */
+
+let iconInfo = document.querySelectorAll('.info-icon span i')
+
+iconInfo.forEach(icon => {
+    icon.addEventListener('click', () => {
+        function saltar(i) {
+            i.style.animation = "saltar-icon 1s ease-in-out"
+
+            setTimeout(() => {
+
+                return i.style.animation = ""
+            }, 1000);
+        }
+        saltar(icon)
+    })
+
+})

@@ -17,12 +17,13 @@
     font-weight: 500;
     display: inline-block;
     border-radius: 4px;
-    transition: .5s;
+    transition: 0.5s;
     border: 2px solid $color-primario;
     padding: 10px 35px;
     margin: 10px 7px 10px 0px;
     color: $color-secundario;
     background: $color-primario;
+
     &:hover {
         background: transparent;
         border: 2px solid $color-secundario;
@@ -33,10 +34,11 @@
     font-weight: 500;
     display: inline-block;
     border-radius: 4px;
-    transition: .5s;
+    transition: 0.5s;
     padding: 10px 35px;
     margin: 10px 7px 10px 0px;
     border: 2px solid $color-secundario;
+
     &:hover {
         background: $color-primario;
         border: 2px solid $color-primario;

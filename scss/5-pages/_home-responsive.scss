@@ -1,6 +1,5 @@
-@media (max-width:900px) {
+@media (max-width: 900px) {
     .home {
-        padding-top: 90px;
         padding-bottom: 90px;
         &__img {
             min-width: 210px;
@@ -37,15 +36,22 @@
     }
 }
 
-@media (max-height:550px) {
+@media (max-height: 550px) {
     .about-us {
         height: 700px;
     }
 }
 
-@media (max-width:530px) {
+@media (max-width: 530px) {
     .home__title {
         width: 100%;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .home__img {
+        display: none;
     }
     .linea {
         width: 80px;
@@ -60,25 +66,25 @@
                 margin-bottom: 10px;
                 width: 150px;
             }
+            p {
+                padding: 0px 1rem;
+            }
         }
     }
 }
 
-@media (max-width:1000px) {
+@media (max-width: 1000px) {
     .grid {
         .item {
-            width: calc(50% - 20px);
+            width: calc(50% - 30px);
         }
     }
 }
 
-@media (max-width:600px) {
+@media (max-width: 420px) {
     .grid {
         .item {
-            width: calc(100% - 20px);
+            width: calc(100% - 30px);
         }
-    }
-    .progress {
-        width: 50%;
     }
 }
