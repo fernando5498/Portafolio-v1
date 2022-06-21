@@ -1,4 +1,5 @@
 /* ---------------------------- SOMBRAS --------------------------- */
+@use "../1-base/variables" as var;
 
 @mixin sombras-normal {
     border-radius: 3px;
@@ -18,15 +19,15 @@
     display: inline-block;
     border-radius: 4px;
     transition: 0.5s;
-    border: 2px solid $color-primario;
+    border: 2px solid var.$color-primario;
     padding: 10px 35px;
     margin: 10px 7px 10px 0px;
-    color: $color-secundario;
-    background: $color-primario;
+    color: var.$color-secundario;
+    background: var.$color-primario;
 
     &:hover {
         background: transparent;
-        border: 2px solid $color-secundario;
+        border: 2px solid var.$color-secundario;
     }
 }
 
@@ -37,11 +38,11 @@
     transition: 0.5s;
     padding: 10px 35px;
     margin: 10px 7px 10px 0px;
-    border: 2px solid $color-secundario;
+    border: 2px solid var.$color-secundario;
 
     &:hover {
-        background: $color-primario;
-        border: 2px solid $color-primario;
-        color: $color-secundario;
+        background: var.$color-primario;
+        border: 2px solid var.$color-primario;
+        color: var.$color-secundario;
     }
 }

@@ -1,6 +1,10 @@
+@use "../1-base/variables" as var;
+@use "../2-mixins/mixins" as mixs;
+@use "../2-mixins/breakPoints" as breakP;
+
 .contact {
-    padding: $padding-conteiner;
-    background: $bg-color;
+    padding: var.$padding-conteiner;
+    background: var.$bg-color;
     min-height: 100vh;
 }
 
@@ -11,33 +15,28 @@
 .contact-content {
     position: relative;
     .contact-redes {
+        display: flex;
         width: 100%;
-        color: $color-secundario;
-        ul {
-            display: flex;
-            width: 100%;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            li {
-                a {
-                    padding: 2rem;
-                    transition: all 300ms;
-                    min-height: 200px;
-                    min-height: 250px;
-                    min-width: 300px;
-                    @include f-center;
-                    flex-direction: column;
-                    @include sombras-normal;
-                    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
-                        "Open Sans", "Helvetica Neue", sans-serif;
-                }
-                a:hover p {
-                    color: $color-primario;
-                }
-                a:active {
-                    box-shadow: none;
-                    color: $color-secundario;
-                }
+        justify-content: space-around;
+        flex-wrap: wrap;
+        li {
+            a {
+                padding: 2rem;
+                transition: all 300ms;
+                min-height: 250px;
+                min-width: 250px;
+                @include mixs.f-center;
+                flex-direction: column;
+                @include mixs.sombras-normal;
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+                    "Open Sans", "Helvetica Neue", sans-serif;
+            }
+            a:hover p {
+                color: var.$color-primario;
+            }
+            a:active {
+                box-shadow: none;
+                color: var.$color-secundario;
             }
         }
     }
@@ -49,8 +48,8 @@
 }
 
 .info {
-    color: $color-secundario;
-    @include f-center;
+    color: var.$color-secundario;
+    @include mixs.f-center;
     flex-direction: column;
 }
 
@@ -61,7 +60,7 @@
     padding: 0px 20px 20px 0px;
     width: 100%;
     height: 60px;
-    @include f-center;
+    @include mixs.f-center;
     &:hover {
         opacity: 1;
     }
@@ -74,8 +73,8 @@
             transition: all 300ms;
         }
         i:hover {
-            color: $color-secundario;
-            color: $color-primario;
+            color: var.$color-secundario;
+            color: var.$color-primario;
         }
     }
 }
@@ -102,7 +101,7 @@
     bottom: -120%;
     left: 0;
     background: transparent;
-    @include f-center;
+    @include mixs.f-center;
     transition: all 500ms;
     -webkit-transition: all 500ms;
     -moz-transition: all 500ms;
@@ -116,11 +115,11 @@
 }
 
 .form {
-    background: $bg-color2;
+    background: var.$bg-color2;
     width: 80%;
     min-height: 280px;
     position: relative;
-    @include sombras-normal;
+    @include mixs.sombras-normal;
     border-radius: 4px;
     height: 70%;
     margin: 0;
@@ -155,10 +154,10 @@
         textarea {
             border: none;
             background: transparent;
-            border-bottom: 1px solid transparentize($color-secundario, 0.7);
+            border-bottom: 1px solid transparentize(var.$color-secundario, 0.7);
             height: 40px;
             font-weight: medium;
-            color: transparentize($color-secundario, 0.5);
+            color: transparentize(var.$color-secundario, 0.5);
             transition: all 300ms;
             -webkit-transition: all 300ms;
             -moz-transition: all 300ms;
@@ -171,65 +170,23 @@
         }
         input:focus,
         textarea:focus {
-            border-bottom: 1px solid $color-secundario;
+            border-bottom: 1px solid var.$color-secundario;
             outline: none;
-            color: $color-secundario;
+            color: var.$color-secundario;
         }
         input[type="submit"] {
-            @include btn-principal;
+            @include mixs.btn-principal;
             height: auto;
             &:hover {
-                background: $color-primario;
-                border: 2px solid $color-primario;
+                background: var.$color-primario;
+                border: 2px solid var.$color-primario;
                 letter-spacing: 1px;
             }
         }
     }
-}
-
-.footer {
-    color: $color-secundario;
-    background: $bg-color;
-    text-align: center;
-    padding-top: 10px;
-    @include f-center;
-}
-
-@media (max-width: 900px) {
-    .contact-redes {
-        ul {
-            flex-direction: column;
-            padding: 0;
-            li {
-                a {
-                    min-width: auto;
-                }
-            }
-        }
-    }
-}
-
-@media (max-width: 600px) {
-    .contact-redes {
-        ul {
-            flex-direction: column;
-            padding: 0;
-            align-items: center !important;
-            li {
-                a {
-                    min-width: 250px !important;
-                }
-            }
-        }
-    }
-    .form {
+    @include breakP.mediaQueriesMax(sm) {
         height: 100%;
         width: 100%;
-    }
-}
-
-@media (max-width: 500px) {
-    .form {
         &__data {
             width: 100%;
         }
@@ -237,4 +194,12 @@
             display: none;
         }
     }
+}
+
+.footer {
+    color: var.$color-secundario;
+    background: var.$bg-color;
+    text-align: center;
+    padding-top: 10px;
+    @include mixs.f-center;
 }

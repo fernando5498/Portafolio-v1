@@ -1,4 +1,6 @@
 /* ------------------------ HOME ------------------------ */
+@use "../1-base/variables" as var;
+@use "../2-mixins/breakPoints" as breakP;
 
 .home {
     position: relative;
@@ -10,16 +12,34 @@
     flex-wrap: wrap-reverse;
     &__title {
         text-align: start;
-        color: $color-secundario;
+        color: var.$color-secundario;
         h2 {
             font-weight: 200;
         }
     }
     &__img {
         max-width: 350px;
-        // width: 30%;
+
         img {
             filter: invert(1);
+        }
+    }
+    @include breakP.mediaQueriesMax(lg) {
+        padding-bottom: 90px;
+        &__img {
+            min-width: 210px;
+        }
+    }
+    @include breakP.mediaQueriesMax(sm) {
+        &__title {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+        &__img {
+            display: none;
         }
     }
 }
@@ -27,48 +47,23 @@
 /* --------------------------- ABOUT-US --------------------------- */
 
 .about-us {
-    overflow: hidden;
     position: relative;
     width: 100%;
-    height: 100vh;
-    display: flex;
-    transition: all 500ms;
-    background: $bg-color;
-    .about-image {
-        height: 100%;
-        margin-left: 4rem;
-        position: absolute;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        img {
-            width: 100%;
-            height: 80%;
-            position: absolute;
-            -o-object-fit: contain;
-            object-fit: contain;
-        }
-    }
-    .about-content {
-        color: $color-secundario;
-        height: 100%;
-        position: absolute;
-        border: none;
-        right: 0;
-        padding: 0px 4rem 0px 0px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        .about-text {
-            font-size: $text-normal;
-            margin-top: 2rem;
+    background: var.$bg-color;
+    padding: 5rem 0;
+    &__content {
+        font-size: var.$text-normal;
+        margin-top: 1rem;
+        &__img {
+            max-width: 300px;
+            float: left;
+            margin-right: 30px;
             img {
-                display: none;
+                width: 100%;
             }
         }
-        .about-button {
+        &__button {
             display: flex;
-            padding-bottom: 1rem;
             justify-content: space-between;
             align-items: center;
             .icon {
@@ -128,33 +123,43 @@
             }
         }
     }
+
+    @include breakP.mediaQueriesMax(sm) {
+        .about-us__content__img {
+            margin: 0 auto;
+            margin-bottom: 10px;
+            width: 150px;
+            clear: both;
+            float: none;
+        }
+    }
 }
 
 /* ----------------------------- STUDY ---------------------------- */
 
 .study {
-    padding: $padding-conteiner;
+    padding: var.$padding-conteiner;
     overflow: hidden;
 }
 
 /* ----------------------- SKILLS ----------------------- */
 
 .skills {
-    padding: $padding-conteiner;
+    padding: var.$padding-conteiner;
     overflow: hidden;
 }
 
 /* -------------------------- PORTAFOLIO -------------------------- */
 
 .works {
-    background: $bg-color2;
-    padding: $padding-conteiner;
+    background: var.$bg-color2;
+    padding: var.$padding-conteiner;
     overflow: hidden;
     min-height: 1200px;
 }
 
 .works-title {
-    color: $color-secundario;
+    color: var.$color-secundario;
     .works-category {
         display: flex;
         justify-content: space-around;
@@ -165,20 +170,20 @@
             flex-wrap: wrap;
             li {
                 padding: 2px 10px;
-                border: 2px solid $color-secundario;
+                border: 2px solid var.$color-secundario;
                 margin: 5px 5px;
                 transition: all 300ms;
                 cursor: pointer;
             }
             li:hover {
-                background: $color-primario;
+                background: var.$color-primario;
             }
         }
     }
 }
 
 .active-filter {
-    background: $color-primario;
+    background: var.$color-primario;
 }
 
 .img-cargadas {
@@ -187,15 +192,12 @@
 
 .grid {
     position: relative;
-
     opacity: 1;
-
     .item {
         position: absolute;
         display: block;
         width: calc(25% - 30px);
         margin: 10px;
-
         .item-content {
             width: 100%;
             height: 100%;
@@ -224,6 +226,16 @@
                     transform: scale(1.05);
                 }
             }
+        }
+    }
+    @include breakP.mediaQueriesMax(lg) {
+        .item {
+            width: calc(50% - 30px);
+        }
+    }
+    @include breakP.mediaQueriesMax(sm) {
+        .item {
+            width: calc(100% - 30px);
         }
     }
 }

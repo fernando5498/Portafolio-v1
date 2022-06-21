@@ -1,14 +1,16 @@
+@use "../2-mixins/mixins" as mixs;
+
 .btn-primario {
-    @include btn-principal;
+    @include mixs.btn-principal;
 }
 
 .btn-secundario {
-    @include btn-secundario;
+    @include mixs.btn-secundario;
     img {
         width: 15px;
         -webkit-filter: invert(100%);
         filter: invert(100%);
-        transition: all .5s;
+        transition: all 0.5s;
     }
 }
 

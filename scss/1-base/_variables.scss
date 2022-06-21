@@ -1,34 +1,32 @@
 /* ---------------------------- COLORES --------------------------- */
 
-$color-primario:#00A8E8;
-$color-secundario:white;
-$text-color:#444444;
-$sub-title-color:#263d4d;
-$icon-color:#477392;
-$bg-color:hsl(217deg 43% 8%);
-$bg-color2:hsl(219deg 41% 13%);
+$color-primario: #00a8e8;
+$color-secundario: white;
+$text-color: #444444;
+$sub-title-color: #263d4d;
+$icon-color: #477392;
+$bg-color: hsl(217deg 43% 8%);
+$bg-color2: hsl(219deg 41% 13%);
 
 /* --------------------- THEME-DARK --------------------- */
 
-$color-secundario-night:black;
-$text-color-night:black;
-$bg-color-night:white;
-$bg-color2-night:rgb(238, 238, 238);
-$nav-modal-color:#a5a5a5;
-;
-
+$color-secundario-night: black;
+$text-color-night: black;
+$bg-color-night: white;
+$bg-color2-night: rgb(238, 238, 238);
+$nav-modal-color: #a5a5a5;
 /* ---------------------------- TAMAÑOS --------------------------- */
 
-$padding-conteiner:5rem 0px;
-$font-size-navbar:.8rem;
-$font-size-h1:4rem;
-$font-size-h2:2.5rem;
-$font-size-h3:2rem;
-$font-size-h4:1.25rem;
-$font-size-h5:1.1rem;
-$text-normal:1rem;
-$text-small:.8rem;
+$padding-conteiner: 5rem 0px;
+$font-size-navbar: 0.8rem;
+$font-size-h1: 4rem;
+$font-size-h2: 2.5rem;
+$font-size-h3: 2rem;
+$font-size-h4: 1.25rem;
+$font-size-h5: 1.1rem;
+$text-normal: 1rem;
+$text-small: 0.8rem;
 
 /* --------------------- TRANSITION --------------------- */
 
-$transition-fetch:all 300ms;
+$transition-fetch: all 300ms;

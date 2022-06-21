@@ -226,6 +226,17 @@ var modalGaleria = document.querySelectorAll('.item img')
 
 
 modalGaleria.forEach((img) => {
+
+    // let modalContent = {
+    //     ruta: ,
+    //     url: ,
+    //     repositorio: ,
+    //     download: ,
+    //     categoria: ,
+    //     title: ,
+    //     fecha: ,
+    //     description: ,
+    // }
     const ruta = img.getAttribute('src')
     const url = img.parentNode.parentNode.dataset.link
     const repo = img.parentNode.parentNode.dataset.repositorio

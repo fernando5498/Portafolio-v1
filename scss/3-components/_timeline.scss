@@ -1,0 +1,71 @@
+@use "../1-base/variables" as var;
+@use "../2-mixins/breakPoints" as breakP;
+
+.container-timeline {
+    padding: 5rem 0px 0px 0px;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timeline {
+    height: auto;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    ul {
+        li {
+            border-radius: 10px;
+            margin-bottom: 20px;
+            user-select: none;
+        }
+    }
+    @include breakP.mediaQueriesMin(md) {
+        &::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 2px;
+            right: 49.8%;
+            background-color: var.$color-primario;
+        }
+        ul li {
+            width: 50%;
+            margin-bottom: 50px;
+            position: relative;
+            &:nth-child(odd) {
+                float: left;
+                clear: right;
+                transform: translateX(-29px);
+            }
+            &:nth-child(even) {
+                float: right;
+                clear: left;
+                transform: translateX(30px);
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                height: 20px;
+                width: 20px;
+                background: var.$color-primario;
+                border-radius: 50%;
+                top: 0;
+                transition: all 300ms;
+            }
+            &:nth-child(odd)::after {
+                transform: translate(50%, -50%);
+                right: -30px;
+            }
+            &:nth-child(even)::after {
+                transform: translate(-50%, 50%);
+                left: -30px;
+            }
+            &:hover::after {
+                box-shadow: 0px 0px 10px var.$color-primario;
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+$breakPoints: (
+    xs: 375px,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    xxl: 1400px,
+);
+
+@mixin mediaQueriesMax($tamaño) {
+    @media screen and (max-width: map-get($breakPoints,$tamaño)) {
+        @content;
+    }
+}
+@mixin mediaQueriesMin($tamaño) {
+    @media screen and (min-width: map-get($breakPoints,$tamaño)) {
+        @content;
+    }
+}

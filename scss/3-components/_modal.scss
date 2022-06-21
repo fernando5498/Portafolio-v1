@@ -1,0 +1,316 @@
+@use "../1-base/variables" as var;
+@use "../2-mixins/mixins" as mixs;
+@use "../2-mixins/breakPoints" as breakP;
+
+.modal-container {
+    display: flex;
+    &.mo-active {
+        position: fixed;
+        top: 0;
+        height: 100vh;
+        width: 100%;
+        @include mixs.f-center;
+        z-index: 10;
+        &::before {
+            content: "";
+            position: fixed;
+            height: 100vh;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background: rgba(21, 20, 20, 0.877);
+        }
+    }
+}
+
+.modal-container .modal-content.mo-con-active {
+    position: absolute;
+    background: white;
+    width: 70%;
+    max-width: 800px;
+    height: 70%;
+    min-height: 500px;
+    max-height: 550px;
+    z-index: 310;
+    padding: 3rem;
+    @include mixs.f-center;
+    font-size: 1.4rem;
+    -webkit-animation: abrir 0.7s ease-in-out;
+    animation: abrir 0.7s ease-in-out;
+    h2 {
+        color: black;
+        font-size: var.$font-size-h2;
+    }
+    p {
+        color: black;
+    }
+    .close {
+        background: url(../svg/cancel.svg) no-repeat;
+        background-size: 25px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 1rem;
+        cursor: pointer;
+        width: 25px;
+        height: 25px;
+    }
+    .modal-inner {
+        border-top: 2px solid black;
+        border-bottom: 2px solid black;
+        height: 100%;
+        overflow: scroll;
+        transition: all 1s;
+        text-align: center;
+        @include mixs.f-center;
+        span {
+            font-size: var.$text-normal + 0.8rem;
+            color: var.$color-primario;
+        }
+        p {
+            margin: 0;
+            max-height: 100%;
+        }
+    }
+    .start {
+        a {
+            @include mixs.btn-principal;
+            &:hover {
+                color: black;
+                border: 2px solid black;
+            }
+        }
+    }
+
+    @include breakP.mediaQueriesMax(md) {
+        width: 90%;
+        height: 80%;
+        padding: 2rem 1rem;
+        .close {
+            display: none;
+        }
+    }
+}
+
+/* --------------------- MODAL WORKS -------------------- */
+
+.div-margen {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.overlay {
+    display: none !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.788);
+    width: 100%;
+    height: 100vh;
+    @include mixs.f-center;
+    z-index: 10;
+    &.active-overlay {
+        display: flex !important;
+        z-index: 1;
+    }
+
+    .overlay-container {
+        position: relative;
+        width: 90%;
+        height: 80%;
+        background: var.$bg-color;
+        padding: 3rem;
+        color: var.$color-secundario;
+        -webkit-animation: abrir 0.7s ease-in-out;
+        animation: abrir 0.7s ease-in-out;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    .overlay-info {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        @include mixs.f-center;
+        .contenedor-img {
+            img {
+                width: 100%;
+                height: 100%;
+                max-height: calc(100vh / 1.5);
+                -o-object-fit: contain;
+                object-fit: contain;
+            }
+        }
+        .description-img {
+            @include mixs.f-center;
+            flex-direction: column;
+        }
+        .enlaces-img {
+            display: flex;
+            flex-direction: column;
+            a {
+                @include mixs.f-center;
+            }
+        }
+
+        .overlay-title {
+            text-align: center;
+            margin-bottom: 2px;
+            h3 {
+                margin: 0;
+            }
+            span {
+                font-size: 12px;
+                color: var.$nav-modal-color;
+                font-weight: bolder;
+            }
+        }
+    }
+}
+
+/* --------------------- MODAL-VIDEO -------------------- */
+
+.cerrar-overlay-video,
+.cerrar-overlay {
+    background: url(../svg/cancel.svg) no-repeat 30px;
+    background-position: center;
+    -webkit-filter: invert(100%);
+    filter: invert(100%);
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.modal-video {
+    display: none !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.788);
+    width: 100%;
+    height: 100vh;
+    z-index: 101 !important;
+    @include mixs.f-center;
+}
+
+.video-container {
+    position: relative;
+    width: 90%;
+    height: 80%;
+    background: var.$bg-color;
+    padding: 3rem;
+    color: var.$color-secundario;
+    -webkit-animation: abrir 0.7s ease-in-out;
+    animation: abrir 0.7s ease-in-out;
+    video {
+        width: 100%;
+        max-height: calc(100vh / 1.5);
+    }
+    .enlaces-img {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.active-video {
+    display: flex !important;
+    z-index: 1;
+}
+
+.contenedor-video {
+    position: relative;
+    height: 100%;
+    .ratio {
+        height: 100%;
+        &::before {
+            padding: 0;
+        }
+    }
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* ----------------- MEDIAQUERIES MODAL VIDEO Y WORKS----------------- */
+
+@media (max-width: 550px) {
+    .overlay-container,
+    .video-container {
+        padding: 2rem 0.5rem !important;
+    }
+    .cerrar-overlay,
+    .cerrar-overlay-video {
+        width: 15px !important;
+        height: 15px !important;
+    }
+}
+
+@media (max-width: 1000px) {
+    .cerrar-overlay,
+    .cerrar-overlay-video {
+        width: 20px !important;
+        z-index: 10;
+        height: 20px !important;
+    }
+}
+@media (max-width: 1000px) {
+    .overlay-container {
+        .contenedor-img {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+    }
+    .description-img {
+        width: 100%;
+    }
+    .contenedor-video {
+        margin-bottom: 1rem;
+    }
+    .grid .item {
+        width: calc(50% - 20px);
+    }
+    .enlaces-img {
+        flex-direction: row !important;
+        width: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .enlaces-img a {
+        font-size: 0.5rem;
+        padding: 5px 15px;
+    }
+    .grid .item {
+        width: calc(100% - 20px);
+    }
+}
+
+@-webkit-keyframes abrir {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes abrir {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

@@ -1,31 +1,30 @@
 /* --------------------------- BASE -------------------------- */
 
-@import "1-base/variables";
-@import "1-base/reset";
+@forward "1-base/variables";
+@forward "1-base/reset";
 
 /* ----------------------- MIXINS ----------------------- */
 
-@import "2-mixins/mixins";
-@import "2-mixins/breakPoints";
+@forward "2-mixins/mixins";
+@forward "2-mixins/breakPoints";
 
 /* ----------------------- LAYOUT ----------------------- */
 
-@import "3-layout/preload";
-@import "3-layout/buttons";
-@import "3-layout/containers";
-@import "3-layout/footer";
-@import "3-layout/header";
-@import "3-layout/logo";
-@import "3-layout/cards-study";
-@import "3-layout/modal";
-@import "3-layout/timeline";
-@import "3-layout/other";
+@forward "3-components/preload";
+@forward "3-components/buttons";
+@forward "3-components/containers";
+@forward "3-components/footer";
+@forward "3-components/header";
+@forward "3-components/logo";
+@forward "3-components/cards-study";
+@forward "3-components/modal";
+@forward "3-components/timeline";
+@forward "3-components/other";
 
 /* ---------------------- DARK-MODE --------------------- */
 
-@import "4-dark-mode/dark-mode";
+@forward "4-dark-mode/dark-mode";
 
 /* ------------------------ PAGES ----------------------- */
 
-@import "5-pages/home";
-@import "5-pages/home-responsive";
+@forward "5-pages/home";

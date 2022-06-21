@@ -1,0 +1,11 @@
+@use "../1-base/variables" as var;
+
+.linea {
+    width: 10%;
+    height: 1px;
+    display: inline-block;
+    background: var.$color-primario;
+    margin: 4px 10px;
+    vertical-align: middle;
+    min-width: 50px;
+}

@@ -1,11 +1,14 @@
+@use "../1-base/variables" as var;
+@use "../2-mixins/mixins" as mixs;
+
 .preload {
-    @include f-center;
-    height: 100vh;
+    @include mixs.f-center;
+    height: 100%;
     width: 100%;
-    background: $bg-color2;
+    background: var.$bg-color2;
     flex-direction: column;
     position: fixed;
-    z-index: 101;
+    z-index: 10;
     img {
         position: relative;
         width: 200px;

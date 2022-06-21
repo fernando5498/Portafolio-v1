@@ -1,10 +1,12 @@
+@use "variables" as var;
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     list-style: none;
     scrollbar-width: auto;
-    scrollbar-color: $color-primario transparent
+    scrollbar-color: var.$color-primario transparent;
 }
 
 ::-webkit-scrollbar {
@@ -13,21 +15,26 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: $color-primario;
+    background: var.$color-primario;
     border-radius: 40px;
+}
+html {
+    @media screen and (max-width: 576px) {
+        font-size: 14px;
+    }
 }
 
 body {
-    font-family: 'Raleway', sans-serif;
-    background: $bg-color2;
+    font-family: "Raleway", sans-serif;
+    background: var.$bg-color2;
     scroll-behavior: smooth;
 }
 
 a {
     text-decoration: none;
-    font-size: $font-size-navbar;
+    font-size: var.$font-size-navbar;
     transition: all 300ms;
-    color: $color-secundario;
+    color: var.$color-secundario;
     &:hover {
         color: black;
     }
@@ -38,25 +45,25 @@ ul {
 }
 
 h1 {
-    font-size: $font-size-h1;
+    font-size: var.$font-size-h1;
     font-weight: 700;
     color: white;
 }
 
 h2 {
-    font-size: $font-size-h2;
+    font-size: var.$font-size-h2;
     font-weight: 700;
     color: white;
 }
 
 h3 {
-    font-size: $font-size-h3;
+    font-size: var.$font-size-h3;
     font-weight: 700;
     color: white;
 }
 
 h4 {
-    font-size: $font-size-h4;
+    font-size: var.$font-size-h4;
     font-weight: 700;
     color: white;
 }
