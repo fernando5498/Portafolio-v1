@@ -4,32 +4,6 @@ window.onload = function () {
     $('body').removeClass('overflow-hidden')
 };
 
-/* --------------------- BOTON NOCHE -------------------- */
-
-const btnSwitch = document.querySelector('#switch')
-
-btnSwitch.addEventListener('click', () => {
-    document.body.classList.toggle('dark')
-    btnSwitch.classList.toggle('active-noche')
-    if (document.body.classList.contains('dark')) {
-        localStorage.setItem('dark-mode', 'true')
-    } else {
-        localStorage.setItem('dark-mode', 'false')
-    }
-})
-
-
-// obtenemos el modo actual
-if (localStorage.getItem('dark-mode') === 'true') {
-    document.body.classList.add('dark')
-    btnSwitch.classList.add('active-noche')
-} else {
-    document.body.classList.remove('dark')
-
-    btnSwitch.classList.remove('active-noche')
-};
-
-
 
 /* ---------------------------- GALERIA --------------------------- */
 let galery = document.querySelector('.grid')
@@ -83,85 +57,12 @@ window.addEventListener('load', () => {
 })
 
 
-/* ----------------------------- MENU ----------------------------- */
-
-/* ------------------ BACKGROUND SCROLL ----------------- */
-let headerNavBar = document.getElementById("header")
-
-if (window.scrollY > 0) {
-    headerNavBar.classList.add("navbar-down")
-
-} else {
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 0) {
-            headerNavBar.classList.add("navbar-down")
-        } else {
-            headerNavBar.classList.remove("navbar-down")
-        }
-    })
-}
-
-
-
-// =========== SCROLL SECTIONS ACTIVE LINK ===========
-
-
-
-const sections = document.querySelectorAll("section")
-const navLink = document.querySelectorAll(".nav-link a")
-
-
-
-
-window.addEventListener("scroll", function () {
-    let idSection = '';
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
-        const sectionHeight = section.clientHeight;
-        if (pageYOffset >= sectionTop) {
-            idSection = section.getAttribute('id')
-        }
-    })
-    console.log(idSection);
-    navLink.forEach(li => {
-        li.classList.remove('active-link')
-        if (li.dataset.page == idSection) {
-            li.classList.add('active-link')
-        }
-    })
-})
-
-/* ------------------------ MENU-RESPONSIVE ----------------------- */
-
-const menuBtn = document.querySelector('.menu-btn')
-const navigation = document.querySelector('.nav')
-
-menuBtn.addEventListener('click', () => {
-    menuBtn.classList.toggle('burger')
-    navigation.classList.toggle('nav-active')
-})
-
-
-/* ------------------- CERRAR MENU AL DAR CLICK ------------------- */
-
-navLink.forEach(item => {
-    item.addEventListener('click', () => {
-        menuBtn.classList.toggle('burger')
-        navigation.classList.toggle('nav-active')
-    })
-})
-
-
 
 /* ----------------------------- WELCOME ---------------------------- */
 var welcomBtn = document.querySelector('.welcom-btn');
 var modal = document.querySelector(".modal-container")
 var modaContent = document.querySelector('.modal-content')
 var cerrar = document.querySelectorAll('.cerrar')
-
-
-
-
 welcomBtn.addEventListener('click', () => {
     modal.classList.add('mo-active')
     modal.style.display = 'flex'
@@ -169,48 +70,9 @@ welcomBtn.addEventListener('click', () => {
     modal.classList.remove('d-none')
 
 })
-
-
 cerrar.forEach(cer => {
     cer.addEventListener('click', () => {
         modal.style.display = 'none'
-    })
-})
-
-/* --------------------- MODAL VIDEO -------------------- */
-
-var modalvideo = document.getElementById('modal-video')
-var Video = document.querySelectorAll('.item-content video')
-
-
-
-Video.forEach((vid) => {
-    const rutaVid = vid.getAttribute('src')
-    const canalYoutube = vid.parentNode.parentNode.dataset.link
-    const downVid = vid.parentNode.parentNode.dataset.download
-    const title = vid.parentNode.parentNode.dataset.title
-    const fecha = vid.parentNode.parentNode.dataset.fecha
-    const description = vid.parentNode.parentNode.dataset.description
-    let newUrl = `https://www.youtube.com/embed/${rutaVid}`
-
-    vid.addEventListener('click', () => {
-        modalvideo.classList.add('active-video')
-        const modal = document.querySelector('.video-container iframe')
-        modal.src = newUrl
-        document.querySelector('.vid-descrip').innerHTML = description
-
-        const tituloItem = document.querySelectorAll('.item-title')
-        tituloItem.forEach((titulo) => {
-            titulo.innerHTML = title
-        })
-        const fechaItem = document.querySelectorAll('.item-fecha')
-        fechaItem.forEach((time) => {
-            time.innerHTML = fecha
-        })
-
-        document.querySelector('.link-video').href = canalYoutube
-        document.querySelector('.download-video').href = downVid
-
     })
 })
 
@@ -222,57 +84,51 @@ Video.forEach((vid) => {
 
 
 const overlay = document.getElementById('overlay')
-var modalGaleria = document.querySelectorAll('.item img')
+let itemsGallery = document.querySelectorAll('.item ')
+
+itemsGallery.forEach((itemGal) => {
+
+    let itemObject = {
+        ruta: itemGal.firstElementChild.firstElementChild.getAttribute('src'),
+        url: itemGal.dataset.link,
+        repositorio: itemGal.dataset.repositorio,
+        download: itemGal.dataset.download,
+        categoria: itemGal.dataset.categoria,
+        title: itemGal.dataset.title,
+        fecha: itemGal.dataset.fecha,
+        description: itemGal.dataset.description,
+        tipo: itemGal.firstElementChild.firstElementChild.getAttribute('class')
+    }
 
 
-modalGaleria.forEach((img) => {
-
-    // let modalContent = {
-    //     ruta: ,
-    //     url: ,
-    //     repositorio: ,
-    //     download: ,
-    //     categoria: ,
-    //     title: ,
-    //     fecha: ,
-    //     description: ,
-    // }
-    const ruta = img.getAttribute('src')
-    const url = img.parentNode.parentNode.dataset.link
-    const repo = img.parentNode.parentNode.dataset.repositorio
-    const download = img.parentNode.parentNode.dataset.download
-    const categoria = img.parentNode.parentNode.dataset.categoria
-    const title = img.parentNode.parentNode.dataset.title
-    const fecha = img.parentNode.parentNode.dataset.fecha
-    const description = img.parentNode.parentNode.dataset.description
-
-
-
-    img.addEventListener('click', () => {
-
+    itemGal.addEventListener('click', () => {
         overlay.classList.add('active-overlay')
-        document.querySelector('.contenedor-img img').src = ruta
-        document.querySelector('.repo-git').href = repo
-        document.querySelector('.link-sitio').href = url
-        document.querySelector('.link-descarga').href = download
-        document.querySelector('.item-description').innerHTML = description
+        document.querySelector('.link-descarga').href = itemObject.download
+        document.querySelector('.item-description').innerHTML = itemObject.description
+        document.querySelectorAll('.item-title').forEach(title => {
+            title.innerHTML = itemObject.title
+        })
+        document.querySelectorAll('.item-fecha').forEach(fecha => {
+            fecha.innerHTML = itemObject.fecha
+        })
 
-        const tituloItem = document.querySelectorAll('.item-title')
-        tituloItem.forEach((titulo) => {
-            titulo.innerHTML = title
-        })
-        const fechaItem = document.querySelectorAll('.item-fecha')
-        fechaItem.forEach((time) => {
-            time.innerHTML = fecha
-        })
-        if (categoria === 'illustrator') {
-            document.querySelector('.link-sitio').style.display = "none"
+        if (itemObject.tipo === "tipo-video") {
+            document.querySelector('.overlay-container__content').innerHTML = `<iframe src="https://www.youtube.com/embed/${itemObject.ruta}"></iframe>`
+            document.querySelector('.link-sitio').href = itemObject.url
+            document.querySelector('.link-sitio').style.display = "flex"
+            document.querySelector('.link-sitio').innerHTML = `Ver en Youtube`
             document.querySelector('.repo-git').style.display = "none"
 
-        } else {
+        } else if (itemObject.tipo === "tipo-page") {
+            document.querySelector('.overlay-container__content').innerHTML = `<img src="${itemObject.ruta}"></img>`
+            document.querySelector('.repo-git').href = itemObject.repositorio
+            document.querySelector('.link-sitio').href = itemObject.url
             document.querySelector('.link-sitio').style.display = "flex"
             document.querySelector('.repo-git').style.display = "flex"
-
+        } else if (itemObject.tipo === "tipo-img") {
+            document.querySelector('.overlay-container__content').innerHTML = `<img src="${itemObject.ruta}"></img>`
+            document.querySelector('.link-sitio').style.display = "none"
+            document.querySelector('.repo-git').style.display = "none"
         }
 
     })
@@ -283,13 +139,8 @@ modalGaleria.forEach((img) => {
 /* -------------------- BOTON CERRAR -------------------- */
 document.querySelector('.cerrar-overlay').addEventListener('click', () => {
     overlay.classList.remove('active-overlay')
-
 })
-document.querySelector('.cerrar-overlay-video').addEventListener('click', () => {
-    modalvideo.classList.remove('active-video')
-    const videoReproduc = document.querySelector('.video-container iframe').src = `yotube.com`
 
-})
 
 /* -------------- CERRAR OVERLAY POR FUERA -------------- */
 overlay.addEventListener('click', (fuera) => {
@@ -297,14 +148,7 @@ overlay.addEventListener('click', (fuera) => {
         overlay.classList.remove('active-overlay')
     }
 })
-modalvideo.addEventListener('click', (fuera) => {
-    if (fuera.target.id == 'modal-video') {
-        modalvideo.classList.remove('active-video')
-        const videoReproduc = document.querySelector('.video-container iframe').src = `yotube.com`
 
-
-    }
-})
 
 /* --------------------- FORMULARIO --------------------- */
 const buttomGmail = document.querySelector('.gmail')
@@ -324,16 +168,16 @@ form.addEventListener('click', (fuera) => {
 })
 
 // scrollreveal
-ScrollReveal().reveal('.card', {
-    distance: '150%',
-    origin: 'bottom',
-    duration: 1800
-});
-ScrollReveal().reveal('.contact-redes', {
-    distance: '150%',
-    origin: 'bottom',
-    duration: 1800
-});
+// ScrollReveal().reveal('.card', {
+//     distance: '150%',
+//     origin: 'bottom',
+//     duration: 1800
+// });
+// ScrollReveal().reveal('.contact-redes', {
+//     distance: '150%',
+//     origin: 'bottom',
+//     duration: 1800
+// });
 
 
 

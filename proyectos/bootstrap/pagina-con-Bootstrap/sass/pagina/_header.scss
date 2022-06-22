@@ -1,0 +1,99 @@
+// whrite-mode = cambia de orientacion las letra
+.sideways {
+    writing-mode: vertical-lr;
+    display: block;
+    margin: 3.5rem 0px;
+    transform: rotate(-180deg);
+    -webkit-writing-mode: vertical-lr;
+    -ms-writing-mode: vertical-lr;
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    font-size: .8rem;
+}
+
+.lead-xl {
+    font-size: 1.75rem;
+}
+
+#aside {
+    transition: all 300ms;
+    -webkit-transition: all 300ms;
+    -moz-transition: all 300ms;
+    -ms-transition: all 300ms;
+    -o-transition: all 300ms;
+}
+
+.go-top {
+    transition: all 500ms;
+    -webkit-transition: all 500ms;
+    -moz-transition: all 500ms;
+    -ms-transition: all 500ms;
+    -o-transition: all 500ms;
+}
+
+.go-top:hover {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+
+.go-top.active {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+}
+
+@media (min-width:1200px) {
+    #header {
+        height: 100vh !important;
+    }
+}
+
+@media (max-width:1200px) {
+    .sideways {
+        margin: 2rem 0px;
+    }
+    .lead-xl {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width:900px) {
+    .menu-redes {
+        font-size: 1rem !important;
+    }
+}
+
+@media (max-width:767px) {
+    #aside {
+        z-index: 10;
+        bottom: 0;
+        flex-direction: row !important;
+        height: 10% !important;
+        width: 100%;
+        background: $color-ultra-dark;
+        .menu-redes {
+            font-size: .8rem;
+            transform: rotate(90deg);
+            -webkit-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            -o-transform: rotate(90deg);
+            .sideways {
+                margin: .5rem 0;
+            }
+        }
+    }
+}
+
+@media (max-width:576px) {
+    .menu-redes {
+        font-size: .7rem !important;
+    }
+}
