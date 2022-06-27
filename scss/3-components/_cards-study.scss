@@ -3,6 +3,9 @@
 @use "../2-mixins/breakPoints" as breakP;
 
 .card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     .card-points {
         margin-top: 2rem;
         height: 100%;

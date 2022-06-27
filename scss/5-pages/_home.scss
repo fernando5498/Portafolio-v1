@@ -196,7 +196,7 @@
     .item {
         position: absolute;
         display: block;
-        width: calc(25% - 30px);
+        width: calc(25% - 20px);
         margin: 10px;
         .item-content {
             width: 100%;
@@ -230,12 +230,12 @@
     }
     @include breakP.mediaQueriesMax(lg) {
         .item {
-            width: calc(50% - 30px);
+            width: calc(50% - 20px);
         }
     }
     @include breakP.mediaQueriesMax(sm) {
         .item {
-            width: calc(100% - 30px);
+            width: calc(100% - 20px);
         }
     }
 }
