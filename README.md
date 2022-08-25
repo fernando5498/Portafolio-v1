@@ -10,7 +10,7 @@
 
 
 ## 🚀 Acerca del Proyecto
-Este es mi portafolio personal donde estaran enlazado todos mis proyectos y trabajos. Todo lo podras ver en https://raulfetch.herokuapp.com/ lo estare actualizando y rediseñando a lo largo que aprendo a utilizar mas tecnologias y herrmientas.
+Este es uno de mis portafolios personales donde estan algunos proyectos que hice en ese momento. Todo lo podras ver en https://fernando5498.github.io/Segundo-Portafolio/ .Mi portafolio actual esta ubicado en https://raulfetch.herokuapp.com/ 
 
 
 ## 🛠 Tecnologias Utilizadas
