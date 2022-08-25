@@ -1,9 +1,9 @@
 /* ----------------------- CONTACT ---------------------- */
-
+@use "../1-base/variables" as var;
 .contact {
-    background: url(../img/bg-end.png) top $color-principal;
+    background: url(../img/bg-end.png) top var.$color_primary;
     padding: 80px 0px;
-    color: $color-secundario;
+    color: var.$color_white;
     text-align: center;
     position: relative;
     &__content {

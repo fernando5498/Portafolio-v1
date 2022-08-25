@@ -1,4 +1,7 @@
-@media screen and (max-width:992px) {
+@use "../../1-base/variables" as var;
+@use "../../3-helpers/helpers" as help;
+
+@media screen and (max-width: 992px) {
     .title {
         h1 {
             font-size: 4rem;
@@ -25,14 +28,14 @@
             width: 100%;
             text-align: center;
             .mes__items-container .item-mes {
-                width: calc(100% /6 - 4px);
+                width: calc(100% / 6 - 4px);
                 min-width: 40px;
             }
         }
     }
     .panel__stake {
         justify-content: center;
-        padding: .5rem;
+        padding: 0.5rem;
         .btn-evulus-medium {
             width: calc(100% / 3 - 10px);
             min-width: 80px;
@@ -58,7 +61,7 @@
     }
 }
 
-@media screen and (max-width:767px) {
+@media screen and (max-width: 767px) {
     .title {
         h1 {
             font-size: 40px;
@@ -80,14 +83,14 @@
             -moz-border-radius: 0;
             -ms-border-radius: 0;
             -o-border-radius: 0;
-            background: $color-secundario;
+            background: var.$color_white;
             box-shadow: none;
             height: 100%;
         }
         .valance-value {
             border: 1px solid grey;
             width: 100%;
-            font-size: .8rem;
+            font-size: 0.8rem;
             span {
                 font-weight: 400;
             }
@@ -113,11 +116,11 @@
             -moz-border-radius: 0px;
             -ms-border-radius: 0px;
             -o-border-radius: 0px;
-            font-size: .6rem;
+            font-size: 0.6rem;
             font-weight: 500;
             border: 1px solid #809894;
             &__title {
-                font-size: .6rem;
+                font-size: 0.6rem;
             }
             &__total {
                 font-size: 8px;
@@ -132,7 +135,7 @@
         -o-border-radius: 10px;
         table {
             thead {
-                font-size: .8rem;
+                font-size: 0.8rem;
                 background: rgb(0, 0, 0);
                 background: linear-gradient(260deg, rgba(0, 0, 0, 1) 0%, rgba(7, 129, 109, 1) 97%);
                 text-transform: uppercase;
@@ -140,12 +143,12 @@
                     flex-direction: column;
                     justify-content: space-evenly;
                     div:last-child {
-                        border-top: 1px solid $color-secundario;
+                        border-top: 1px solid var.$color_white;
                     }
                 }
             }
             tbody {
-                font-size: .5rem;
+                font-size: 0.5rem;
                 td {
                     border: 1px solid #d9d9d9;
                 }
@@ -158,7 +161,7 @@
     }
 }
 
-@media screen and (max-width:575px) {
+@media screen and (max-width: 575px) {
     .component-day .linea-mes {
         .mes .container-item-mes .day-mes__title {
             font-size: 12px;
@@ -186,7 +189,7 @@
             font-weight: 700;
         }
         span {
-            font-size: .7rem;
+            font-size: 0.7rem;
         }
     }
     .btn-submit-wallet {
@@ -229,8 +232,8 @@
                 -moz-border-radius: 30px;
                 -ms-border-radius: 30px;
                 -o-border-radius: 30px;
-                background: $color-btn;
-                font-size: .8rem;
+                background: var.$color-btn;
+                font-size: 0.8rem;
                 height: auto;
                 padding: 0px 10px;
             }
@@ -253,7 +256,7 @@
                         height: 40px;
                         width: 120px;
                         padding: 0px 20px 7px 20px;
-                        @include f-center
+                        @include help.f-center;
                     }
                 }
             }
@@ -265,22 +268,22 @@
             margin: 10px 0px;
             table {
                 thead {
-                    font-size: .5rem;
+                    font-size: 0.5rem;
                 }
                 tbody {
-                    font-size: .43rem;
+                    font-size: 0.43rem;
                 }
             }
         }
     }
     .footer {
         p {
-            font-size: .6rem;
+            font-size: 0.6rem;
         }
     }
 }
 
-@media screen and (max-width:400px) {
+@media screen and (max-width: 400px) {
     .component-day .linea-mes {
         .mes .container-item-mes .day-mes__title {
             font-size: 10px;
@@ -292,13 +295,13 @@
         }
     }
     .panel__day {
-        padding: .5rem;
+        padding: 0.5rem;
         .component-day .day-mes__items span {
             height: 18px;
             width: 40px;
             padding: 0;
             text-align: center;
-            font-size: .7rem;
+            font-size: 0.7rem;
         }
     }
     .component-day .day-mes__items span {
@@ -306,7 +309,7 @@
         width: 40px;
         padding: 0;
         text-align: center;
-        font-size: .7rem;
+        font-size: 0.7rem;
     }
     .slider-range {
         gap: 5px;

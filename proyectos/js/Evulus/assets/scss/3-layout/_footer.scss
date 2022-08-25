@@ -1,5 +1,7 @@
+@use "../1-base/variables" as var;
+/* ----------------------- FOOTER ----------------------- */
 .footer {
-    color: $color-secundario;
+    color: var.$color_white;
     padding-top: 45px;
     padding-bottom: 45px;
     font-weight: 400;
@@ -18,7 +20,7 @@
         }
         .btn-evulus-ultra-small {
             font-size: 10px;
-            border-radius: $borde-radius-height;
+            border-radius: 10px;
             font-weight: 600;
             padding: 0px 10px;
         }
@@ -30,7 +32,7 @@
             }
         }
         a:hover {
-            color: $color-secundario;
+            color: var.$color_white;
             text-decoration: underline;
         }
     }

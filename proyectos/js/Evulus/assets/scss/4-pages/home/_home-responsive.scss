@@ -1,4 +1,4 @@
-@media screen and (max-width:1400px) {
+@media screen and (max-width: 1400px) {
     .preguntas-title {
         h2 {
             font-size: calc(20px + 2.4vw);
@@ -6,13 +6,13 @@
     }
     .evulus {
         p {
-            font-size: calc(18.5px + .1vw);
+            font-size: calc(18.5px + 0.1vw);
         }
     }
     .preguntas {
         .pregunta-1__text,
         .acciones p {
-            font-size: calc(18.5px + .1vw);
+            font-size: calc(18.5px + 0.1vw);
         }
     }
     .btn-green--normal {
@@ -20,7 +20,7 @@
     }
 }
 
-@media screen and (max-width:991px) {
+@media screen and (max-width: 991px) {
     .btn-green--normal {
         font-size: calc(18px + 2vw);
     }
@@ -45,7 +45,7 @@
     }
 }
 
-@media screen and (max-width:767px) {
+@media screen and (max-width: 767px) {
     .evulus {
         h1 {
             font-size: calc(30.34px + 1.5vw);

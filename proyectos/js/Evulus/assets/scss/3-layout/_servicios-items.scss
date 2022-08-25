@@ -1,3 +1,6 @@
+@use "../1-base/variables" as var;
+@use "../3-helpers/helpers" as help;
+
 /* ---------------------- SERVICIOS --------------------- */
 
 .container-servicios-items {
@@ -16,28 +19,29 @@
     min-width: 248px;
     padding: 10px;
     height: 160px;
-    @include f-center;
+    @include help.f-center;
     flex-direction: column;
     font-size: 27px;
     line-height: 30px;
-    box-shadow: $box-shadow-secundario;
-    transition: $transition-all;
-    -webkit-transition: $transition-all;
-    -moz-transition: $transition-all;
-    -ms-transition: $transition-all;
-    -o-transition: $transition-all;
+    box-shadow: var.$box-shadow-secundario;
+    transition: map-get(var.$transition, fast);
+    -webkit-transition: map-get(var.$transition, fast);
+    -moz-transition: map-get(var.$transition, fast);
+    -ms-transition: map-get(var.$transition, fast);
+    -o-transition: map-get(var.$transition, fast);
     border-radius: 20px;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     -ms-border-radius: 20px;
     -o-border-radius: 20px;
-    color: $color-principal;
+    color: var.$color_primary;
     font-weight: 500;
     text-align: center;
-    background: $color-secundario;
+    background: var.$color_white;
     &:hover {
-        background: $color-hover;
-        color: $color-secundario;
+        background: var.$color-hover;
+        color: var.$color_white;
+        transform: translateY(-2px);
     }
     img {
         height: 45%;

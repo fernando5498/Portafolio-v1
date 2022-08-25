@@ -1,14 +1,16 @@
+@use "../1-base/variables" as var;
+/* -------------------- .SOCIAL-ICONS ------------------- */
 .social-icons {
     flex-wrap: wrap;
     li a img {
         width: 30px;
         height: 30px;
-        margin: .5rem;
-        transition: $transition-all;
-        -webkit-transition: $transition-all;
-        -moz-transition: $transition-all;
-        -ms-transition: $transition-all;
-        -o-transition: $transition-all;
+        margin: 0.5rem;
+        transition: map-get(var.$transition, fast);
+        -webkit-transition: map-get(var.$transition, fast);
+        -moz-transition: map-get(var.$transition, fast);
+        -ms-transition: map-get(var.$transition, fast);
+        -o-transition: map-get(var.$transition, fast);
         &:hover {
             transform: scale(1.1);
             -webkit-transform: scale(1.1);
@@ -20,6 +22,7 @@
 }
 
 .social-icons--white {
+    margin-bottom: 0.5rem;
     li a img {
         filter: brightness(0) invert(100%);
         -webkit-filter: brightness(0) invert(100%);
@@ -28,7 +31,7 @@
     }
 }
 
-@media screen and (max-width:767px) {
+@media screen and (max-width: 767px) {
     .social-icons--white {
         li a img {
             width: 50px;

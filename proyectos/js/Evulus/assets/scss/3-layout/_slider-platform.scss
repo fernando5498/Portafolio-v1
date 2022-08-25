@@ -1,7 +1,9 @@
+@use "../1-base/variables" as var;
+
 /* ------------------ .SLIDER-PLATFORM ------------------ */
 
 .slider-platform {
-    background-color: $color-secundario;
+    background-color: var.$color_white;
     padding-top: 58px;
     padding-bottom: 58px;
     .item {

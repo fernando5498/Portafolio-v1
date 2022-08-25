@@ -1,3 +1,5 @@
+@use "../1-base/variables" as var;
+/* ---------------------- TEAM CADS --------------------- */
 .card-member {
     display: flex;
     align-items: center;
@@ -10,7 +12,7 @@
         -moz-border-radius: 50%;
         -ms-border-radius: 50%;
         -o-border-radius: 50%;
-        border: 15px solid $color-principal;
+        border: 15px solid var.$color_primary;
         box-shadow: 0px 0px 0px 7px #68cdc4;
         width: 60%;
         margin-bottom: 10px;
@@ -29,13 +31,13 @@
         a,
         svg {
             display: inline-block;
-            color: $color-principal;
+            color: var.$color_primary;
             font-size: 1.3rem;
-            transition: $transition-all;
-            -webkit-transition: $transition-all;
-            -moz-transition: $transition-all;
-            -ms-transition: $transition-all;
-            -o-transition: $transition-all;
+            transition: map-get(var.$transition, fast);
+            -webkit-transition: map-get(var.$transition, fast);
+            -moz-transition: map-get(var.$transition, fast);
+            -ms-transition: map-get(var.$transition, fast);
+            -o-transition: map-get(var.$transition, fast);
             margin: 0px 3px 0px 3px;
             &:hover {
                 transform: scale(1.1);
@@ -57,10 +59,10 @@
         font-size: 1.4rem;
     }
     p {
-        font-size: .8rem;
+        font-size: 0.8rem;
     }
     img {
-        border: 10px solid $color-principal;
+        border: 10px solid var.$color_primary;
         box-shadow: 0px 0px 0px 6px #68cdc4;
     }
 }

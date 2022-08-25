@@ -1,3 +1,5 @@
+@use "../../1-base/variables" as var;
+
 /* ----------------------- STAKING ---------------------- */
 
 .staking {
@@ -5,7 +7,7 @@
     min-height: 100vh;
     background: url(../img/velas.png) no-repeat;
     background-position: center calc(10px + 4.5vw);
-    color: $color-secundario;
+    color: var.$color_white;
     .staking-content {
         &__title {
             h2,
@@ -26,14 +28,14 @@
             padding: 0px 37px;
         }
         &__parrafo {
-            font-size: calc(14px + .5vw);
+            font-size: calc(14px + 0.5vw);
             h4 {
-                color: $color-texo;
+                color: var.$color_black;
                 padding: 8px;
-                font-size: calc(18px + .5vw);
-                background: $color-btn;
+                font-size: calc(18px + 0.5vw);
+                background: var.$color-btn;
                 width: fit-content;
-                border-radius: $borde-radius-medium;
+                border-radius: 5px;
             }
         }
     }
@@ -65,30 +67,29 @@
 .requisitos,
 .pasos,
 .reglas {
-    border-bottom: 1px solid $color-secundario;
+    border-bottom: 1px solid var.$color_white;
 }
-
 
 /* --------------------- REQUISITOS --------------------- */
 
 .requisitos {
-    border-top: 1px solid $color-secundario;
+    border-top: 1px solid var.$color_white;
     .participacion {
         width: 85%;
         margin: 0 auto;
         .participacion-content {
             p {
-                font-size: calc(14px + .4vw);
+                font-size: calc(14px + 0.4vw);
             }
             &__items {
                 width: fit-content;
                 a {
                     margin: 5px;
-                    border: 1px solid $color-secundario;
+                    border: 1px solid var.$color_white;
                     border-radius: 5px;
                     padding: 5px 10px;
                     background: transparent;
-                    transition: $transition-all;
+                    transition: map-get(var.$transition, fast);
                     img {
                         width: 110px;
                     }
@@ -104,7 +105,6 @@
     }
 }
 
-
 /* ------------------------ PASOS ----------------------- */
 
 .pasos-buttons {
@@ -113,7 +113,6 @@
         padding: 5px 25px;
     }
 }
-
 
 /* ----------------------- .REGLAS ---------------------- */
 
@@ -126,7 +125,7 @@
         list-style: decimal-leading-zero;
         margin-left: 40px;
         position: relative;
-        font-size: calc(17px + .5vw);
+        font-size: calc(17px + 0.5vw);
         font-weight: 600;
         li {
             margin-bottom: 10px;
@@ -144,7 +143,6 @@
     }
 }
 
-
 /* --------------- .TRANSICIONES--STAKING --------------- */
 
 .transiciones--staking {
@@ -152,7 +150,7 @@
     .contador-container {
         h5,
         span {
-            color: $color-secundario;
+            color: var.$color_white;
         }
     }
 }

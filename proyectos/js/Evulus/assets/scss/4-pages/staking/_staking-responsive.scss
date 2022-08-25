@@ -1,10 +1,12 @@
-@media screen and (min-width:1500px) {
+@use "../../3-helpers/helpers" as help;
+
+@media screen and (min-width: 1500px) {
     .staking {
         min-height: auto;
     }
 }
 
-@media screen and (max-width:1400px) {
+@media screen and (max-width: 1400px) {
     .staking {
         .staking-content {
             &__title {
@@ -20,7 +22,7 @@
             }
             &__parrafo {
                 h4 {
-                    font-size: calc(15px + .5vw);
+                    font-size: calc(15px + 0.5vw);
                 }
             }
         }
@@ -33,7 +35,7 @@
         .participacion {
             .participacion-content {
                 p {
-                    font-size: calc(14px + .4vw);
+                    font-size: calc(14px + 0.4vw);
                 }
                 .btn-evulus-white {
                     margin: 40px auto;
@@ -44,7 +46,7 @@
     }
 }
 
-@media screen and (max-width:991px) {
+@media screen and (max-width: 991px) {
     .staking {
         .staking-content {
             &__title {
@@ -58,18 +60,18 @@
             }
             &__parrafo {
                 h4 {
-                    font-size: calc(15px + .5vw);
+                    font-size: calc(15px + 0.5vw);
                 }
             }
         }
     }
 }
 
-@media screen and (max-width:575px) {
+@media screen and (max-width: 575px) {
     .requisitos {
         .participacion {
             .participacion-content {
-                @include f-center;
+                @include help.f-center;
                 flex-direction: column;
             }
         }
@@ -90,7 +92,7 @@
     .btn-green,
     .btn-evulus-icon,
     .btn-evulus-medium {
-        font-size: 14px
+        font-size: 14px;
     }
     .btn-green {
         padding: 5px 20px;

@@ -1,0 +1,5 @@
+@use "../1-base/variables" as var;
+.hr-green {
+    background-color: var.$color-primary;
+    height: 2px !important;
+}

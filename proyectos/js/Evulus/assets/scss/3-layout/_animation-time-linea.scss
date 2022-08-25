@@ -49,11 +49,11 @@
     bottom: 14px;
     left: 0;
     z-index: 1;
-    transform: translate(12.2%) scaleY(.4);
-    -webkit-transform: translate(12.2%) scaleY(.4);
-    -moz-transform: translate(12.2%) scaleY(.4);
-    -ms-transform: translate(12.2%) scaleY(.4);
-    -o-transform: translate(12.2%) scaleY(.4);
+    transform: translate(12.2%) scaleY(0.4);
+    -webkit-transform: translate(12.2%) scaleY(0.4);
+    -moz-transform: translate(12.2%) scaleY(0.4);
+    -ms-transform: translate(12.2%) scaleY(0.4);
+    -o-transform: translate(12.2%) scaleY(0.4);
     transform-origin: bottom;
     transition: all 500ms;
     -webkit-transition: all 500ms;
@@ -70,11 +70,11 @@
 }
 
 .animation-year-text-top {
-    @include animation-road-map-text(-60%, auto)
+    @include animation-road-map-text(-60%, auto);
 }
 
 .animation-year-text-bottom {
-    @include animation-road-map-text( auto, -55%)
+    @include animation-road-map-text(auto, -55%);
 }
 
 .animation-year-init:hover {
@@ -192,16 +192,15 @@
     }
 }
 
-
 /* --------------------- RESPONSIVE --------------------- */
 
-@media screen and (max-width:1300px) {
+@media screen and (max-width: 1300px) {
     .svg-animation-time-line {
-        transform: scale(.8);
+        transform: scale(0.8);
     }
 }
 
-@media screen and (max-width:1000px) {
+@media screen and (max-width: 1000px) {
     .svg-animation-time-line {
         transform: scale(1);
         -webkit-transform: scale(1);
@@ -225,7 +224,7 @@
     }
 }
 
-@media screen and (max-width:660px) {
+@media screen and (max-width: 660px) {
     .svg-animation-time-line {
         grid-template-columns: repeat(4, 102px);
         grid-template-rows: repeat(17, 73px);
@@ -256,7 +255,7 @@
     }
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width: 500px) {
     .svg-animation-time-line {
         grid-template-columns: repeat(2, 160px);
         grid-template-rows: repeat(32, 40px);
@@ -309,12 +308,12 @@
     .animation-year-text-bottom {
         top: auto;
         bottom: auto;
-        padding: .5rem;
-        border-radius: $borde-radius-medium;
-        -webkit-border-radius: $borde-radius-medium;
-        -moz-border-radius: $borde-radius-medium;
-        -ms-border-radius: $borde-radius-medium;
-        -o-border-radius: $borde-radius-medium;
+        padding: 0.5rem;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
         max-width: 180px !important;
         text-align: center;
     }

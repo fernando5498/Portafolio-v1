@@ -1,10 +1,11 @@
+@use "../1-base/variables" as var;
 .academia-desafios-item {
     width: 269px;
     margin: 0 auto;
     &__img {
         max-height: 207px;
         transform: translateX(-40%);
-        transition: $transition-all;
+        transition: map-get(var.$transition, fast);
         display: block;
         margin: 0 auto;
         &:hover {
@@ -13,7 +14,7 @@
     }
     &__content {
         h3 {
-            color: $color-principal;
+            color: var.$color_primary;
             font-weight: 700;
             font-size: 25.48px;
             text-indent: 3px;
@@ -24,7 +25,7 @@
     }
 }
 
-@media screen and (max-width:575px) {
+@media screen and (max-width: 575px) {
     .academia-desafios-item__img {
         transform: translateX(0%);
         &:hover {

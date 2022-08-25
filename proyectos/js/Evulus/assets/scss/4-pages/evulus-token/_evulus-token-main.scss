@@ -1,3 +1,5 @@
+@use "../../1-base/variables" as var;
+
 /* ----------------------- EVULUS TOKEN----------------------- */
 
 .evulus-token {
@@ -11,7 +13,7 @@
                     h1 {
                         font-size: 72.6px;
                         span {
-                            color: $color-principal;
+                            color: var.$color_primary;
                         }
                     }
                     p {
@@ -38,11 +40,11 @@
 }
 
 .bg-verde-claro {
-    background: $bg-color;
+    background: var.$bg-color;
 }
 
 .bg-verde-ultra-claro {
-    background: $bg-color-ultra-claro;
+    background: var.$bg-color-ultra-claro;
 }
 
 .crypto-assets-content,
@@ -59,7 +61,6 @@
     padding-bottom: 60px;
 }
 
-
 /* -------------------- CRYPTO-ASSETS ------------------- */
 
 .crypto-assets {
@@ -75,7 +76,6 @@
         margin: 0 auto;
     }
 }
-
 
 /* ---------------------- PLATFORM ---------------------- */
 
@@ -107,7 +107,6 @@
     }
 }
 
-
 /* --------------------- EVU TOKENS --------------------- */
 
 .evu-tokens {
@@ -117,18 +116,18 @@
             ul {
                 margin: 0 auto;
                 padding: 40px 20px 40px 40px;
-                background: $color-secundario;
+                background: var.$color_white;
                 border-radius: 20px;
                 width: 250px;
                 -webkit-border-radius: 20px;
                 -moz-border-radius: 20px;
                 -ms-border-radius: 20px;
                 -o-border-radius: 20px;
-                box-shadow: 0px -15px 0px 0px #08907915, 0px -30px 0px 0px #dff3f18f, 0px .5rem 1rem #b4b4b4;
+                box-shadow: 0px -15px 0px 0px #08907915, 0px -30px 0px 0px #dff3f18f, 0px 0.5rem 1rem #b4b4b4;
                 li {
                     position: relative;
                     & span {
-                        color: $color-principal;
+                        color: var.$color_primary;
                         font-size: 1.2rem;
                         font-weight: 900;
                         &::before {
@@ -146,19 +145,19 @@
                         top: 15px;
                         right: 0;
                         width: 125px;
-                        padding: 0.2rem .5rem;
+                        padding: 0.2rem 0.5rem;
                         border-radius: 5px;
                         -webkit-border-radius: 5px;
                         -moz-border-radius: 5px;
                         -ms-border-radius: 5px;
                         -o-border-radius: 5px;
-                        transition: $transition-all;
-                        -webkit-transition: $transition-all;
-                        -moz-transition: $transition-all;
-                        -ms-transition: $transition-all;
-                        -o-transition: $transition-all;
+                        transition: map-get(var.$transition, fast);
+                        -webkit-transition: map-get(var.$transition, fast);
+                        -moz-transition: map-get(var.$transition, fast);
+                        -ms-transition: map-get(var.$transition, fast);
+                        -o-transition: map-get(var.$transition, fast);
                         &:hover {
-                            box-shadow: $box-shadow-hover;
+                            box-shadow: var.$box-shadow-hover;
                         }
                     }
                     span {
@@ -204,7 +203,6 @@
     }
 }
 
-
 /* -------------------- EVU-CONTRACT -------------------- */
 
 .evu-contract {
@@ -238,7 +236,7 @@
             overflow: hidden;
         }
         .copy {
-            background: $color-btn;
+            background: var.$color-btn;
             font-size: 12px;
             padding: 0 5px;
             border-radius: 2px;
@@ -255,24 +253,24 @@
                     text-align: center;
                     width: 50px;
                     height: 20px;
-                    border-radius: $borde-radius-low;
-                    -webkit-border-radius: $borde-radius-low;
-                    -moz-border-radius: $borde-radius-low;
-                    -ms-border-radius: $borde-radius-low;
-                    -o-border-radius: $borde-radius-low;
+                    border-radius: 5px;
+                    -webkit-border-radius: 5px;
+                    -moz-border-radius: 5px;
+                    -ms-border-radius: 5px;
+                    -o-border-radius: 5px;
                     top: -25px;
                     transform: translateX(-66%);
-                    background: $color-btn;
+                    background: var.$color-btn;
                     -webkit-transform: translateX(-66%);
                     -moz-transform: translateX(-66%);
                     -ms-transform: translateX(-66%);
                     -o-transform: translateX(-66%);
                     user-select: none;
-                    transition: $transition-all;
-                    -webkit-transition: $transition-all;
-                    -moz-transition: $transition-all;
-                    -ms-transition: $transition-all;
-                    -o-transition: $transition-all;
+                    transition: map-get(var.$transition, fast);
+                    -webkit-transition: map-get(var.$transition, fast);
+                    -moz-transition: map-get(var.$transition, fast);
+                    -ms-transition: map-get(var.$transition, fast);
+                    -o-transition: map-get(var.$transition, fast);
                 }
                 &::before {
                     position: absolute;
@@ -280,7 +278,7 @@
                     width: 10px;
                     height: 10px;
                     top: -10px;
-                    background: $color-btn;
+                    background: var.$color-btn;
                     clip-path: polygon(50% 100%, 0 0, 100% 0);
                     user-select: none;
                 }
@@ -288,7 +286,6 @@
         }
     }
 }
-
 
 /* -------------------- EVU GRAPCHICS -------------------- */
 
@@ -307,13 +304,12 @@
     }
     p,
     h3 {
-        color: $color-principal;
+        color: var.$color_primary;
     }
     p {
-        font-size: .6rem;
+        font-size: 0.6rem;
     }
 }
-
 
 /* ---------------------- EXCHANGES --------------------- */
 
@@ -328,14 +324,13 @@
     }
 }
 
-
 /* ----------------------- SERVICE ---------------------- */
 
 .service {
     .service-team__text {
         h3 {
             font-size: 59.2px;
-            color: $color-principal;
+            color: var.$color_primary;
         }
         p {
             font-size: 16px;
@@ -344,7 +339,6 @@
         }
     }
 }
-
 
 /* ---------------------- ROAD MAP ---------------------- */
 
@@ -360,7 +354,6 @@
         align-items: center;
     }
 }
-
 
 /* ----------------------- CONTACT ---------------------- */
 

@@ -1,6 +1,8 @@
+@use "../../1-base/variables" as var;
+
 /* --------------------- RESPONSIVE --------------------- */
 
-@media screen and (max-width:1400px) {
+@media screen and (max-width: 1400px) {
     .evulus-token .container .row .evulus-token__content__text {
         h1 {
             font-size: calc(50px + 1.3vw);
@@ -11,7 +13,7 @@
     }
 }
 
-@media screen and (max-width:1200px) {
+@media screen and (max-width: 1200px) {
     .logginSearch {
         flex-direction: column;
         .button-search {
@@ -21,8 +23,8 @@
                 opacity: 1;
             }
             button {
-                background: $color-principal;
-                color: $color-secundario;
+                background: var.$color_primary;
+                color: var.$color_white;
             }
         }
     }
@@ -43,7 +45,7 @@
     }
 }
 
-@media screen and (max-width:991px) {
+@media screen and (max-width: 991px) {
     .evulus-token .container .row {
         .evulus-token__img {
             right: 0;
@@ -55,7 +57,7 @@
     }
 }
 
-@media screen and (max-width:767px) {
+@media screen and (max-width: 767px) {
     .evulus-token .container .row .evulus-token__content__text p {
         font-size: 24px;
     }
@@ -70,7 +72,7 @@
     }
 }
 
-@media screen and (max-width:400px) {
+@media screen and (max-width: 400px) {
     .evulus-token .row .evulus__content__text h1 {
         font-size: calc(30px + 4.8vw);
     }

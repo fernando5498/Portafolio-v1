@@ -1,41 +1,51 @@
+//PT_Sans
 @font-face {
-    font-family: 'GalanoGrotesque';
-    src: url(../fonts/Galano-Grotesque-Light.ttf) format('truetype');
+    font-family: "GalanoGrotesque";
+    font-weight: 100;
+    src: url("../font-family/GalanoGrotesqueThin.otf") format("opentype");
+}
+@font-face {
+    font-family: "GalanoGrotesque";
+    font-weight: 200;
+    src: url("../font-family/GalanoGrotesqueExtraLight.otf") format("opentype");
+}
+@font-face {
+    font-family: "GalanoGrotesque";
     font-weight: 300;
+    src: url("../font-family/GalanoGrotesqueLight.otf") format("opentype");
 }
-
 @font-face {
-    font-family: 'GalanoGrotesque';
-    src: url(../fonts/Galano-Grotesque.ttf) format('truetype');
+    font-family: "GalanoGrotesque";
     font-weight: 400;
+    src: url("../font-family/GalanoGrotesqueRegular.otf") format("opentype");
 }
-
 @font-face {
-    font-family: 'GalanoGrotesque';
-    src: url(../fonts/Galano-Grotesque-Medium.ttf) format('truetype');
+    font-family: "GalanoGrotesque";
     font-weight: 500;
+    src: url("../font-family/GalanoGrotesqueMedium.otf") format("opentype");
 }
-
 @font-face {
-    font-family: 'GalanoGrotesque';
-    src: url(../fonts/GalanoGrotesqueSemiBold.ttf) format('truetype');
+    font-family: "GalanoGrotesque";
     font-weight: 600;
+    src: url("../font-family/GalanoGrotesqueSemiBold.otf") format("opentype");
 }
-
 @font-face {
-    font-family: 'GalanoGrotesque';
-    src: url(../fonts/GalanoGrotesque-Bold.ttf) format('truetype');
+    font-family: "GalanoGrotesque";
     font-weight: 700;
+    src: url("../font-family/GalanoGrotesqueBold.otf") format("opentype");
 }
-
 @font-face {
-    font-family: 'GalanoGrotesque';
-    src: url(../fonts/GalanoGrotesqueExtraBold.ttf) format('truetype');
+    font-family: "GalanoGrotesque";
     font-weight: 800;
+    src: url("../font-family/GalanoGrotesqueExtraBold.otf") format("opentype");
 }
-
 @font-face {
-    font-family: 'GalanoGrotesque';
-    src: url(../fonts/Galano-Grotesque-Heavy.ttf) format('truetype');
+    font-family: "GalanoGrotesque";
     font-weight: 900;
+    src: url("../font-family/GalanoGrotesqueBlack.otf") format("opentype");
 }
+// @font-face {
+//   font-family: "GalanoGrotesque";
+//   font-weight: 900;
+//   src: url("../font-family/GalanoGrotesqueHeavy.otf") format("opentype");
+// }

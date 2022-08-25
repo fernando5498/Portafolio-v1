@@ -1,3 +1,5 @@
+@use "../1-base/variables" as var;
+/* ------------------------ RESET ----------------------- */
 * {
     padding: 0;
     margin: 0;
@@ -20,9 +22,10 @@ input {
 
 a {
     text-decoration: none;
-    color: $color-secundario;
+    color: var.$color_white;
     &:hover {
         text-decoration: none;
+        color: inherit;
     }
 }
 
@@ -38,7 +41,24 @@ html {
 
 body {
     min-height: 100vh;
-    font-family: 'GalanoGrotesque';
+    font-family: "GalanoGrotesque";
+    font-size: 1rem;
+    font-weight: normal;
+    font-weight: initial;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+input,
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+    outline-width: 0;
+    outline-color: transparent;
+    box-shadow: none;
+    outline-style: none;
 }
 
 .body-calc {
@@ -47,11 +67,11 @@ body {
 }
 
 .body-home {
-    background: $color-secundario;
+    background: var.$color_white;
 }
 
 .body-staking {
-    background: linear-gradient(122deg, #000000 39.92%, #07836F 87.77%), #FFFFFF;
+    background: linear-gradient(122deg, #000000 39.92%, #07836f 87.77%), #ffffff;
     main {
         p,
         li,
@@ -60,7 +80,7 @@ body {
         h3,
         h4,
         h5 {
-            color: $color-secundario;
+            color: var.$color_white;
         }
     }
 }
@@ -75,7 +95,7 @@ body {
     height: 6px;
 }
 
- ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background: rgba(0, 0, 0, 0.124);
     border: solid rgba(88, 88, 88, 0.323) 2px;
     border-radius: 5px;

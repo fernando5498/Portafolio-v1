@@ -1,18 +1,20 @@
-/* --------------------- BTN-EVULUS--------------------- */
+@use "../1-base/variables" as var;
+
+/* ------------------------ BASE ------------------------ */
 
 @mixin btn-personalizado($bg, $padding, $font-size) {
     padding: $padding;
-    color: $color-texo;
+    color: var.$color_black;
     background: $bg;
-    transition: $transition-all;
-    -webkit-transition: $transition-all;
-    -moz-transition: $transition-all;
-    -ms-transition: $transition-all;
-    -o-transition: $transition-all;
+    transition: map-get(var.$transition, medium);
+    -webkit-transition: map-get(var.$transition, medium);
+    -moz-transition: map-get(var.$transition, medium);
+    -ms-transition: map-get(var.$transition, medium);
+    -o-transition: map-get(var.$transition, medium);
     font-weight: 600;
     font-size: $font-size;
     text-align: center;
-    border-radius: $borde-radius-medium;
+    border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
@@ -21,7 +23,12 @@
     height: auto;
     user-select: none;
     &:active {
+        transform: translateY(-2px);
+
         box-shadow: none !important;
+    }
+    &:hover {
+        transform: translateY(-2px);
     }
     img,
     svg,
@@ -31,22 +38,58 @@
     }
 }
 
+/* --------------------- BTN-EVULUS--------------------- */
+
+@mixin btn-personalizado($bg, $padding, $font-size) {
+    padding: $padding;
+    color: var.$color_black;
+    background: $bg;
+    transition: map-get(var.$transition, fast);
+    -webkit-transition: map-get(var.$transition, fast);
+    -moz-transition: map-get(var.$transition, fast);
+    -ms-transition: map-get(var.$transition, fast);
+    -o-transition: map-get(var.$transition, fast);
+    font-weight: 600;
+    font-size: $font-size;
+    text-align: center;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    display: inline-block;
+    height: auto;
+    user-select: none;
+    &:hover {
+        transform: translateY(-2px);
+    }
+    &:active {
+        box-shadow: none !important;
+        transform: translateY(-2px);
+    }
+    img,
+    svg,
+    i {
+        margin-right: 5px;
+        width: 43px;
+    }
+}
 
 /* ------------------ BTN-EVULUS-WHITE ------------------ */
 
 @mixin btn-white($weight-w, $padding-p, $radius-br) {
     width: $weight-w;
     min-height: 67px;
-    background: $color-secundario;
+    background: var.$color_white;
     padding: $padding-p;
     display: flex;
     align-items: center;
-    box-shadow: $box-shadow-primario;
-    transition: $transition-all;
-    -webkit-transition: $transition-all;
-    -moz-transition: $transition-all;
-    -ms-transition: $transition-all;
-    -o-transition: $transition-all;
+    box-shadow: var.$box-shadow-primario;
+    transition: map-get(var.$transition, fast);
+    -webkit-transition: map-get(var.$transition, fast);
+    -moz-transition: map-get(var.$transition, fast);
+    -ms-transition: map-get(var.$transition, fast);
+    -o-transition: map-get(var.$transition, fast);
     border-radius: $radius-br;
     -webkit-border-radius: $radius-br;
     -moz-border-radius: $radius-br;
@@ -54,5 +97,6 @@
     -o-border-radius: $radius-br;
     &:hover {
         background: #f2f2f2;
+        transform: translateY(-2px);
     }
 }

@@ -1,26 +1,28 @@
+@use "../1-base/variables" as var;
+@use "../2-mixins/base-buttons" as btn;
 .btn-evulus {
-    @include btn-personalizado($color-btn, 0px 37px, 1.5rem);
-    box-shadow: 0px 0px 2rem $color-btn;
+    @include btn.btn-personalizado(var.$color-btn, 0px 37px, 1.5rem);
+    box-shadow: 0px 0px 2rem var.$color-btn;
     &:hover {
-        box-shadow: 0px 0px 3rem $color-btn;
-        color: $color-texo;
+        box-shadow: 0px 0px 3rem var.$color-btn;
+        color: var.$color_black;
     }
     &:active {
-        box-shadow: 0px 0px 3.5rem $color-btn !important;
-        color: $color-texo !important;
+        box-shadow: 0px 0px 3.5rem var.$color-btn !important;
+        color: var.$color_black !important;
     }
     &:focus {
-        box-shadow: 0px 0px 3.5rem $color-btn !important;
-        color: $color-texo !important;
+        box-shadow: 0px 0px 3.5rem var.$color-btn !important;
+        color: var.$color_black !important;
     }
 }
 
 .btn-evulus-medium {
-    @include btn-personalizado($color-btn, 15px 20px, 1rem);
-    border: 3px solid $color-btn;
+    @include btn.btn-personalizado(var.$color-btn, 15px 20px, 1rem);
+    border: 3px solid var.$color-btn;
     &:hover {
         background: #e0a800;
-        color: $color-texo !important;
+        color: var.$color_black !important;
         text-decoration: none !important;
     }
     &:active {
@@ -29,12 +31,12 @@
 }
 
 .btn-evulus-small {
-    @include btn-personalizado($color-btn, .5rem, 1rem);
+    @include btn.btn-personalizado(var.$color-btn, 0.5rem, 1rem);
     margin: 0;
-    border: 2px solid $color-btn;
+    border: 2px solid var.$color-btn;
     &:hover {
         background: #e0a800;
-        color: $color-texo !important;
+        color: var.$color_black !important;
         text-decoration: none !important;
         border: 2px solid #e0a800;
     }
@@ -43,94 +45,94 @@
     }
 }
 
-
 /* ------------------ BTN EVULUS WHITE ------------------ */
 
 .btn-evulus-white {
-    @include btn-personalizado($color-secundario, 5px 28px, 33px);
-    color: $color-principal;
+    @include btn.btn-personalizado(var.$color_white, 5px 28px, 33px);
+    color: var.$color_primary;
     border-radius: 30px;
-    box-shadow: 0px 0px 2rem $color-btn;
+    box-shadow: 0px 0px 2rem var.$color-btn;
     text-transform: uppercase;
     white-space: nowrap;
     &:hover {
-        box-shadow: 0px 0px 3rem $color-btn;
-        color: $color-principal;
+        box-shadow: 0px 0px 3rem var.$color-btn;
+        color: var.$color_primary;
     }
     &:active {
-        color: $color-principal-oscuro !important;
-        box-shadow: 0px 0px 3.5rem $color-btn !important;
+        color: var.$color_primary-dark !important;
+        box-shadow: 0px 0px 3.5rem var.$color-btn !important;
     }
     &:focus {
-        color: $color-principal-oscuro !important;
-        box-shadow: 0px 0px 3.5rem $color-btn !important;
+        color: var.$color_primary-dark !important;
+        box-shadow: 0px 0px 3.5rem var.$color-btn !important;
     }
 }
 
 .btn-green {
-    @include btn-personalizado($color-principal, 12px 30px, 33px);
+    @include btn.btn-personalizado(var.$color_primary, 12px 30px, 33px);
     box-shadow: 0px 0px 2rem white;
     border-radius: 40px;
-    color: $color-secundario;
+    color: var.$color_white;
     &:hover {
-        box-shadow: 0px 0px 3rem $color-secundario;
-        color: $color-secundario;
+        box-shadow: 0px 0px 3rem var.$color_white;
+        color: var.$color_white;
     }
     &:active {
-        box-shadow: 0px 0px 3.5rem $color-secundario !important;
-        color: $color-secundario !important;
+        box-shadow: 0px 0px 3.5rem var.$color_white !important;
+        color: var.$color_white !important;
     }
     &:focus {
-        box-shadow: 0px 0px 3.5rem $color-secundario !important;
-        color: $color-secundario !important;
+        box-shadow: 0px 0px 3.5rem var.$color_white !important;
+        color: var.$color_white !important;
     }
 }
 
 .btn-green--normal {
-    @include btn-personalizado($color-secundario, 9px 40px, 36px);
-    border: 3px solid $color-principal;
-    color: $color-principal;
+    @include btn.btn-personalizado(var.$color_white, 9px 40px, 36px);
+    border: 3px solid var.$color_primary;
+    color: var.$color_primary;
     &:hover {
-        background: $color-principal;
-        color: $color-secundario;
+        background: var.$color_primary;
+        color: var.$color_white;
     }
     &.active {
-        background: $color-principal;
-        color: $color-secundario;
+        background: var.$color_primary;
+        color: var.$color_white;
     }
 }
-
 
 /* --------------------- BUTTON TOP --------------------- */
 
 .go-top {
-    background: $color-principal;
+    background: var.$color_primary;
     position: fixed;
     bottom: 16px;
     right: 32px;
     width: 50px;
     height: 50px;
-    border-radius: $borde-radius-medium;
-    -webkit-border-radius: $borde-radius-medium;
-    -moz-border-radius: $borde-radius-medium;
-    -ms-border-radius: $borde-radius-medium;
-    -o-border-radius: $borde-radius-medium;
-    transition: $transition-all;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 32px;
-    color: $color-secundario;
-    box-shadow: $box-shadow-terciario;
+    color: var.$color_white;
+    box-shadow: var.$box-shadow-terciario;
     text-decoration: none;
     pointer-events: none;
-    -webkit-transition: $transition-all;
-    -moz-transition: $transition-all;
-    -ms-transition: $transition-all;
-    -o-transition: $transition-all;
+    transition: map-get(var.$transition, fast);
+    -webkit-transition: map-get(var.$transition, fast);
+    -moz-transition: map-get(var.$transition, fast);
+    -ms-transition: map-get(var.$transition, fast);
+    -o-transition: map-get(var.$transition, fast);
+
     opacity: 0;
     &:hover {
-        color: $color-secundario;
+        color: var.$color_white;
+        transform: scale(1.1);
     }
 }
 
@@ -140,7 +142,6 @@
     pointer-events: auto;
 }
 
-
 /* -------------------- BTN-DOWNLOAD -------------------- */
 
 .btn-down-white {
@@ -148,8 +149,8 @@
     font-weight: 700;
     height: fit-content;
     margin: 10px;
-    padding: 5px .5rem;
-    color: $color-texo;
+    padding: 5px 0.5rem;
+    color: var.$color_black;
     border: 2px solid #eee;
     background: #eee;
     border-radius: 5px;
@@ -159,23 +160,22 @@
     -o-border-radius: 5px;
     &:hover {
         background: #a7a9ac;
-        color: $color-texo;
+        color: var.$color_black;
     }
     img {
         vertical-align: text-top;
     }
 }
 
-
 /* ------------------------------------------ BUTTONS-SECCION-EVULUS-TOKENS ----------------------------------------- */
 
 .btn-white-tall {
-    @include btn-white(300px, 2rem, 10px);
+    @include btn.btn-white(300px, 2rem, 10px);
     height: 136px;
 }
 
 .btn-white-medium {
-    @include btn-white(220px, .5rem 1rem, 5px);
+    @include btn.btn-white(220px, 0.5rem 1rem, 5px);
     img {
         width: 100%;
         height: 100%;
@@ -188,17 +188,16 @@
     padding: 14px 30px;
 }
 
-
 /* -------------------- BTN-ACADEMIA -------------------- */
 
 .btn-evulus-academia {
-    @include btn-personalizado($color-btn, 6px 52px, 37.98px);
+    @include btn.btn-personalizado(var.$color-btn, 6px 52px, 37.98px);
     border-radius: 30px;
     font-weight: 800;
-    box-shadow: $box-shadow-primario;
+    box-shadow: var.$box-shadow-primario;
     &:hover {
         background: #e0a800;
-        color: $color-texo !important;
+        color: var.$color_black !important;
         text-decoration: none !important;
     }
     &:active {
@@ -206,18 +205,30 @@
     }
 }
 
-
-/* -------------------- BTN-ACCOUNTS -------------------- */
+/* -------------------- BTN-ACCOUNTS Y FORMULARIOS -------------------- */
+.btn-pay {
+    width: 100%;
+    margin: 0 auto;
+    background-color: var.$color_primary;
+    padding: 19px 0px;
+    border-radius: 5px;
+    color: var.$color_white;
+    font-weight: bold;
+    transition: map-get(var.$transition, fast);
+    &:hover {
+        background-color: var.$color-primary-dark;
+    }
+}
 
 .account-google,
 .account-facebook {
-    @include btn-personalizado(auto, 16px 0px, auto);
-    color: $color-secundario;
+    @include btn.btn-personalizado(auto, 16px 0px, auto);
+    color: var.$color_white;
     max-width: 220px;
     min-width: 50px;
-    border-radius: $borde-radius-low;
+    border-radius: 2px;
     &:hover {
-        color: $color-secundario;
+        color: var.$color_white;
     }
 }
 
@@ -235,7 +246,7 @@
     }
 }
 
-@media screen and (max-width:576px) {
+@media screen and (max-width: 576px) {
     .btn-evulus,
     .btn-evulus-medium,
     .btn-evulus-icon,

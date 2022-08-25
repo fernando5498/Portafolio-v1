@@ -1,9 +1,11 @@
+@use "../1-base/variables" as var;
+/* -------------------- SLIDER WALLET ------------------- */
 .carousel-wallets {
     .item {
         position: relative;
         margin: 0 auto;
         width: 120px;
-        color: $color-principal;
+        color: var.$color_primary;
         text-align: center;
         a {
             img {
@@ -19,7 +21,7 @@
             font-weight: 600;
         }
     }
-    .owl-nav>button {
+    .owl-nav > button {
         margin-top: -26px;
         position: absolute;
         top: 30%;
@@ -27,8 +29,8 @@
     .owl-stage-outer {
         padding-top: 20px;
     }
-    .owl-nav [class*='owl-']:hover {
-        color: $color-secundario;
+    .owl-nav [class*="owl-"]:hover {
+        color: var.$color_white;
         background: transparent !important;
     }
     .owl-nav svg {
@@ -47,7 +49,7 @@
     z-index: 0;
 }
 
-@media screen and (max-width:767px) {
+@media screen and (max-width: 767px) {
     .carousel-wallets {
         width: 80%;
         margin: 0 auto;

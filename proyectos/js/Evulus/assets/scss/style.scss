@@ -1,58 +1,59 @@
 /* ------------------------ BASE ------------------------ */
+@forward "1-base/typograpgy";
+@forward "1-base/reset";
 
-@import "1-base/variables";
-@import "1-base/typograpgy";
-@import "1-base/reset";
+/* --------------------- COMPONENTS --------------------- */
+@forward "4-componets/header";
+@forward "4-componets/banner";
+@forward "4-componets/payment";
+@forward "4-componets/planes";
 
-/* ----------------------- MIXINS ----------------------- */
-
-@import "2-mixins/helpers";
-@import "2-mixins/base-buttons";
+/* ----------------------- HELPERS ---------------------- */
+@forward "3-helpers/class";
 
 /* ----------------------- LAYOUT ----------------------- */
 
-@import "3-layout/buttons";
-@import "3-layout/slider-wallets";
-@import "3-layout/slider-platform";
-@import "3-layout/numbers-transactions";
-@import "3-layout/otros";
-@import "3-layout/containers";
-@import "3-layout/comunidad-contacto";
-@import "3-layout/loggin-register";
-@import "3-layout/social-icons";
-@import "3-layout/team-cads";
-@import "3-layout/servicios-items";
-@import "3-layout/academia-desafio-item";
-@import "3-layout/animation-time-linea";
-@import "3-layout/custom-video-player";
-@import "3-layout/slider-noticias";
-@import "3-layout/header";
-@import "3-layout/footer";
+@forward "3-layout/buttons";
+@forward "3-layout/slider-wallets";
+@forward "3-layout/slider-platform";
+@forward "3-layout/numbers-transactions";
+@forward "3-layout/otros";
+@forward "3-layout/containers";
+@forward "3-layout/comunidad-contacto";
+@forward "3-layout/loggin-register";
+@forward "3-layout/social-icons";
+@forward "3-layout/team-cads";
+@forward "3-layout/servicios-items";
+@forward "3-layout/academia-desafio-item";
+@forward "3-layout/animation-time-linea";
+@forward "3-layout/custom-video-player";
+@forward "3-layout/slider-noticias";
+@forward "3-layout/footer";
 
 /* ----------------------- PAGE-HOME ---------------------- */
 
-@import "4-pages/home/home-main";
-@import "4-pages/home/home-responsive";
+@forward "4-pages/home/home-main";
+@forward "4-pages/home/home-responsive";
 
 /* ----------------------- PAGE STAKING---------------------- */
 
-@import "4-pages/staking/staking-main";
-@import "4-pages/staking/staking-responsive";
+@forward "4-pages/staking/staking-main";
+@forward "4-pages/staking/staking-responsive";
 
 /* ----------------------- PAGE-Evulus TOken---------------------- */
 
-@import "4-pages/evulus-token/evulus-token-main";
-@import "4-pages/evulus-token/evulus-token-grid-section-grapihics";
-@import "4-pages/evulus-token/evulus-token-responsive";
+@forward "4-pages/evulus-token/evulus-token-main";
+@forward "4-pages/evulus-token/evulus-token-grid-section-grapihics";
+@forward "4-pages/evulus-token/evulus-token-responsive";
 
 /* ----------------------- PAGE-STAKING-PROGRESIVE ---------------------- */
 
-@import "4-pages/staking-progresive/staking-main-progresive";
-@import "4-pages/staking-progresive/modal-calculadora";
-@import "4-pages/staking-progresive/components";
-@import "4-pages/staking-progresive/staking-progresive-responsive";
+@forward "4-pages/staking-progresive/staking-main-progresive";
+@forward "4-pages/staking-progresive/modal-calculadora";
+@forward "4-pages/staking-progresive/components";
+@forward "4-pages/staking-progresive/staking-progresive-responsive";
 
 /* -------------------- PAGE-ACADEMIA ------------------- */
 
-@import "4-pages/academia/academia-main";
-@import "4-pages/academia/academia-responsive";
+@forward "4-pages/academia/academia-main";
+@forward "4-pages/academia/academia-responsive";

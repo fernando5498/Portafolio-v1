@@ -1,0 +1,165 @@
+@use "../1-base/variables" as var;
+@use "../2-mixins/breakpoints" as breakP;
+.container-banner {
+    background-color: #bedfe0;
+    position: relative;
+}
+.content-right {
+    background: url(../img/academia/banner/banner-img.png) no-repeat center;
+    width: 55%;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0pc;
+    height: 100%;
+    @include breakP.media-queries-down(lg) {
+        display: none;
+    }
+}
+.container-left {
+    display: flex;
+    justify-content: end;
+}
+.content-left {
+    padding: 71px 0px 20px 0px;
+    position: relative;
+    max-width: 800px;
+    z-index: 2;
+    float: left;
+    &::before {
+        content: "";
+
+        width: 100%;
+        height: 200%;
+        position: absolute;
+        top: -150px;
+        transform: rotate(18deg);
+        right: -80px;
+        z-index: -1;
+        border-right: 18px solid #85c6bfbd;
+        background-color: #bedfe0;
+    }
+}
+.price-plan {
+    font-size: clamp(4rem, 0.5rem + 2vw, 5.5rem);
+    font-weight: 800;
+    color: var.$color_primary;
+    margin: 0 auto;
+    width: fit-content;
+    text-shadow: 0px 4px 3px var.$color_gray;
+    -webkit-text-stroke: 2px rgb(255, 255, 255);
+    span {
+        color: black;
+        font-weight: 500;
+        -webkit-text-stroke: transparent;
+        font-size: 24px;
+    }
+}
+.banner__btn {
+    font-size: clamp(28px, 0.5rem + 2vw, 32px);
+    padding: 7px 62px;
+    box-shadow: 0px 4px 15px 0px var.$color_gray;
+    color: black;
+    font-weight: 500;
+    background-color: var.$color-btn;
+    width: fit-content;
+    border-radius: 5px;
+    display: block;
+    transition: all 300ms;
+    &:hover {
+        background: #e0a800;
+        transform: translateY(-2px);
+    }
+}
+.banner {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 45% 55%;
+    overflow: hidden;
+
+    &__h1 {
+        font-size: clamp(32px, 0.5rem + 2vw, 46px);
+        margin-bottom: 0;
+        line-height: 1.2;
+        span {
+            display: block;
+            font-weight: 800;
+        }
+    }
+    &__text {
+        font-size: clamp(18px, 0.5rem + 2vw, 24px);
+        font-weight: 500;
+        max-width: 500px;
+        margin: 0;
+    }
+
+    &__wrapper-price {
+        max-width: 450px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .wrapper-pay {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 35px;
+        max-width: 490px;
+        gap: 10px;
+    }
+    @include breakP.media-queries-down(lg) {
+        & {
+            grid-template-columns: 100%;
+        }
+        .content-left {
+            background-color: #bedfe0;
+            width: 100%;
+            &::before {
+                width: 100%;
+                left: 0;
+                right: 0;
+                border: none;
+                transform: none;
+            }
+        }
+        .content-left,
+        &__text,
+        &__wrapper-price,
+        .wrapper-pay {
+            max-width: none;
+        }
+    }
+}
+
+.platform-cryto {
+    padding: 0;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    img {
+        width: 30px;
+    }
+    .platform-cryto-card {
+        border: 1px solid var.$color_black;
+        padding: 0.4375rem 0.5625rem;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        transition: map-get(var.$transition, fast);
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}
+
+.banner .payment__selection--banner {
+    width: 200px;
+    margin: 0;
+    padding: 0.4375rem 0.625rem;
+    .payment__selection__stripe {
+        font-size: 1rem;
+        left: 15px;
+        top: -18px;
+    }
+}

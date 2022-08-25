@@ -1,20 +1,21 @@
+@use "../1-base/variables" as var;
 /* -------------------- TRANSICIONES -------------------- */
 
 .transiciones {
     background-color: #c1e3de;
     padding-top: 58px;
     padding-bottom: 58px;
-    background: $bg-color;
+    background: var.$bg-color;
 }
 
 .contador-container {
-    color: $color-texo;
+    color: var.$color_black;
     h5,
     span {
         font-size: calc(40px + 2.5vw);
     }
     p {
-        font-size: calc(18px + .5vw);
+        font-size: calc(18px + 0.5vw);
     }
 }
 

@@ -1,7 +1,9 @@
+@use "../1-base/variables" as var;
+/* ------------------- SLIDER-NOTICIAS ------------------ */
 .noticias-slider {
     .item {
         width: auto;
-        color: $color-texo;
+        color: var.$color_black;
         text-align: start;
     }
     .owl-stage {
@@ -25,7 +27,7 @@
     a {
         font-size: 21.74px;
         font-weight: 700;
-        color: $color-texo;
+        color: var.$color_black;
         &:hover {
             text-decoration: underline;
         }

@@ -1,27 +1,31 @@
+@use "../../3-helpers/helpers" as help;
+@use "../../2-mixins/base-buttons" as btn;
+@use "../../1-base/variables" as var;
+
 /* --------------------- DATOS -------------------- */
 
 .btn-submit-wallet {
-    @include btn-personalizado($color-btn, 12px 25px, 1.5rem);
+    @include btn.btn-personalizado(var.$color-btn, 12px 25px, 1.5rem);
     border-radius: 30px;
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
     -ms-border-radius: 30px;
     -o-border-radius: 30px;
-    box-shadow: 0px 0px 2rem $color-btn;
+    box-shadow: 0px 0px 2rem var.$color-btn;
     &:hover {
-        box-shadow: 0px 0px 2.5rem $color-btn;
+        box-shadow: 0px 0px 2.5rem var.$color-btn;
     }
     &:active {
-        box-shadow: 0px 0px 3rem $color-btn !important;
+        box-shadow: 0px 0px 3rem var.$color-btn !important;
     }
     &:focus {
-        box-shadow: 0px 0px 3rem $color-btn !important;
+        box-shadow: 0px 0px 3rem var.$color-btn !important;
     }
     text-transform: uppercase;
 }
 
 .container-valance-value {
-    @include btn-personalizado($color-secundario, 0px, 1rem);
+    @include btn.btn-personalizado(var.$color_white, 0px, 1rem);
     border-radius: 50px;
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
@@ -30,10 +34,10 @@
     background: #808080;
     height: 80px;
     width: 281px;
-    @include f-center;
+    @include help.f-center;
     margin: 10px 20px;
     .valance-value {
-        @include btn-personalizado($color-secundario, 0px 0px, 1rem);
+        @include btn.btn-personalizado(var.$color_white, 0px 0px, 1rem);
         border-radius: 50px;
         width: 95%;
         -webkit-border-radius: 50px;
@@ -41,13 +45,12 @@
         -ms-border-radius: 50px;
         -o-border-radius: 50px;
         height: 80%;
-        @include f-center;
+        @include help.f-center;
         flex-direction: column;
         box-shadow: 0px 0px 4px 0px #464646;
         font-size: 1rem;
     }
 }
-
 
 /* ------------------- VALUE CONTAINE ------------------- */
 
@@ -59,10 +62,10 @@
     -moz-border-radius: 50px;
     -ms-border-radius: 50px;
     -o-border-radius: 50px;
-    border: 7px solid $color-secundario;
+    border: 7px solid var.$color_white;
     height: 54px;
     background: #f2f2f1;
-    padding: 0rem .5rem;
+    padding: 0rem 0.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -77,18 +80,17 @@
     }
 }
 
-
 /* -------------------- COMPONENT-DAY ------------------- */
 
 .component-day {
-    color: $color-secundario;
+    color: var.$color_white;
     display: grid;
     width: 100%;
     grid-template-columns: 78px calc(100% - 105px) 10px;
     height: 50px;
     position: relative;
     .porcentaje {
-        color: $color-secundario;
+        color: var.$color_white;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -102,7 +104,7 @@
             position: absolute;
             width: 100%;
             height: 6px;
-            background: $color-secundario;
+            background: var.$color_white;
             bottom: 0;
             border-radius: 4px;
             margin-bottom: 6px;
@@ -184,7 +186,7 @@
         span {
             height: 25px;
             padding: 0px 8px;
-            background: $color-secundario;
+            background: var.$color_white;
             border-radius: 5px;
             -webkit-border-radius: 5px;
             -moz-border-radius: 5px;
@@ -196,13 +198,12 @@
     }
 }
 
-
 /* ------------------------ component-rango----------------------- */
 
 .next {
     width: 0;
     height: 0;
-    border-left: 14px solid $color-secundario;
+    border-left: 14px solid var.$color_white;
     border-top: 7px solid transparent;
     border-bottom: 7px solid transparent;
 }
@@ -210,7 +211,7 @@
 .prev {
     width: 0;
     height: 0;
-    border-right: 15px solid $color-secundario;
+    border-right: 15px solid var.$color_white;
     border-top: 7px solid transparent;
     border-bottom: 7px solid transparent;
 }
@@ -219,7 +220,7 @@
     border-radius: 5px;
     display: flex;
     align-items: center;
-    color: $color-secundario;
+    color: var.$color_white;
     gap: 10px;
     margin: 10px auto;
     .porcentaje {
@@ -266,13 +267,12 @@
     }
 }
 
-
 /* ----------------- .COMPONENTE-MENSUA ----------------- */
 
 .component-mensual {
     display: flex;
     align-items: flex-end;
-    color: $color-secundario;
+    color: var.$color_white;
     justify-content: space-between;
     flex-wrap: wrap;
     .meses {
@@ -291,24 +291,24 @@
                 .item-mensual__value {
                     width: 100%;
                     height: 30px;
-                    border-radius: $borde-radius-medium;
-                    -webkit-border-radius: $borde-radius-medium;
-                    -moz-border-radius: $borde-radius-medium;
-                    -ms-border-radius: $borde-radius-medium;
-                    -o-border-radius: $borde-radius-medium;
+                    border-radius: 5px;
+                    -webkit-border-radius: 5px;
+                    -moz-border-radius: 5px;
+                    -ms-border-radius: 5px;
+                    -o-border-radius: 5px;
                     background: transparent;
                     border: 1px solid white;
                     transition: 200ms all;
                     cursor: pointer;
                     &:hover {
-                        background: $color-btn;
-                        border: 1px solid $color-btn;
-                        color: $color-texo;
+                        background: var.$color-btn;
+                        border: 1px solid var.$color-btn;
+                        color: var.$color_black;
                     }
                     &.active {
-                        background: $color-btn;
-                        border: 1px solid $color-btn;
-                        color: $color-texo;
+                        background: var.$color-btn;
+                        border: 1px solid var.$color-btn;
+                        color: var.$color_black;
                     }
                 }
             }
@@ -321,15 +321,15 @@
         }
         button {
             padding: 0px 20px 8px 20px;
-            border-radius: $borde-radius-medium;
-            -webkit-border-radius: $borde-radius-medium;
-            -moz-border-radius: $borde-radius-medium;
-            -ms-border-radius: $borde-radius-medium;
-            -o-border-radius: $borde-radius-medium;
+            border-radius: 5px;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            -ms-border-radius: 5px;
+            -o-border-radius: 5px;
             margin: 2px;
-            background: $color-btn;
-            border: 1px solid $color-btn;
-            color: $color-texo;
+            background: var.$color-btn;
+            border: 1px solid var.$color-btn;
+            color: var.$color_black;
             font-weight: 500;
             font-size: 2rem;
         }

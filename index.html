@@ -15,36 +15,6 @@
     <link rel="stylesheet" href="css/style.css">
     <meta name="theme-color" content="#4285f4">
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6BDMMMX2VV"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'G-6BDMMMX2VV');
-    </script>
-
-    <!-- Hotjar Tracking Code for https://raulfetch.herokuapp.com/ -->
-    <script>
-        (function (h, o, t, j, a, r) {
-            h.hj = h.hj || function () {
-                (h.hj.q = h.hj.q || []).push(arguments)
-            };
-            h._hjSettings = {
-                hjid: 3009285,
-                hjsv: 6
-            };
-            a = o.getElementsByTagName('head')[0];
-            r = o.createElement('script');
-            r.async = 1;
-            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
-            a.appendChild(r);
-        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
-    </script>
     <link rel="shortcut icon" href="img/logo-sin-text.svg" type="image/x-icon">
 </head>
 
@@ -186,7 +156,7 @@
         <div class="container">
             <nav class="navbar">
                 <a href="#home">
-                    <img width="40" src="img/logo-sin-text.svg" alt="logo">
+                    <img width="40" src="img/logo-sin-text.svg" alt="logo" loading="lazy">
                 </a>
 
                 <button class="switch" id="switch">
@@ -213,15 +183,17 @@
         <section id="home" class="home container">
 
             <div class="home__img col-6">
-                <img src="/svg/Personaje-Principal.svg" alt="item">
+                <img src="/svg/Personaje-Principal.svg" alt="item" loading="lazy">
             </div>
             <div class="home__title col-6">
                 <h1>Raul Pineda</h1>
                 <h2>Desarrollador Web Front-End</h2>
                 <div class="home__btn">
                     <a href="#" class="btn-secundario  welcom-btn">Bienvenidos</a>
-                    <a href="proyectos/RaulPineda-Curriculum.pdf" target="_blank" class=" btn-secundario">Curriculum
-                        <img src="img/icon-curriculum.svg" alt="Curriculum" /></a>
+                    <a href="proyectos/RaulPineda-Curriculum.pdf" rel="noopener noreferrer" target="_blank"
+                        class=" btn-secundario">Curriculum
+                        <img src="img/icon-curriculum.svg" alt="Curriculum" loading="lazy" />
+                    </a>
                 </div>
             </div>
 
@@ -256,7 +228,8 @@
 
                     <div class="about-us__content ">
                         <div class="about-us__content__img col-4">
-                            <img src="img/2.webp" alt="Raul Pineda">
+                            <img src="img/2.webp" alt="Raul Pineda" loading="lazy">
+
                         </div>
                         <p>
                             Hola soy Raúl Pineda tengo 20 años y me estoy formando como desarrollador web
@@ -294,7 +267,7 @@
                             <a class="btn-secundario" href="#contact">Contactame</a>
                             <div class="icon ">
                                 <div class="tooltip-personal">Trabajo Remoto</div>
-                                <img src="img/apoyo.png" style="filter: none;" alt="apoyo" />
+                                <img src="img/apoyo.png" style="filter: none;" alt="apoyo" loading="lazy">
                             </div>
                         </div>
                     </div>
@@ -316,8 +289,8 @@
                         <ul>
                             <li>
                                 <a class="s-card" href="proyectos/certificados/Certificado_Electronica_Basica.pdf"
-                                    target="_blank">
-                                    <img class="col-3" src="svg/circuito-electronico.svg " alt="curso">
+                                    target="_blank" rel="noopener noreferrer">
+                                    <img class="col-3" src="svg/circuito-electronico.svg " alt="curso" loading="lazy">
                                     <div class=" col-sm-10 col-md-9 card-content ">
                                         <h4>Electronica Básica</h4>
                                         <p>Tipo: Curso <br>Diciembre 2018</p>
@@ -327,8 +300,8 @@
                             </li>
                             <li>
                                 <a class="s-card" href="proyectos/certificados/Certificado_Reparacion_Pc.pdf"
-                                    target="_blank">
-                                    <img class="col-3" src="svg/torre-de-pc.svg " alt="curso">
+                                    target="_blank" rel="noopener noreferrer">
+                                    <img class="col-3" src="svg/torre-de-pc.svg " alt="curso" loading="lazy">
                                     <div class=" col-sm-10 col-md-9 card-content ">
                                         <h4>Reparación de Computadoras</h4>
                                         <p>Tipo: Curso <br> Marzo 2019</p>
@@ -338,8 +311,9 @@
                                 </a>
                             </li>
                             <li>
-                                <a class="s-card " href="proyectos/certificados/Bachiller.pdf" target="_blank">
-                                    <img class="col-3" src="svg/graduado.svg " alt="Bachillerato">
+                                <a class="s-card " href="proyectos/certificados/Bachiller.pdf" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <img class="col-3" src="svg/graduado.svg " alt="Bachillerato" loading="lazy">
                                     <div class=" col-sm-10 col-md-9 card-content ">
                                         <h4>Estudios</h4>
                                         <p>Tipo: Bachillerato<br>2014-2019</p>
@@ -350,8 +324,8 @@
                             </li>
                             <li>
                                 <a class="s-card  " href="proyectos/certificados/Certificado-Udemy-Master-en-Css.pdf"
-                                    target="_blank">
-                                    <img class="col-3" src="svg/Css-Bootstrap.svg" alt="curso">
+                                    target="_blank" rel="noopener noreferrer">
+                                    <img class="col-3" src="svg/Css-Bootstrap.svg" alt="curso" loading="lazy">
                                     <div class=" col-sm-10 col-md-9 card-content ">
                                         <h4>Css Responsive y BootsTrap</h4>
                                         <p>Tipo: Curso Online<br>Agosto 2021</p>
@@ -361,8 +335,8 @@
                             </li>
                             <li>
                                 <a class="s-card  " href="proyectos/certificados/Certificado-Udemy-HTML.pdf"
-                                    target="_blank">
-                                    <img class="col-3" src="svg/html.svg" alt="html">
+                                    target="_blank" rel="noopener noreferrer">
+                                    <img class="col-3" src="svg/html.svg" alt="html" loading="lazy">
                                     <div class=" col-sm-10 col-md-9 card-content ">
                                         <h4>HTML de Cero a Experto</h4>
                                         <p>Tipo: Curso Online<br>Diciembre 2021</p>
@@ -373,8 +347,8 @@
                             <li>
                                 <a class="s-card  "
                                     href="proyectos/certificados/Universidad-de-Css-desde-cero-a-experto.pdf"
-                                    target="_blank">
-                                    <img class="col-3" src="svg/Css.svg " alt="Css">
+                                    target="_blank" rel="noopener noreferrer">
+                                    <img class="col-3" src="svg/Css.svg " alt="Css" loading="lazy">
                                     <div class=" col-sm-10 col-md-9 card-content ">
                                         <h4>Css de Cero a Experto</h4>
                                         <p>Tipo: Curso Online<br>Diciembre 2021</p>
@@ -383,8 +357,9 @@
                                 </a>
                             </li>
                             <li>
-                                <a class="s-card  " href="proyectos/certificados/Certificado_sass.pdf" target="_blank">
-                                    <img class="col-3" src="svg/sass.svg " alt="Sass">
+                                <a class="s-card  " href="proyectos/certificados/Certificado_sass.pdf" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <img class="col-3" src="svg/sass.svg " alt="Sass" loading="lazy">
                                     <div class=" col-sm-10 col-md-9 card-content ">
                                         <h4>Sass y JQuery</h4>
                                         <p>Tipo: Curso Online<br>Enero 2022</p>
@@ -393,9 +368,9 @@
                                 </a>
                             </li>
                             <li>
-                                <a class="s-card  " href="proyectos/certificados/Certificado_Raul-7even.pdf"
-                                    target="_blank">
-                                    <img class="col-3" src="svg/7even-icon.png" alt="7even">
+                                <a class="s-card" href="proyectos/certificados/Certificado_Raul-7even.pdf"
+                                    target="_blank" rel="noopener noreferrer">
+                                    <img class="col-3" src="svg/7even-icon.png" alt="7even" loading="lazy">
                                     <div class=" col-sm-10 col-md-9 card-content ">
                                         <h4>Desarrollo Web con 7even</h4>
                                         <p>Tipo: Curso Online<br>Junio 2022</p>
@@ -403,9 +378,11 @@
                                     </div>
                                 </a>
                             </li>
+
                             <li>
-                                <a class="s-card" href="proyectos/certificados/curso-wordpress.pdf" target="_blank">
-                                    <img class="col-3" src="svg/WordPress-512.webp" alt="WordPress">
+                                <a class="s-card" href="proyectos/certificados/curso-wordpress.pdf" target="_blank"
+                                    rel="noopener noreferrer">
+                                    <img class="col-3" src="svg/WordPress-512.webp" alt="WordPress" loading="lazy">
                                     <div class=" col-sm-10 col-md-9 card-content ">
                                         <h4>Manejo de WordPress</h4>
                                         <p>Tipo: Curso Online<br>Junio 2022</p>
@@ -537,7 +514,8 @@
                         data-download="proyectos/js/Pagina-Wallpaper/flor.jpg"
                         data-repositorio="https://github.com/fernando5498/Pagina-Wallpaper" data-categoria="javascript">
                         <div class="item-content">
-                            <img class="tipo-page" src="proyectos/js/Pagina-Wallpaper/flor.webp" alt="Pagina-Wallpaper">
+                            <img class="tipo-page" src="proyectos/js/Pagina-Wallpaper/flor.webp" alt="Pagina-Wallpaper"
+                                loading="lazy">
                         </div>
                     </div>
 
@@ -548,7 +526,7 @@
                         data-repositorio="https://github.com/fernando5498/Pagina-Eventos" data-categoria="javascript">
                         <div class="item-content">
                             <img class="tipo-page" src="proyectos/js/Pagina-Eventos/pagina-eventos.webp"
-                                alt="Pagina-Eventos">
+                                alt="Pagina-Eventos" loading="lazy">
                         </div>
                     </div>
 
@@ -561,7 +539,7 @@
                         <div class="item-content">
                             <img class="tipo-page"
                                 src="proyectos/bootstrap/pagina-con-Bootstrap/Pagina-Con-Bootstrap_index.html.webp"
-                                alt="BootsTrap">
+                                alt="BootsTrap" loading="lazy">
                         </div>
                     </div>
 
@@ -576,7 +554,7 @@
                         <div class="item-content">
                             <img class="tipo-page"
                                 src="proyectos/html,css,jass/Landing-page-Mejorando/Landing-page-Mejorando.webp"
-                                alt="Landing-Page">
+                                alt="Landing-Page" loading="lazy">
                         </div>
                     </div>
 
@@ -585,7 +563,8 @@
                         data-link="proyectos/js/Evulus/index.html" data-download="proyectos/js/Evulus/evulus-full.jpg"
                         data-repositorio="https://github.com/fernando5498/evulus-Inicio" data-categoria="javascript">
                         <div class="item-content">
-                            <img class="tipo-page" src="proyectos/js/Evulus/evulus-home.webp" alt="Evulus-Tokens">
+                            <img class="tipo-page" src="proyectos/js/Evulus/evulus-home.webp" alt="Evulus-Tokens"
+                                loading="lazy">
                         </div>
                     </div>
 
@@ -596,7 +575,7 @@
                         data-repositorio="https://github.com/fernando5498/Pagina-Almuerzos" data-categoria="javascript">
                         <div class="item-content">
                             <img class="tipo-page" src="proyectos/js/Pagina-Almuerzos/Pagina-Almuerzos.webp"
-                                alt="Pagina-Almuerzos">
+                                alt="Pagina-Almuerzos" loading="lazy">
                         </div>
                     </div>
 
@@ -609,7 +588,8 @@
                         data-categoria="html/css/jass">
                         <div class="item-content">
                             <img class="tipo-page"
-                                src="proyectos/html,css,jass/Practica-Cocacola/Practica-Cocacola.webp" alt="Pepsi">
+                                src="proyectos/html,css,jass/Practica-Cocacola/Practica-Cocacola.webp" alt="Pepsi"
+                                loading="lazy">
                         </div>
                     </div>
 
@@ -618,7 +598,7 @@
                         data-download="proyectos/illustrator/publicidad-personal-01.png" data-categoria="illustrator">
                         <div class="item-content">
                             <img class="tipo-img" src="proyectos/illustrator/publicidad-personal-01.webp"
-                                alt="plubicidad">
+                                alt="plubicidad" loading="lazy">
                         </div>
                     </div>
 
@@ -651,7 +631,7 @@
                         data-categoria="html/css/jass">
                         <div class="item-content">
                             <img class="tipo-page" src="proyectos/html,css,jass/landing-basico/portafolio-basico.jpg"
-                                alt="Portafolio">
+                                alt="Portafolio" loading="lazy">
                         </div>
                     </div>
 
@@ -679,7 +659,8 @@
                         data-description="Creada con illustrator y diseñada por mi mismo, espero mejorar cada vez más"
                         data-download="proyectos/pothoshop/publicidad Tortas.png" data-categoria="illustrator">
                         <div class="item-content">
-                            <img class="tipo-img" src="proyectos/pothoshop/publicidad-Tortas.webp" alt="publicidad">
+                            <img class="tipo-img" src="proyectos/pothoshop/publicidad-Tortas.webp" alt="publicidad"
+                                loading="lazy">
                         </div>
                     </div>
 
@@ -689,7 +670,8 @@
                         data-download="proyectos/js/Pagina-Chile/Chile_Full.jpg"
                         data-repositorio="https://github.com/fernando5498/Pagina-Chile" data-categoria="javascript">
                         <div class="item-content">
-                            <img class="tipo-page" src="proyectos/js/Pagina-Chile/Pagina-Chile.webp" alt="Pagina-chile">
+                            <img class="tipo-page" src="proyectos/js/Pagina-Chile/Pagina-Chile.webp" alt="Pagina-chile"
+                                loading="lazy">
                         </div>
                     </div>
 
@@ -712,7 +694,7 @@
                         data-categoria="javascript">
                         <div class="item-content">
                             <img class="tipo-page" src="proyectos/js/Landing-Page-pagina-2/Landing-Page-pagina-2.webp"
-                                alt="Landing-Page">
+                                alt="Landing-Page" loading="lazy">
                         </div>
                     </div>
 
@@ -752,8 +734,9 @@
                     </div>
 
                     <div class="overlay-container__description__enlaces">
-                        <a class="repo-git btn-secundario" target="_blank" href="">Git</a>
-                        <a class="link-sitio btn-secundario" href="" target="_blank">Ver el Sitio</a>
+                        <a class="repo-git btn-secundario" target="_blank" href="" rel="noopener noreferrer">Git</a>
+                        <a class="link-sitio btn-secundario" href="" target="_blank" rel="noopener noreferrer">Ver el
+                            Sitio</a>
                         <a href="" class="btn-secundario link-descarga" download="">Descargar</a>
                     </div>
                 </div>
@@ -775,32 +758,33 @@
                     <ul class="contact-redes ">
                         <li>
                             <a href="https://wa.me/584261997762?text=Hola%20Raul%20vi%20tu%20portafolio%20y%20me%20Gustaria%20hablar%20contingo"
-                                target="_blank">
-                                <img class="icon-redes" src="svg/whatsapp.svg " alt=" ">
+                                target="_blank" rel="noopener noreferrer">
+                                <img class="icon-redes" src="svg/whatsapp.svg " alt="redes" loading="lazy">
                                 <p>Whatsapp</p>
                             </a>
                         </li>
                         <li>
                             <a href="#" class="gmail">
-                                <img class="icon-redes" src="svg/gmail.svg " alt=" ">
+                                <img class="icon-redes" src="svg/gmail.svg " alt="gmail" loading="lazy">
                                 <p>Gmail</p>
                             </a>
                         </li>
                         <li>
-                            <a href="https://github.com/fernando5498" target="_blank">
-                                <img class="icon-redes" src="svg/github_git.svg" alt=" ">
+                            <a href="https://github.com/fernando5498" target="_blank" rel="noopener noreferrer">
+                                <img class="icon-redes" src="svg/github_git.svg" alt="github" loading="lazy">
                                 <p>GitHub</p>
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.frontendmentor.io/profile/fernando5498" target="_blank">
-                                <img class="icon-redes" src="svg/logo-Mentor.svg" alt="">
+                            <a href="https://www.frontendmentor.io/profile/fernando5498" target="_blank"
+                                rel="noopener noreferrer">
+                                <img class="icon-redes" src="svg/logo-Mentor.svg" alt="Front-End" loading="lazy">
                                 <p>Frontend Mentor</p>
                             </a>
                         </li>
                         <li>
-                            <a href="https://www.linkedin.com/in/raul-pineda" target="_blank">
-                                <img class="icon-redes" src="svg/linkeding.svg" alt="">
+                            <a href="https://www.linkedin.com/in/raul-pineda" target="_blank" rel="noopener noreferrer">
+                                <img class="icon-redes" src="svg/linkeding.svg" alt="linkeding" loading="lazy">
                                 <p>linkedin</p>
                             </a>
                         </li>
@@ -841,11 +825,11 @@
                             <div class="d-flex h-100">
                                 <div class="cerrar-overlay close--form"></div>
                                 <div class="form__img col-6">
-                                    <img class="" src="img/montaña-nieve.webp" alt="">
+                                    <img class="" src="img/montaña-nieve.webp" alt="montaña" loading="lazy">
                                 </div>
                                 <div class="form__data col-6 ">
                                     <div class="logo-container mx-auto">
-                                        <img src="img/logo-sin-text.svg" width="80" alt="logo">
+                                        <img src="img/logo-sin-text.svg" width="80" alt="logo" loading="lazy">
                                     </div>
                                     <input type="text" required name="name" placeholder="Nombre">
                                     <input type="email" required name="email" placeholder="Email">
