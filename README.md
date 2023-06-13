@@ -10,7 +10,7 @@
 
 
 ## 🚀 Acerca del Proyecto
-Este es uno de mis portafolios personales donde estan algunos proyectos que hice en ese momento. Todo lo podras ver en https://fernando5498.github.io/Segundo-Portafolio/ .
+Este es uno de mis portafolios personales donde estan algunos proyectos que hice en ese momento. 
 
 
 ## 🛠 Tecnologias Utilizadas
